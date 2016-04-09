@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title> Accessible Geographic Maps</title>
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!--  
+        Stylesheets and Preprocessors
+        ==============================
+
+        You can always bring in CSS files manually with `<link>` tags, or asynchronously
+        using a solution like AMD (RequireJS).  Or, if you like, you can take advantage 
+        of Sails' conventional asset pipeline (boilerplate Gruntfile).
+
+        By default, stylesheets from your `assets/styles` folder are included
+        here automatically (between STYLES and STYLES END). Both CSS (.css) and LESS (.less)
+        are supported. In production, your styles will be minified and concatenated into
+        a single file.
+        
+        To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
+        For example, here are a few things you could do:
+            
+            + Change the order of your CSS files
+            + Import stylesheets from other directories
+            + Use a different or additional preprocessor, like SASS, SCSS or Stylus
+    -->
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/css/general/bootstrap.css">
+    <link rel="stylesheet" href="/styles/css/general/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/css/general/estilo.css">
+    <link rel="stylesheet" href="/styles/css/general/estilobarra.css">
+    <link rel="stylesheet" href="/styles/css/general/index.css">
+    <link rel="stylesheet" href="/styles/css/general/shop-item.css">
+    <!--STYLES END-->
+    <link id="estilo" rel="stylesheet" href="/styles/css/accesibilidad/estilo.css">
+
+    <!--SCRIPTS-->
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/dependencies/Jquery/jquery-1.11.3.js"></script>
+    <script src="/js/dependencies/Jquery/jquery-1.11.3.min.js"></script>
+    <script src="/js/dependencies/Jquery/jquery-ui.js"></script>
+    <script src="/js/dependencies/Jquery/jquery-ui.min.js"></script>
+    <script src="/js/dependencies/Jquery/jquery.js"></script>
+    <script src="/js/dependencies/Jquery/jquery.min.js"></script>
+    <script src="/js/dependencies/Jquery/jquery.svg.js"></script>
+    <script src="/js/dependencies/Jquery/jquery.svganim.js"></script>
+    <script src="/js/dependencies/Bootstrap/bootstrap.js"></script>
+    <script src="/js/dependencies/Bootstrap/bootstrap.min.js"></script>
+    <script src="/js/mapa/main.js"></script>
+    <!--SCRIPTS END-->
+</head>
+
+<body class="advancedOptions">
+
+    <!-- bottom-up button-->
+    <input type="image" src="../../images/flecha.png" alt="back to top" class="back-to-top" style="display: inline;" title="back to top" tabindex="100">
+
+
+
+    <div id="menuaccesibilidad" class="panel-collapse collapse">
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">Accessibility</a></li>
+            <li><a data-toggle="tab" href="#menu1">Advanced Options</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+                <div id="menuaccesibilidad" class="panel-collapse">
+                    <!--    <ul class="list-group">-->
+                    <div class="menuavanzado">
+                        <!-- <li class="list-group-item elementoavanzado">-->
+                        <div class="row">
+                            <div class="estilos col-md-3">
+                                <input type="image" src="../../images/normal2.png" alt="normal style" width="48" height="48" onclick="pulsar('estilo.css')" tabindex="2" title="normal style">
+                                <input type="image" src="../../images/blanco.png" alt="white style" width="48" height="48" onclick="pulsar('estiloblanco.css')" tabindex="3" title="white style">
+                                <input type="image" src="../../images/amarillo-negro.png" alt="yellow style" width="48" height="48" onclick="pulsar('estiloamarillo-negro.css')" tabindex="4" title="yellow style">
+                                <input type="image" src="../../images/negro-amarillo.png" alt="black style" width="48" height="48" onclick="pulsar('estilonegro-amarillo.css')" tabindex="5" title="black style">
+                                <input type="image" src="../../images/negro.png" alt="black and white style" width="48" height="48" onclick="pulsar('estilonegro.css')" tabindex="6" title="black and white style">
+                                <input type="image" src="../../images/bajocontraste.png" alt="low contrast style" width="48" height="48" onclick="pulsar('estilobajocontraste.css')" tabindex="7" title="low contrast style">
+                            </div>
+
+                            <div class="tamanio-letra col-md-2">
+                                <p>Font Size</p>
+                                <img id="letranormal" src="../../images/letranormal.png" alt="small font size" height="42" width="42">
+                                <input id="letra" class="inline" type='text' name='username' size='2' title="font" disabled />
+                                <img id="letragrande" src="../../images/letragrande.png" alt="small font size" height="42" width="42">
+                                <input id="tamanioletra" class="" type="range" name="points" min="1" max="2.5" size='5' step="0.1" tabindex="8" title="font size">
+                            </div>
+
+                            <div class="interlineado col-md-2">
+                                <p>Line Spacing</p>
+                                <img id="espaciadonormal" src="../../images/linea1.png" alt="small font size" height="42" width="42">
+                                <input id="espaciado" class="inline" type='text' name='username' size='2' disabled title="spacing" />
+                                <img id="espaciadogrande" src="../../images/linea3.png" alt="small font size" height="42" width="42">
+                                <input id="espaciado2" class="" type="range" name="points" min="1" max="2.5" size='5' step="0.1" tabindex="9" title="spacing">
+                            </div>
+                            <div class="tipo-letra col-md-2">
+                                <p>Text Style</p>
+
+                                <select id="tipoletra" width="10" tabindex="10" title="tipo de letra">
+                                    <option id="Calibri" value="Calibri">Calibri</option>
+                                    <option id="Arial" value="Arial">Arial</option>
+                                    <option id="Times New Roman" value="Times New Roman">Times New Roman</option>
+                                    <option id="Helvetica" value="Helvetica">Helvetica</option>
+                                    <option id="Verdana" value="Verdana">Verdana</option>
+
+                                </select>
+                            </div>
+
+                            <p class="panel-title">
+                                <a class="btn btn-default opcionavanzada" href="#reload" onclick="reiniciar()" tabindex="11" alt="Reload">
+               Reload Settings
+            </a>
+                            </p>
+                        </div>
+                        <!--  </li>-->
+                    </div>
+                    <!--</ul>-->
+
+                </div>
+
+            </div>
+            <div id="menu1" class="tab-pane fade">
+                <div id="collapse2" class="panel-collapse">
+                    <!--   <ul class="list-group ">-->
+                    <div class="menuavanzado">
+                        <!--<li class="list-group-item elementoavanzado">-->
+                        <div class="row">
+                            <p>Pattern</p>
+                            <div class="col-md-3">
+                                <input type="image" src="../../images/patron.png" alt="without pattern" width="48" height="48" onclick="patronnegro()" tabindex="14" title="without pattern">
+                                <input type="image" src="../../images/colorypatron.png" alt="Color and pattern" width="48" height="48" onclick="patron()" tabindex="15" title="color and pattern">
+                                <a id="original" onclick="url()">
+                                    <input type="image" src="../../images/color.png" alt="only pattern" width="48" height="48" tabindex="16" title="only pattern">
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <p>Saturation</p>
+                                        <input id="Saturation" class="" type="range" name="points" min="1" max="10" size='5' step="1" tabindex="17" title="Saturation">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p>Brightness</p>
+                                        <input id="Brightness" class="" type="range" name="points" min="1" max="1.2" size='5' step="0.1" tabindex="18" title="Brightness">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p>Hue</p>
+                                        <input id="Hue" class="" type="range" name="points" min="0" max="360" size='5' step="0.1" tabindex="19" title="Hue">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p>Grayscale</p>
+                                        <input id="Grayscale" class="" type="range" name="points" min="0" max="1" size='5' step="0.1" tabindex="20" title="Grayscale">
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <p>Sepia</p>
+                                        <input id="Sepia" class="" type="range" name="points" min="0" max="1" size='5' step="0.1" tabindex="21" title="Sepia">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p>Invert</p>
+                                        <input id="Invert" class="" type="range" name="points" min="0" max="1" size='5' step="0.001" tabindex="22" title="Invert">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p>Opacity</p>
+                                        <input id="Opacity" class="" type="range" name="points" min="0.2" max="1" size='5' step="0.001" tabindex="23" title="Opacity">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p>Contrast</p>
+                                        <input id="Contrast" class="" type="range" name="points" min="1" max="4" size='5' step="0.001" tabindex="24" title="Contrast">
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <p class="panel-title">
+                                <a class="btn btn-default opcionavanzada" href="#reload" onclick="restart()" tabindex="25" alt="restart">
+               Reload Settings
+            </a>
+                            </p>
+                        </div>
+
+                        <!--  </li>-->
+                    </div>
+                    <!--</ul>-->
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <!--
+    <div class="panel-heading">
+        <p class="panel-title">
+            <button data-toggle="collapse" class="btn btn-default opcionavanzada" href="#menuaccesibilidad" onclick="" tabindex="1" alt="Accessibility" aria-expanded="true">
+                Accessibility
+            </button>
+        </p>
+    </div>
+
+
+
+    <div class="panel-heading">
+        <p class="panel-title">
+            <button data-toggle="collapse" class="btn btn-default opcionavanzada" href="#collapse2" tabindex="12" alt="Advanced Options" aria-expanded="true">
+                Advanced Options
+            </button>
+        </p>
+    </div>-->
+
+
+    <!--<div class="row fondo-menu" id="bs-example-navbar-collapse-1" style="max-height:50px;" id="top-bar">
+    <p class="panel-title">
+        <button data-toggle="collapse" class="btn btn-default opcionavanzada" href="#menuaccesibilidad" onclick="" tabindex="1" alt="Accessibility" aria-expanded="true">
+            Accessibility
+        </button>
+    </p>
+
+</div>-->
+
+
+
+
+    <div class="fondo-menu">
+        <button data-toggle="collapse" class="btn btn-default opcionavanzada" href="#menuaccesibilidad" onclick="" tabindex="1" alt="Accessibility" aria-expanded="true">
+            Accessibility
+        </button>
+
+    </div>
+
+
+    <div class="div-main-content-body container-fluid row">
+        <%- body %>
+    </div>
+
+    <p class="fondo-menu">.</p>
+
+</body>
+
+</html>
