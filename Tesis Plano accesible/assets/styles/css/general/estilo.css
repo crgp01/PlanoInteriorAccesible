@@ -3,121 +3,144 @@
     height: 30px;
 }
 
+.sticky {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-top: 0;
+}
+
 .fondo-menu {
     max-height: 50px;
     background-color: #DDDDDD;
-    padding-left: 95%;
+    /*padding-left: 95%;*/
 }
 
-
-}
 p.titulobloque {
     font-size: 1.1em;
 }
+
 .texto-menu {
     color: white;
     font-size: 1.1em;
 }
+
 .leyenda {
     padding-top: 15px;
     font-size: 1.2em;
 }
+
 .div-inicio {
     padding-bottom: 40px;
 }
+
 .div-main-content-body {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    min-height: 400px;
 }
+
 .divtamaniomap {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    /*min-height: 60px;*/
-    /*  min-width: 700px;*/
 }
+
 .colordescripcionmapa {
     background-color: #f4f4f4;
     overflow: scroll;
-    /*  max-height: 600px;*/
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    /*  min-width: 700px;*/
+    max-height: 900px;
 }
-.div {
-    width: 800px;
-    text-align: justify;
-}
-.estilomapa {
-    //overflow: scroll;
-    max-height: 100%;
-    max-width: 100%;
-}
-.menuprovincias {
-    background-color: #f4f4f4;
-    overflow: scroll;
-    max-height: 140px;
-}
+
 .menuavanzado {
-    max-height: 350px;
     margin-left: 1%;
-    margin-bottom: 2%;
+    margin-bottom: 1%;
+    border-color: #BBBBBB;
+    background-color: #FFFFFF;
 }
-p.descripcionProvincia {
+
+p.descripcionoficina {
     text-align: justify;
     font-size: 1.2em;
 }
+
 .tamaniomapa {
-    min-height: 750px;
     min-width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
 }
+
 p.titulodescripcion {
     font-size: 1.4em;
 }
+
 a.elementomenu {
     font-size: 1.2em;
     margin: 3%;
 }
+
 .tamanio-letra {
     max-width: 20%;
 }
+
 #tamanioletra {
     max-width: 250px;
 }
+
 .menuaccesibilidad {
     margin-left: 1%;
+    margin-bottom: 1%;
     border-color: #BBBBBB;
     background-color: #FFFFFF;
 }
+
 .elementoavanzado {
     border-color: #BBBBBB;
 }
+
 #letra {
     margin-left: 15%;
     margin-right: 15%;
 }
+
 #espaciado2 {
     max-width: 250px;
 }
+
 #espaciado {
     margin-left: 15%;
     margin-right: 15%;
 }
+
 .tituloprincipal {
     font-size: 2.2em;
 }
+
 a.opcionavanzada {
     background-color: #ffffff;
     color: #000000;
     border-color: #000000;
 }
+
 .subtitulos {
     margin-bottom: 3%;
 }
+
 .tituloinicial {
     border-color: #BBBBBB;
 }
+
 .back-to-top {
     background: none;
     margin: 0;
@@ -132,14 +155,54 @@ a.opcionavanzada {
     /* color: #ffffff;
  background-color: #ff9000;*/
 }
+
 .back-to-top i {
     font-size: 60px;
 }
+
 #menu1 {
     margin-left: 2%;
     margin-top: 1%;
 }
+
 #home {
     margin-left: 2%;
     margin-top: 1%;
+}
+
+.advancedOptions {
+    -webkit-filter: saturate(1);
+    -webkit-filter: grayscale(0);
+    -webkit-filter: brightness(100%);
+    -webkit-filter: hue-rotate(0deg);
+    -webkit-filter: sepia(0);
+    -webkit-filter: invert(0);
+}
+
+.nav {
+    background-color: #FFFFFF;
+}
+
+a:focus {
+    outline: none !important;
+    border: 1px solid blue;
+    box-shadow: 0 0 10px blue;
+}
+
+input:focus {
+    outline: none !important;
+    border: 1px solid blue;
+    box-shadow: 0 0 10px blue;
+}
+
+select:focus {
+    outline: none !important;
+    border: 1px solid blue;
+    box-shadow: 0 0 10px blue;
+}
+
+div:focus {
+    outline: none !important;
+    border: 1px solid blue;
+    box-shadow: 0 0 10px blue;
 }

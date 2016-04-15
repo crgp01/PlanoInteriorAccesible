@@ -102,14 +102,14 @@
                 zoomInBackground.setAttribute('y', '0');
                 zoomInBackground.setAttribute('width', '1500'); // larger than expected because the whole group is transformed to scale down
                 zoomInBackground.setAttribute('height', '1400');
-                zoomInBackground.setAttribute('tabindex', '25');
+               /* zoomInBackground.setAttribute('tabindex', '25');*/
                 zoomInBackground.setAttribute('class', 'svg-pan-zoom-control-background');
                 zoomIn.appendChild(zoomInBackground);
 
                 var zoomInShape = document.createElementNS(SvgUtils.svgNS, 'path');
                 zoomInShape.setAttribute('d', 'M1280 576v128q0 26 -19 45t-45 19h-320v320q0 26 -19 45t-45 19h-128q-26 0 -45 -19t-19 -45v-320h-320q-26 0 -45 -19t-19 -45v-128q0 -26 19 -45t45 -19h320v-320q0 -26 19 -45t45 -19h128q26 0 45 19t19 45v320h320q26 0 45 19t19 45zM1536 1120v-960 q0 -119 -84.5 -203.5t-203.5 -84.5h-960q-119 0 -203.5 84.5t-84.5 203.5v960q0 119 84.5 203.5t203.5 84.5h960q119 0 203.5 -84.5t84.5 -203.5z');
                 zoomInShape.setAttribute('class', 'svg-pan-zoom-control-element');
-                zoomInShape.setAttribute('tabindex', '25');
+                /*zoomInShape.setAttribute('tabindex', '25');*/
 
                 zoomIn.appendChild(zoomInShape);
 
@@ -136,7 +136,7 @@
                 resetPanZoomControlBackground.setAttribute('width', '182'); // larger than expected because the whole group is transformed to scale down
                 resetPanZoomControlBackground.setAttribute('height', '58');
                 resetPanZoomControlBackground.setAttribute('class', 'svg-pan-zoom-control-background');
-                resetPanZoomControlBackground.setAttribute('tabindex', '26');
+               /* resetPanZoomControlBackground.setAttribute('tabindex', '26');*/
                 resetPanZoomControl.appendChild(resetPanZoomControlBackground);
 
                 var resetPanZoomControlShape1 = document.createElementNS(SvgUtils.svgNS, 'path');
@@ -159,7 +159,7 @@
                 zoomOut.setAttribute('id', 'svg-pan-zoom-zoom-out');
                 zoomOut.setAttribute('transform', 'translate(30.5 70) scale(0.015)');
                 zoomOut.setAttribute('class', 'svg-pan-zoom-control');
-                zoomOut.setAttribute('tabindex', '26');
+               /* zoomOut.setAttribute('tabindex', '26');*/
                 zoomOut.addEventListener('click', function () {
                     instance.getPublicInstance().zoomOut()
                 }, false);
@@ -173,7 +173,7 @@
                 zoomOutBackground.setAttribute('width', '1500'); // larger than expected because the whole group is transformed to scale down
                 zoomOutBackground.setAttribute('height', '1400');
                 zoomOutBackground.setAttribute('class', 'svg-pan-zoom-control-background');
-                zoomOutBackground.setAttribute('tabindex', '27');
+               /* zoomOutBackground.setAttribute('tabindex', '27');*/
                 zoomOut.appendChild(zoomOutBackground);
 
                 var zoomOutShape = document.createElementNS(SvgUtils.svgNS, 'path');

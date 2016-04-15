@@ -13,7 +13,24 @@ h4 {
     color: #000000;
 }
 
-.elementomenu {}
+.nav {
+    background-color: #FFFFFF;
+}
+
+.fondo-menu {
+    max-height: 50px;
+    background-color: #FFFFFF;
+    padding-left: 95%;
+}
+
+.sticky {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-top: 0;
+}
 
 .texto-menu {
     color: #000000;

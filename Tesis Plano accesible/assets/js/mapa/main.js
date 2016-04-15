@@ -1,103 +1,43 @@
 $(document).ready(function () {
 
-    var svg = document.getElementById("plano");
-    $(function () {
-        $('#plano').svg({
-            onLoad: drawInitial
-        });
 
-    });
 
-    function drawInitial(svg) {
-        var circleab = svg.circle(465, 75, 5, {
-            fill: 'cyan',
-            stroke: 'cyan',
-            strokeWidth: 3,
-            id: 'circleab'
-        });
 
-        //var g = svg.group({stroke: 'red', strokeWidth: 2});
-    }
-
-    $("#rutaspredefinidas").change(function () {
-        var idRuta = $("#rutaspredefinidas").val();
-        $.post(
-            '/Mapas/coordenadas', {
-                idRuta: idRuta
-            },
-            function (data) {
-                var datauser = data;
-                $.post("/Mapas/mapa", {
-                    idsvgplano: $("#idsvgplano").val()
-                }, function (data) {
-                    $("#mapaContent").html(data);
-                    //$('#plano').svg('get').clear();
-                    var svg = document.getElementById("plano");
-                    $(function () {
-                        $('#plano').svg({
-                            onLoad: drawInitial
-                        });
-
-                    });
-
-                    function drawposition(coordenadax, coordenaday, svg, colortono) {
-                        var shape = this.id;
-                        var svg = $('#plano').svg('get');
-                        x = parseInt(coordenadax);
-                        y = parseInt(coordenaday);
-                        svg.circle(x, y, 5, {
-                            fill: colortono,
-                            stroke: colortono,
-                            strokeWidth: 3,
-                            id: 'circle'
-                        });
-
-                    }
-
-                    var aux = 1;
-                    var total = Object.keys(datauser['user']).length;
-
-                    $.each(datauser['user'], function (i, item) {
-
-                        setTimeout(function () {
-                            if (aux === total) {
-                                drawposition(item["coordenadax"], item["coordenaday"], svg, "yellow");
-                            } else {
-                                drawposition(item["coordenadax"], item["coordenaday"], svg, "red");
-                            }
-                            aux++;
-                        }, 1000 * i);
-
-                    });
-                });
-            }).done(function (data) {
-
-        }).fail(function (res) {
-            alert("Error: en ajax");
-        });
-
-    });
-
-    var zoomTiger = svgPanZoom('#plano', {
-        zoomEnabled: true,
-        controlIconsEnabled: true,
-        fit: true,
-        center: true,
-    });
-
+    //lamada de funcion cookies
     cookiesinicio();
 
-    var offset = 250;
+    //Declaracion Stycky Bar
+    var stickyNavTop = $('#styckybar').offset().top;
+
+    var stickyNav = function () {
+        var scrollTop = $(window).scrollTop();
+
+        if (scrollTop > stickyNavTop) {
+            $('#styckybar').addClass('sticky');
+        } else {
+            $('#styckybar').removeClass('sticky');
+        }
+    };
+
+    stickyNav();
+
+    var offset = 25;
 
     var duration = 300;
 
-    jQuery(window).scroll(function () {
+    $(window).scroll(function () {
+        stickyNav();
+
+
+
         if (jQuery(this).scrollTop() > offset) {
             jQuery('.back-to-top').fadeIn(duration);
         } else {
             jQuery('.back-to-top').fadeOut(duration);
         }
     });
+
+    //declaracion back on top
 
     jQuery('.back-to-top').click(function (event) {
 
@@ -112,16 +52,1333 @@ $(document).ready(function () {
     });
 
 
+    //barra de zoom svg
+    var zoomTiger = svgPanZoom('#plano', {
+        zoomEnabled: true,
+        controlIconsEnabled: true,
+        fit: true,
+        center: true,
+    });
 
+
+    //Keypress event with enter key
     $("body").keypress(function (e) {
         if (e.which == 13) {
             var focused = $(':focus').parent();
-            if (focused.attr("xlink:href")) {
-                /* console.log("redirect: " + focused.attr("xlink:href"));*/
-                window.location.replace(focused.attr("xlink:href"));
+            focused.trigger("click");
+        }
+
+
+    });
+
+    //Keyup event
+    $("body").keyup(function (e) {
+
+        var focused = $(':focus');
+
+        //Oficina de imagen sistemas, tabindex30
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '30':
+                if (e.which == 38) {
+                    $("path[tabindex='45']").focus();
+                } else {
+                    $("path[tabindex='75']").focus();
+                }
+                break;
             }
         }
+        //key left and right
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '30':
+                if (e.which == 37) {
+                    $("path[tabindex='31']").focus();
+                } else {
+                    $("path[tabindex='29']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '30':
+                if (e.which == 38) {
+                    $("path[tabindex='1']").focus();
+                } else {
+                    $("path[tabindex='47']").focus();
+                }
+                break;
+            }
+        }
+
+        //Sala de reuniones , tabindex 31
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '31':
+                if (e.which == 37) {
+                    $("path[tabindex='33']").focus();
+                } else {
+                    $("path[tabindex='30']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '31':
+                if (e.which == 38) {
+                    $("path[tabindex='1']").focus();
+                } else {
+                    $("path[tabindex='39']").focus();
+                }
+                break;
+            }
+        }
+
+        //subdecanato , tabindex 33
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '33':
+                if (e.which == 37) {
+                    $("a[tabindex='15']").focus();
+                } else {
+                    $("path[tabindex='31']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '33':
+                if (e.which == 38) {
+                    $("path[tabindex='1']").focus();
+                } else {
+                    $("path[tabindex='35']").focus();
+                }
+                break;
+            }
+        }
+        //baño rectorado, tabindex 35
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '35':
+                if (e.which == 37) {
+                    $("a[tabindex='15']").focus();
+                } else {
+                    $("path[tabindex='39']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '35':
+                if (e.which == 38) {
+                    $("path[tabindex='33']").focus();
+                } else {
+                    $("path[tabindex='37']").focus();
+                }
+                break;
+            }
+        }
+        //decanato, tabindex 37
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '37':
+                if (e.which == 37) {
+                    $("a[tabindex='15']").focus();
+                } else {
+                    $("path[tabindex='39']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '37':
+                if (e.which == 38) {
+                    $("path[tabindex='35']").focus();
+                } else {
+                    $("path[tabindex='41']").focus();
+                }
+                break;
+            }
+        }
+        //secretaria decanato, tabindex 39
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '39':
+                if (e.which == 37) {
+                    $("path[tabindex='37']").focus();
+                } else {
+                    $("path[tabindex='47']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '39':
+                if (e.which == 38) {
+                    $("path[tabindex='31']").focus();
+                } else {
+                    $("path[tabindex='41']").focus();
+                }
+                break;
+            }
+        }
+        //almacen decanato, tabindex 41
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '41':
+                if (e.which == 37) {
+                    $("a[tabindex='15']").focus();
+                } else {
+                    $("path[tabindex='43']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '41':
+                if (e.which == 38) {
+                    $("path[tabindex='39']").focus();
+                } else {
+                    $("path[tabindex='59']").focus();
+                }
+                break;
+            }
+        }
+        //cocina, tabindex 43
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '43':
+                if (e.which == 37) {
+                    $("path[tabindex='41']").focus();
+                } else {
+                    $("path[tabindex='45']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '43':
+                if (e.which == 38) {
+                    $("path[tabindex='47']").focus();
+                } else {
+                    $("path[tabindex='55']").focus();
+                }
+                break;
+            }
+        }
+
+        //decanato, tabindex 37
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '37':
+                if (e.which == 37) {
+                    $("a[tabindex='15']").focus();
+                } else {
+                    $("path[tabindex='39']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '37':
+                if (e.which == 38) {
+                    $("path[tabindex='35']").focus();
+                } else {
+                    $("path[tabindex='41']").focus();
+                }
+                break;
+            }
+        } //secretaria general, tabindex 45
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '45':
+                if (e.which == 37) {
+                    $("path[tabindex='47']").focus();
+                } else {
+                    $("rect[tabindex='49']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '45':
+                if (e.which == 38) {
+                    $("path[tabindex='30']").focus();
+                } else {
+                    $("path[tabindex='53']").focus();
+                }
+                break;
+            }
+        }
+        //secretaria doctorado, tabindex 47
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '47':
+                if (e.which == 37) {
+                    $("path[tabindex='39']").focus();
+                } else {
+                    $("path[tabindex='45']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '47':
+                if (e.which == 38) {
+                    $("path[tabindex='30']").focus();
+                } else {
+                    $("path[tabindex='43']").focus();
+                }
+                break;
+            }
+        }
+        //guardia, tabindex 29
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '29':
+                if (e.which == 37) {
+                    $("path[tabindex='30']").focus();
+                } else {
+                    $("rect[tabindex='49']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '29':
+                if (e.which == 38) {
+                    $("a[tabindex='0']").focus();
+                } else {
+                    $("path[tabindex='79']").focus();
+                }
+                break;
+            }
+        }
+        //area profesores1, tabindex 49
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '49':
+                if (e.which == 37) {
+                    $("path[tabindex='29']").focus();
+                } else {
+                    $("rect[tabindex='51']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '49':
+                if (e.which == 38) {
+                    $("a[tabindex='0']").focus();
+                } else {
+                    $("path[tabindex='83']").focus();
+                }
+                break;
+            }
+        }
+        //area profesores2, tabindex 51
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '51':
+                if (e.which == 37) {
+                    $("rect[tabindex='49']").focus();
+                } else {
+                    $("a[tabindex = '150']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '51':
+                if (e.which == 38) {
+                    $("a[tabindex='0']").focus();
+                } else {
+                    $("rect[tabindex='101']").focus();
+                }
+                break;
+            }
+        }
+        //marco santorum, tabindex 59
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '59':
+                if (e.which == 37) {
+                    $("a[tabindex='15']").focus();
+                } else {
+                    $("path[tabindex='57']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '59':
+                if (e.which == 38) {
+                    $("path[tabindex='41']").focus();
+                } else {
+                    $("path[tabindex='61']").focus();
+                }
+                break;
+            }
+        }
+        //luis salvador, tabindex 57
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '57':
+                if (e.which == 37) {
+                    $("path[tabindex='59']").focus();
+                } else {
+                    $("path[tabindex='55']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '57':
+                if (e.which == 38) {
+                    $("path[tabindex='41']").focus();
+                } else {
+                    $("path[tabindex='71']").focus();
+                }
+                break;
+            }
+        }
+        //rodrigo chancusig, tabindex 55
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '55':
+                if (e.which == 37) {
+                    $("path[tabindex='57']").focus();
+                } else {
+                    $("path[tabindex='53']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '55':
+                if (e.which == 38) {
+                    $("path[tabindex='43']").focus();
+                } else {
+                    $("path[tabindex='73']").focus();
+                }
+                break;
+            }
+        }
+
+        //Tabindex 53, oficina de bolivar palan
+
+        //keys up and down
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '53':
+                if (e.which == 38) {
+                    $("path[tabindex='45']").focus();
+                } else {
+                    $("path[tabindex='75']").focus();
+                }
+                break;
+            }
+        }
+        //key left and right
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '53':
+                if (e.which == 37) {
+                    $("path[tabindex='55']").focus();
+                } else {
+                    $("path[tabindex='83']").focus();
+                }
+                break;
+            }
+        }
+        //myriam hernandez, tabindex 61
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '61':
+                if (e.which == 37) {
+                    $("a[tabindex='15']").focus();
+                } else {
+                    $("path[tabindex='73']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '61':
+                if (e.which == 38) {
+                    $("path[tabindex='59']").focus();
+                } else {
+                    $("path[tabindex='63']").focus();
+                }
+                break;
+            }
+        }
+        //henry paz, tabindex 63
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '63':
+                if (e.which == 37) {
+                    $("a[tabindex='15']").focus();
+                } else {
+                    $("path[tabindex='73']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '63':
+                if (e.which == 38) {
+                    $("path[tabindex='61']").focus();
+                } else {
+                    $("path[tabindex='65']").focus();
+                }
+                break;
+            }
+        }
+        //andres larco, tabindex 65
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '65':
+                if (e.which == 37) {
+                    $("a[tabindex='15']").focus();
+                } else {
+                    $("path[tabindex='71']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '65':
+                if (e.which == 38) {
+                    $("path[tabindex='63']").focus();
+                } else {
+                    $("path[tabindex='67']").focus();
+                }
+                break;
+            }
+        }
+        //profesor visitante, tabindex 67
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '67':
+                if (e.which == 37) {
+                    $("a[tabindex='15']").focus();
+                } else {
+                    $("path[tabindex='69']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '67':
+                if (e.which == 38) {
+                    $("path[tabindex='65']").focus();
+                } else {
+                    $("path[tabindex='']").focus();
+                }
+                break;
+            }
+        }
+
+        //enrique mafla, tabindex 69
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '69':
+                if (e.which == 37) {
+                    $("path[tabindex='67']").focus();
+                } else {
+                    $("path[tabindex='77']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '69':
+                if (e.which == 38) {
+                    $("path[tabindex='71']").focus();
+                } else {
+                    $("path[tabindex='']").focus();
+                }
+                break;
+            }
+        }
+
+        //tania calle, tabindex 71
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '71':
+                if (e.which == 37) {
+                    $("path[tabindex='65']").focus();
+                } else {
+                    $("path[tabindex='77']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '71':
+                if (e.which == 38) {
+                    $("path[tabindex='73']").focus();
+                } else {
+                    $("path[tabindex='69']").focus();
+                }
+                break;
+            }
+        }
+
+        //marco benalcazar, tabindex 73
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '73':
+                if (e.which == 37) {
+                    $("path[tabindex='61']").focus();
+                } else {
+                    $("path[tabindex='75']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '73':
+                if (e.which == 38) {
+                    $("path[tabindex='55']").focus();
+                } else {
+                    $("path[tabindex='71']").focus();
+                }
+                break;
+            }
+        }
+
+        //maria perez, tabindex 75
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '75':
+                if (e.which == 37) {
+                    $("path[tabindex='73']").focus();
+                } else {
+                    $("path[tabindex='89']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '75':
+                if (e.which == 38) {
+                    $("path[tabindex='53']").focus();
+                } else {
+                    $("path[tabindex='74']").focus();
+                }
+                break;
+            }
+        }
+
+        //consejeria2, tabindex 74
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '74':
+                if (e.which == 37) {
+                    $("path[tabindex='63']").focus();
+                } else {
+                    $("path[tabindex='91']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '74':
+                if (e.which == 38) {
+                    $("path[tabindex='73']").focus();
+                } else {
+                    $("path[tabindex='77']").focus();
+                }
+                break;
+            }
+        }
+
+        //baño hombres, tabindex 77
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '77':
+                if (e.which == 37) {
+                    $("path[tabindex='71']").focus();
+                } else {
+                    $("path[tabindex='79']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '77':
+                if (e.which == 38) {
+                    $("path[tabindex='74']").focus();
+                } else {
+                    $("path[tabindex='']").focus();
+                }
+                break;
+            }
+        }
+
+        //baño mujeres, tabindex 79
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '79':
+                if (e.which == 37) {
+                    $("path[tabindex='77']").focus();
+                } else {
+                    $("rect[tabindex='115']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '79':
+                if (e.which == 38) {
+                    $("path[tabindex='29']").focus();
+                } else {
+                    $("path[tabindex='']").focus();
+                }
+                break;
+            }
+        }
+
+        //proyecto de investigacion, tabindex 83
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '83':
+                if (e.which == 37) {
+                    $("path[tabindex='53']").focus();
+                } else {
+                    $("path[tabindex='85']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '83':
+                if (e.which == 38) {
+                    $("rect[tabindex='49']").focus();
+                } else {
+                    $("path[tabindex='89']").focus();
+                }
+                break;
+            }
+        }
+
+        //consejeria1, tabindex 89
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '89':
+                if (e.which == 37) {
+                    $("path[tabindex='75']").focus();
+                } else {
+                    $("path[tabindex='87']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '89':
+                if (e.which == 38) {
+                    $("path[tabindex='83']").focus();
+                } else {
+                    $("rect[tabindex='115']").focus();
+                }
+                break;
+            }
+        }
+
+        //archivo, tabindex 87
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '87':
+                if (e.which == 37) {
+                    $("path[tabindex='89']").focus();
+                } else {
+                    $("path[tabindex='85']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '87':
+                if (e.which == 38) {
+                    $("path[tabindex='83']").focus();
+                } else {
+                    $("rect[tabindex='113']").focus();
+                }
+                break;
+            }
+        }
+
+        //tnia pazmiño, tabindex 85
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '85':
+                if (e.which == 37) {
+                    $("path[tabindex='83']").focus();
+                } else {
+                    $("path[tabindex='99']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '85':
+                if (e.which == 38) {
+                    $("rect[tabindex='49']").focus();
+                } else {
+                    $("path[tabindex='91']").focus();
+                }
+                break;
+            }
+        }
+
+        //proyecto de investigacion2, tabindex 91
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '91':
+                if (e.which == 37) {
+                    $("path[tabindex='74']").focus();
+                } else {
+                    $("rect[tabindex='93']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '91':
+                if (e.which == 38) {
+                    $("path[tabindex='85']").focus();
+                } else {
+                    $("rect[tabindex='113']").focus();
+                }
+                break;
+            }
+        }
+
+        //zambrano archundia, 93
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '93':
+                if (e.which == 37) {
+                    $("path[tabindex='91']").focus();
+                } else {
+                    $("rect[tabindex='107']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '93':
+                if (e.which == 38) {
+                    $("rect[tabindex='95']").focus();
+                } else {
+                    $("rect[tabindex='111']").focus();
+                }
+                break;
+            }
+        }
+
+        //profesor, tabindex 95
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '95':
+                if (e.which == 37) {
+                    $("path[tabindex='85']").focus();
+                } else {
+                    $("rect[tabindex='105']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '95':
+                if (e.which == 38) {
+                    $("rect[tabindex='97']").focus();
+                } else {
+                    $("rect[tabindex='93']").focus();
+                }
+                break;
+            }
+        }
+
+        //jonathan barriga, tabindex 97
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '97':
+                if (e.which == 37) {
+                    $("path[tabindex='85']").focus();
+                } else {
+                    $("rect[tabindex='103']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '97':
+                if (e.which == 38) {
+                    $("path[tabindex='99']").focus();
+                } else {
+                    $("rect[tabindex='95']").focus();
+                }
+                break;
+            }
+        }
+
+        //bodega, tabindex 99
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '99':
+                if (e.which == 37) {
+                    $("path[tabindex='85']").focus();
+                } else {
+                    $("rect[tabindex='101']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '99':
+                if (e.which == 38) {
+                    $("rect[tabindex='51']").focus();
+                } else {
+                    $("rect[tabindex='97']").focus();
+                }
+                break;
+            }
+        }
+
+        //mayra carrion, tabindex 101
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '101':
+                if (e.which == 37) {
+                    $("path[tabindex='99']").focus();
+                } else {
+                    $("a[tabindex='150']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '101':
+                if (e.which == 38) {
+                    $("path[tabindex='51']").focus();
+                } else {
+                    $("rect[tabindex='103']").focus();
+                }
+                break;
+            }
+        }
+
+        //sandra sanchez, tabindex 103
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '103':
+                if (e.which == 37) {
+                    $("rect[tabindex='97']").focus();
+                } else {
+                    $("a[tabindex='150']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '103':
+                if (e.which == 38) {
+                    $("rect[tabindex='101']").focus();
+                } else {
+                    $("rect[tabindex='105']").focus();
+                }
+                break;
+            }
+        }
+
+        //jenny torres, tabindex 105
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '105':
+                if (e.which == 37) {
+                    $("rect[tabindex='95']").focus();
+                } else {
+                    $("a[tabindex='150']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '105':
+                if (e.which == 38) {
+                    $("rect[tabindex='103']").focus();
+                } else {
+                    $("rect[tabindex='107']").focus();
+                }
+                break;
+            }
+        }
+
+        //carlos montenegro, tabindex 107
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '107':
+                if (e.which == 37) {
+                    $("rect[tabindex='93']").focus();
+                } else {
+                    $("a[tabindex='150']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '107':
+                if (e.which == 38) {
+                    $("rect[tabindex='105']").focus();
+                } else {
+                    $("rect[tabindex='109']").focus();
+                }
+                break;
+            }
+        }
+
+        //carrera, intriago, mena, tabindex 109
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '109':
+                if (e.which == 37) {
+                    $("rect[tabindex='111']").focus();
+                } else {
+                    $("a[tabindex='150']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '109':
+                if (e.which == 38) {
+                    $("rect[tabindex='107']").focus();
+                } else {
+                    $("path[tabindex='']").focus();
+                }
+                break;
+            }
+        }
+
+        //rosa navarrete, tabindex 111
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '111':
+                if (e.which == 37) {
+                    $("rect[tabindex='113']").focus();
+                } else {
+                    $("rect[tabindex='109']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '111':
+                if (e.which == 38) {
+                    $("rect[tabindex='93']").focus();
+                } else {
+
+                    $("path[tabindex='']").focus();
+                }
+                break;
+            }
+        }
+
+        //maria hallo, tabindex 113
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '113':
+                if (e.which == 37) {
+                    $("rect[tabindex='115']").focus();
+                } else {
+                    $("rect[tabindex='111']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '113':
+                if (e.which == 38) {
+                    $("path[tabindex='91']").focus();
+                } else {
+                    $("path[tabindex='']").focus();
+                }
+                break;
+            }
+        }
+
+        //raul cordova 115
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '115':
+                if (e.which == 37) {
+                    $("path[tabindex='79']").focus();
+                } else {
+                    $("rect[tabindex='113']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '115':
+                if (e.which == 38) {
+                    $("path[tabindex='89']").focus();
+                } else {
+                    $("path[tabindex='']").focus();
+                }
+                break;
+            }
+        }
+
+        //boton oficina de docentes 15
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '15':
+                if (e.which == 37) {
+                    $("path[tabindex='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '15':
+                if (e.which == 38) {
+                    $("a[tabindex='1']").focus();
+                } else {
+                    $("a[tabindex='19']").focus();
+                }
+                break;
+            }
+        }
+
+        //boton simulacion de rutas 19
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '19':
+                if (e.which == 37) {
+                    $("path[tabindex='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '19':
+                if (e.which == 38) {
+                    $("a[tabindex='15']").focus();
+                } else {
+                    $("path[tabindex='29']").focus();
+                }
+                break;
+            }
+        }
+
+        //boton informacion principal 150
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '150':
+                if (e.which == 37) {
+                    $("rect[tabindex='51']").focus();
+                } else {
+                    $("rect[tabindex='']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '150':
+                if (e.which == 38) {
+                    $("a[tabindex='1']").focus();
+                } else {
+                    $("a[tabindex='154']").focus();
+                }
+                break;
+            }
+        }
+
+        //boton carga horaria 154
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '154':
+                if (e.which == 37) {
+                    $("rect[tabindex='51']").focus();
+                } else {
+                    $("rect[tabindex='']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '154':
+                if (e.which == 38) {
+                    $("a[tabindex='150']").focus();
+                } else {
+                    $("a[tabindex='158']").focus();
+                }
+                break;
+            }
+        }
+
+        //boton informacion del profesor
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '158':
+                if (e.which == 37) {
+                    $("rect[tabindex='51']").focus();
+                } else {
+                    $("rect[tabindex='']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '150':
+                if (e.which == 38) {
+                    $("a[tabindex='154']").focus();
+                } else {
+                    $("a[tabindex='']").focus();
+                }
+                break;
+            }
+        }
+
+        //boton accesibilidad 1
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '1':
+                if (e.which == 37) {
+                    $("rect[tabindex='']").focus();
+                } else {
+                    $("rect[tabindex='']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '1':
+                if (e.which == 38) {
+                    $("a[tabindex='']").focus();
+                } else {
+                    $("a[tabindex='15']").focus();
+                }
+                break;
+            }
+        }
+
+
+
     });
+
+    //Barra de accesibilidad
 
     $("#tamanioletra").change(function () {
         var nuevotamanio = $("#tamanioletra").val();
@@ -178,19 +1435,17 @@ $(document).ready(function () {
         contrast(nuevocontrast);
     });
 
-
-
-
 });
 
-/*function click() {
-    $('body').keydown(function (e) {
-        if (e.keyCode == 13) {
-            $("#menucapitales").click();
-        }
-    });
-}*/
+//funcion de keypress
+function tab() {
+    var e = jQuery.Event("keypress");
+    e.which = 13; //choose the one you want
+    e.keyCode = 13;
+    $("#theInputToTest").trigger(e);
+}
 
+//funciones barra de accesibilidad
 function pulsar(parametro) {
     $.post(
         '/Mapa/cookieStart', {
@@ -205,12 +1460,7 @@ function pulsar(parametro) {
     });
 }
 
-function tab() {
-    var e = jQuery.Event("keypress");
-    e.which = 13; //choose the one you want
-    e.keyCode = 13;
-    $("#theInputToTest").trigger(e);
-}
+
 
 function tamanioletra(nuevotamanio) {
     $.post(
@@ -424,6 +1674,29 @@ function contrast(nuevocontrast) {
 
 }
 
+function patron(mapa) {
+    var seleccion = $('#plano').find(".svgSeleccionado").attr("tabindex");
+    if (!seleccion) {
+        seleccion = 0;
+    }
+
+    $.post(
+        '/Mapa/cookieStart', {
+            tipocookie: "mapaplano",
+            valorcookie: mapa
+        },
+        function (data) {
+            renderizarMapa(mapa, seleccion);
+        }
+    ).fail(function (res) {
+        console.log("Error: en ajax");
+    });
+
+
+}
+
+//FUnciones restart
+
 function restart() {
     contrast(1);
     brightness(1);
@@ -452,63 +1725,11 @@ function reiniciar() {
     $("#espaciado2").val(1);
 
 }
-
-function url() {
-    var pathname = window.location.pathname; // Returns path only
-
-    var array = pathname.split('/');
-    var seleccion = 0;
-
-    if (array[3]) {
-        seleccion = array[3];
-    }
-
-    var pagina = array[2];
-    var contenedormapa = $('.tamaniomapa');
-
-    $.post(
-        '/Mapa/cookieStart', {
-            tipocookie: "mapapatron",
-            valorcookie: "original"
-        },
-        function (data) {
-            $.post(
-                '/Mapa/mapaOriginal', {
-                    mapa: array[2],
-                    seleccion: array[3]
-                },
-                function (data) {
-                    contenedormapa.html(data);
-                    var zoomTiger = svgPanZoom('#plano', {
-                        zoomEnabled: true,
-                        controlIconsEnabled: true,
-                        fit: true,
-                        center: true,
-                    });
-                }
-            ).fail(function (res) {
-                console.log("Error: en ajax2");
-            });
-
-        }
-    ).fail(function (res) {
-        console.log("Error: en ajax1");
-    });
-
-
-
-
-
-}
-
-
 //Inicio de cookies
 function cookiesinicio() {
     $.post(
         '/Mapa/cookieRead',
         function (data) {
-            //console.log("tipo letra: " + data.tipoletra + "   espaciado letra: " + data.espaciadoletra);
-            //$("#estilo").attr("href", "/styles/css/accesibilidad/" + data.estilo);
 
             pulsar(data.estilo);
             tipoletra(data.tipoLetra);
@@ -536,7 +1757,7 @@ function cookiesinicio() {
             invert(data.invertido);
             opacity(data.opacidad);
 
-            mapainiciocookie(data.mapapatron);
+
 
 
         }).fail(function (res) {
@@ -544,20 +1765,124 @@ function cookiesinicio() {
     });
 }
 
-//inicio de mapa cookie
-function mapainiciocookie(mapaestilo) {
-    switch (mapaestilo) {
-    case 'patronnegro':
-        patronnegro();
-        break;
-    case 'patron':
-        patron();
-        break;
-    case 'original':
-        url();
-        break;
-    default:
-        url();
-        break;
-    }
+//Cargar Informacion de oficina en divs
+function cargarInformacionOficina(idOficina, mapa) {
+    $.post(
+        '/Mapa/informacionOficina', {
+            idOficina: idOficina
+        },
+        function (data) {
+            $('#informacion1').html(data.informacionPrincipal);
+            $('#informacion2').html(data.cargaHoraria);
+            $('#informacion3').html(data.informacionProfesor);
+        }
+    ).fail(function (res) {
+        console.log("Error: en ajax");
+    }).success(function () {
+        renderizarMapa("", idOficina);
+    });
+}
+
+//Renderizar mapa
+function renderizarMapa(mapa, idOficina) {
+    $.post(
+        '/Mapa/tipoPlano', {
+            mapa: mapa,
+            idOficina: idOficina
+        },
+        function (data) {
+
+            $('#contenedorPlanoOficinas').html(data);
+
+
+            var zoomTiger = svgPanZoom('#plano', {
+                zoomEnabled: true,
+                controlIconsEnabled: true,
+                fit: true,
+                center: true,
+            });
+        }
+    ).fail(function (res) {
+        console.log("Error: en ajax plano");
+    });
+}
+
+function mostrarRuta(tabindex, idRuta) {
+    $.post(
+        '/Mapa/coordenadas', {
+            idRuta: idRuta
+        },
+        function (data) {
+            //renderiar mapa
+            var datauser = data;
+            renderizarMapa(datauser['mapa'], tabindex);
+
+            /*var svg = document.getElementById("plano");
+
+            function drawposition(coordenadax, coordenaday, svg, colortono) {
+                var shape = this.id;
+                var svg = $('#plano').svg('get');
+                x = parseInt(coordenadax);
+                y = parseInt(coordenaday);
+                svg.circle(x, y, 5, {
+                    fill: colortono,
+                    stroke: colortono,
+                    strokeWidth: 3,
+                    id: 'circle'
+                });
+
+            }
+
+            //dibujar coordenadas recibidas
+            var aux = 1;
+            var total = Object.keys(datauser['user']).length;
+            var svg = document.getElementById("plano");
+
+            $.each(datauser['user'], function (i, item) {
+
+                setTimeout(function () {
+                    if (aux === total) {
+                        drawposition(item["coordenadax"], item["coordenaday"], svg, "yellow");
+                    } else {
+                        drawposition(item["coordenadax"], item["coordenaday"], svg, "red");
+                    }
+                    aux++;
+                }, 1000 * i);
+            });*/
+
+            var aux = 1;
+            var total = Object.keys(datauser['user']).length;
+            var svgNS = "http://www.w3.org/2000/svg";
+
+            $.each(datauser['user'], function (i, item) {
+
+                setTimeout(function () {
+                    if (aux === total) {
+                        var myCircle = document.createElementNS(svgNS, "circle"); //to create a circle, for rectangle use rectangle
+                        myCircle.setAttributeNS(null, "id", "mycircle");
+                        myCircle.setAttributeNS(null, "cx", item["coordenadax"]);
+                        myCircle.setAttributeNS(null, "cy", item["coordenadax"]);
+                        myCircle.setAttributeNS(null, "r", 5);
+                        myCircle.setAttributeNS(null, "fill", "yellow");
+                        myCircle.setAttributeNS(null, "stroke", "none");
+
+                        document.getElementById("plano").appendChild(myCircle);
+                    } else {
+                        var myCircle = document.createElementNS(svgNS, "circle"); //to create a circle, for rectangle use rectangle
+                        myCircle.setAttributeNS(null, "id", "mycircle");
+                        myCircle.setAttributeNS(null, "cx", 200); //item["coordenadax"]);
+                        myCircle.setAttributeNS(null, "cy", 200); //item["coordenadax"]);
+                        myCircle.setAttributeNS(null, "r", 5);
+                        myCircle.setAttributeNS(null, "fill", "red");
+                        myCircle.setAttributeNS(null, "stroke", "none");
+
+                        document.getElementById("plano").appendChild(myCircle);
+                    }
+                    console.log(item);
+                    aux++;
+                }, 1000 * i);
+            });
+        }).fail(function (res) {
+        console.log("Error: en ajax plano");
+    });
 }

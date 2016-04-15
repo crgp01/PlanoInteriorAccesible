@@ -12,7 +12,24 @@ p {
     color: #FFFFFF;
 }
 
-.elementomenu {}
+.nav {
+    background-color: #000000;
+}
+
+.fondo-menu {
+    max-height: 50px;
+    background-color: #000000;
+    padding-left: 95%;
+}
+
+.sticky {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-top: 0;
+}
 
 .fondo-menu {
     background-color: #000000;

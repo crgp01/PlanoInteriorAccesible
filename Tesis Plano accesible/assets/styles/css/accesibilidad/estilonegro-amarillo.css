@@ -11,6 +11,29 @@ body {
     font-size: 1em;
 }
 
+#styckybar {
+    background-color: #FFF300;
+}
+
+.nav {
+    background-color: #FFF300;
+}
+
+.fondo-menu {
+    max-height: 50px;
+    background-color: #FFF300;
+    padding-left: 95%;
+}
+
+.sticky {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-top: 0;
+}
+
 h1,
 h3,
 h4 {

@@ -1,5 +1,18 @@
+.alfabeto {
+    width: 48px;
+    height: 30px;
+}
+
+.sticky {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-top: 0;
+}
+
 .fondo-menu {
-    max-height: 50px;
     background-color: #DDDDDD;
     padding-left: 95%;
 }
@@ -27,7 +40,6 @@ p.titulobloque {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    min-height: 400px;
 }
 
 .divtamaniomap {
@@ -35,45 +47,39 @@ p.titulobloque {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    //min-height: 600px;
-    //min-width: 700px;
 }
 
 .colordescripcionmapa {
     background-color: #f4f4f4;
-}
-
-.div {
-    width: 800px;
-    text-align: justify;
-}
-
-.estilomapa {
-    //overflow: scroll;
-    max-height: 100%;
-    max-width: 100%;
-}
-
-.menuprovincias {
-    background-color: #f4f4f4;
     overflow: scroll;
-    max-height: 140px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    /*  min-width: 700px;*/
+    max-height: 900px;
 }
 
 .menuavanzado {
-    max-height: 350px;
     margin-left: 1%;
-    border-color:
+    margin-bottom: 1%;
+    border-color: #BBBBBB;
+    background-color: #FFFFFF;
 }
 
-p.descripcionProvincia {
+p.descripcionoficina {
     text-align: justify;
     font-size: 1.2em;
 }
 
 .tamaniomapa {
-    min-height: 750px;
     min-width: 100%;
+    min-height: 900px;
+    max-height: 900px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 p.titulodescripcion {
@@ -138,9 +144,66 @@ a.opcionavanzada {
 
 .advancedOptions {
     -webkit-filter: saturate(1);
-    /*-webkit-filter: grayscale(0);
-            -webkit-filter: brightness(100%);            
-            -webkit-filter: hue-rotate(0deg);
-            -webkit-filter: sepia(0);
-            -webkit-filter: invert(0);*/
+    -webkit-filter: grayscale(0);
+    -webkit-filter: brightness(100%);
+    -webkit-filter: hue-rotate(0deg);
+    -webkit-filter: sepia(0);
+    -webkit-filter: invert(0);
+}
+
+.back-to-top {
+    background: none;
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 90px;
+    height: 90px;
+    z-index: 100;
+    display: none;
+    text-decoration: none;
+    /* color: #ffffff;
+ background-color: #ff9000;*/
+}
+
+.back-to-top i {
+    font-size: 60px;
+}
+
+#menu1 {
+    margin-left: 2%;
+    margin-top: 1%;
+}
+
+#home {
+    margin-left: 2%;
+    margin-top: 1%;
+}
+
+a:focus {
+    outline: none !important;
+    border: 1px solid blue;
+    box-shadow: 0 0 10px blue;
+}
+
+input:focus {
+    outline: none !important;
+    border: 1px solid blue;
+    box-shadow: 0 0 10px blue;
+}
+
+select:focus {
+    outline: none !important;
+    border: 1px solid blue;
+    box-shadow: 0 0 10px blue;
+}
+
+div:focus {
+    outline: none !important;
+    border: 1px solid blue;
+    box-shadow: 0 0 10px blue;
+}
+
+.nav {
+    background-color: #FFFFFF;
 }

@@ -5,16 +5,18 @@
 <script src="/js/mapa/svgbarra.js"></script>
 <script src="/js/mapa/patterns.js"></script>
 
-<div class="divtamaniomap col-md-3 offset3 span6 colordescripcionmapa" tabindex="0">
+
+<div class="col-md-3 offset3 span6 colordescripcionmapa">
     <%- partial ('../Mapa/menuPlano.ejs') %>
 </div>
 
 <div class="col-md-7 estilomapa divtamaniomap">
-    <div class="tamaniomapa">
-        <%- partial ('../Mapa/mapaplano.ejs', {idOficinaSvgVista: idOficinaSvgVista}) %>
+    <div id="contenedorPlanoOficinas" class="tamaniomapa container-fluid">
+
+        <%- partial ('../Mapa/'+mapacookie+'.ejs', {idOficina: idOficina}) %>
     </div>
 </div>
 
-<div class="col-md-3 colordescripcionmapa">
-    <%- partial ('../Mapa/informacionMapa.ejs',{tituloInformacionMapaVista: tituloOficinaVista, descripcionInformacionMapaVista: descripcionOficinaVista}) %>
+<div class="col-md-3 offset3 span6  colordescripcionmapa">
+    <%- partial ('../Mapa/informacionMapa.ejs') %>
 </div>
