@@ -1,8 +1,6 @@
 $(document).ready(function () {
 
 
-
-
     //lamada de funcion cookies
     cookiesinicio();
 
@@ -106,7 +104,7 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '30':
                 if (e.which == 38) {
-                    $("path[tabindex='1']").focus();
+                    $("button[tabindex='1']").focus();
                 } else {
                     $("path[tabindex='47']").focus();
                 }
@@ -131,7 +129,7 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '31':
                 if (e.which == 38) {
-                    $("path[tabindex='1']").focus();
+                    $("button[tabindex='1']").focus();
                 } else {
                     $("path[tabindex='39']").focus();
                 }
@@ -144,7 +142,7 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '33':
                 if (e.which == 37) {
-                    $("a[tabindex='15']").focus();
+                    $("button[tabindex='15']").focus();
                 } else {
                     $("path[tabindex='31']").focus();
                 }
@@ -156,7 +154,7 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '33':
                 if (e.which == 38) {
-                    $("path[tabindex='1']").focus();
+                    $("button[tabindex='1']").focus();
                 } else {
                     $("path[tabindex='35']").focus();
                 }
@@ -168,7 +166,7 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '35':
                 if (e.which == 37) {
-                    $("a[tabindex='15']").focus();
+                    $("button[tabindex='15']").focus();
                 } else {
                     $("path[tabindex='39']").focus();
                 }
@@ -192,7 +190,7 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '37':
                 if (e.which == 37) {
-                    $("a[tabindex='15']").focus();
+                    $("button[tabindex='15']").focus();
                 } else {
                     $("path[tabindex='39']").focus();
                 }
@@ -240,7 +238,7 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '41':
                 if (e.which == 37) {
-                    $("a[tabindex='15']").focus();
+                    $("button[tabindex='15']").focus();
                 } else {
                     $("path[tabindex='43']").focus();
                 }
@@ -289,7 +287,7 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '37':
                 if (e.which == 37) {
-                    $("a[tabindex='15']").focus();
+                    $("button[tabindex='15']").focus();
                 } else {
                     $("path[tabindex='39']").focus();
                 }
@@ -372,7 +370,7 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '29':
                 if (e.which == 38) {
-                    $("a[tabindex='0']").focus();
+                    $("button[tabindex='1']").focus();
                 } else {
                     $("path[tabindex='79']").focus();
                 }
@@ -396,7 +394,7 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '49':
                 if (e.which == 38) {
-                    $("a[tabindex='0']").focus();
+                    $("button[tabindex='1']").focus();
                 } else {
                     $("path[tabindex='83']").focus();
                 }
@@ -410,7 +408,7 @@ $(document).ready(function () {
                 if (e.which == 37) {
                     $("rect[tabindex='49']").focus();
                 } else {
-                    $("a[tabindex = '150']").focus();
+                    $("button[tabindex = '150']").focus();
                 }
                 break;
             }
@@ -420,7 +418,7 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '51':
                 if (e.which == 38) {
-                    $("a[tabindex='0']").focus();
+                    $("button[tabindex='1']").focus();
                 } else {
                     $("rect[tabindex='101']").focus();
                 }
@@ -432,7 +430,7 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '59':
                 if (e.which == 37) {
-                    $("a[tabindex='15']").focus();
+                    $("button[tabindex='15']").focus();
                 } else {
                     $("path[tabindex='57']").focus();
                 }
@@ -531,7 +529,7 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '61':
                 if (e.which == 37) {
-                    $("a[tabindex='15']").focus();
+                    $("button[tabindex='15']").focus();
                 } else {
                     $("path[tabindex='73']").focus();
                 }
@@ -555,7 +553,7 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '63':
                 if (e.which == 37) {
-                    $("a[tabindex='15']").focus();
+                    $("button[tabindex='15']").focus();
                 } else {
                     $("path[tabindex='73']").focus();
                 }
@@ -579,7 +577,7 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '65':
                 if (e.which == 37) {
-                    $("a[tabindex='15']").focus();
+                    $("button[tabindex='15']").focus();
                 } else {
                     $("path[tabindex='71']").focus();
                 }
@@ -603,7 +601,7 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '67':
                 if (e.which == 37) {
-                    $("a[tabindex='15']").focus();
+                    $("button[tabindex='15']").focus();
                 } else {
                     $("path[tabindex='69']").focus();
                 }
@@ -1030,7 +1028,7 @@ $(document).ready(function () {
                 if (e.which == 37) {
                     $("path[tabindex='99']").focus();
                 } else {
-                    $("a[tabindex='150']").focus();
+                    $("button[tabindex='150']").focus();
                 }
                 break;
             }
@@ -1055,7 +1053,7 @@ $(document).ready(function () {
                 if (e.which == 37) {
                     $("rect[tabindex='97']").focus();
                 } else {
-                    $("a[tabindex='150']").focus();
+                    $("button[tabindex='150']").focus();
                 }
                 break;
             }
@@ -1080,7 +1078,7 @@ $(document).ready(function () {
                 if (e.which == 37) {
                     $("rect[tabindex='95']").focus();
                 } else {
-                    $("a[tabindex='150']").focus();
+                    $("button[tabindex='150']").focus();
                 }
                 break;
             }
@@ -1105,7 +1103,7 @@ $(document).ready(function () {
                 if (e.which == 37) {
                     $("rect[tabindex='93']").focus();
                 } else {
-                    $("a[tabindex='150']").focus();
+                    $("button[tabindex='150']").focus();
                 }
                 break;
             }
@@ -1130,7 +1128,7 @@ $(document).ready(function () {
                 if (e.which == 37) {
                     $("rect[tabindex='111']").focus();
                 } else {
-                    $("a[tabindex='150']").focus();
+                    $("button[tabindex='150']").focus();
                 }
                 break;
             }
@@ -1241,9 +1239,9 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '15':
                 if (e.which == 38) {
-                    $("a[tabindex='1']").focus();
+                    $("button[tabindex='1']").focus();
                 } else {
-                    $("a[tabindex='19']").focus();
+                    $("button[tabindex='19']").focus();
                 }
                 break;
             }
@@ -1266,7 +1264,7 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '19':
                 if (e.which == 38) {
-                    $("a[tabindex='15']").focus();
+                    $("button[tabindex='15']").focus();
                 } else {
                     $("path[tabindex='29']").focus();
                 }
@@ -1291,9 +1289,9 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '150':
                 if (e.which == 38) {
-                    $("a[tabindex='1']").focus();
+                    $("button[tabindex='1']").focus();
                 } else {
-                    $("a[tabindex='154']").focus();
+                    $("button[tabindex='154']").focus();
                 }
                 break;
             }
@@ -1316,9 +1314,9 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '154':
                 if (e.which == 38) {
-                    $("a[tabindex='150']").focus();
+                    $("button[tabindex='150']").focus();
                 } else {
-                    $("a[tabindex='158']").focus();
+                    $("button[tabindex='158']").focus();
                 }
                 break;
             }
@@ -1339,11 +1337,11 @@ $(document).ready(function () {
 
         if (e.which == 38 || e.which == 40) {
             switch (focused.attr("tabindex")) {
-            case '150':
+            case '158':
                 if (e.which == 38) {
-                    $("a[tabindex='154']").focus();
+                    $("button[tabindex='154']").focus();
                 } else {
-                    $("a[tabindex='']").focus();
+                    $("button[tabindex='']").focus();
                 }
                 break;
             }
@@ -1366,13 +1364,14 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '1':
                 if (e.which == 38) {
-                    $("a[tabindex='']").focus();
+                    $("button[tabindex='']").focus();
                 } else {
-                    $("a[tabindex='15']").focus();
+                    $("button[tabindex='15']").focus();
                 }
                 break;
             }
         }
+
 
 
 
@@ -1500,7 +1499,7 @@ function espaciadoletra(nuevoespaciado) {
 function tipoletra(nuevotipoletra) {
     //console.log(nuevotipoletra);
     //nuevotipoletra = "";
-    //var tipoletra = "Arial";
+    //var tipoletra = "buttonrial";
     //console.log(nuevotipoletra);
     $.post(
         '/Mapa/cookieStart', {
@@ -1714,6 +1713,7 @@ function restart() {
     $("#Sepia").val(0.5);
     $("#Grayscale").val(0.5);
     $("#Saturation").val(6);
+    patron('mapaplano');
 }
 
 function reiniciar() {
@@ -1807,6 +1807,7 @@ function renderizarMapa(mapa, idOficina) {
     });
 }
 
+
 function mostrarRuta(tabindex, idRuta) {
     $.post(
         '/Mapa/coordenadas', {
@@ -1861,8 +1862,8 @@ function mostrarRuta(tabindex, idRuta) {
                         var myCircle = document.createElementNS(svgNS, "circle"); //to create a circle, for rectangle use rectangle
                         myCircle.setAttributeNS(null, "id", "mycircle");
                         myCircle.setAttributeNS(null, "cx", item["coordenadax"]);
-                        myCircle.setAttributeNS(null, "cy", item["coordenadax"]);
-                        myCircle.setAttributeNS(null, "r", 5);
+                        myCircle.setAttributeNS(null, "cy", item["coordenaday"]);
+                        myCircle.setAttributeNS(null, "r", 3);
                         myCircle.setAttributeNS(null, "fill", "yellow");
                         myCircle.setAttributeNS(null, "stroke", "none");
 
@@ -1870,9 +1871,9 @@ function mostrarRuta(tabindex, idRuta) {
                     } else {
                         var myCircle = document.createElementNS(svgNS, "circle"); //to create a circle, for rectangle use rectangle
                         myCircle.setAttributeNS(null, "id", "mycircle");
-                        myCircle.setAttributeNS(null, "cx", 200); //item["coordenadax"]);
-                        myCircle.setAttributeNS(null, "cy", 200); //item["coordenadax"]);
-                        myCircle.setAttributeNS(null, "r", 5);
+                        myCircle.setAttributeNS(null, "cx", item["coordenadax"]); //item["coordenadax"]);
+                        myCircle.setAttributeNS(null, "cy", item["coordenaday"]); //item["coordenadax"]);
+                        myCircle.setAttributeNS(null, "r", 3);
                         myCircle.setAttributeNS(null, "fill", "red");
                         myCircle.setAttributeNS(null, "stroke", "none");
 
@@ -1880,7 +1881,7 @@ function mostrarRuta(tabindex, idRuta) {
                     }
                     console.log(item);
                     aux++;
-                }, 1000 * i);
+                }, 800 * i);
             });
         }).fail(function (res) {
         console.log("Error: en ajax plano");

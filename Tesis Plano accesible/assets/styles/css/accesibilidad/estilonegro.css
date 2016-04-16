@@ -19,9 +19,11 @@ p {
 .fondo-menu {
     max-height: 50px;
     background-color: #000000;
-    padding-left: 95%;
+    padding-left: 90%;
 }
 
+
+/*
 .sticky {
     position: fixed;
     width: 100%;
@@ -29,7 +31,7 @@ p {
     top: 0;
     z-index: 100;
     border-top: 0;
-}
+}*/
 
 .fondo-menu {
     background-color: #000000;
@@ -60,7 +62,9 @@ p {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    min-height: 400px;
+    width: 1893px;
+    /*height: 900px;*/
+    margin-left: 10px;
 }
 
 .divtamaniomap {
@@ -68,11 +72,16 @@ p {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    //min-height: 600px;
-    //min-width: 700px;
 }
 
 .colordescripcionmapa {
+    background-color: #f4f4f4;
+    overflow: scroll;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    max-height: 830px;
     background-color: #000000;
     border: 1px solid #FFFFFF;
 }

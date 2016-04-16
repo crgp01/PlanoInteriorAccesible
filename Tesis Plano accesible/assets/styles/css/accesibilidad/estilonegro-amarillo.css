@@ -22,9 +22,11 @@ body {
 .fondo-menu {
     max-height: 50px;
     background-color: #FFF300;
-    padding-left: 95%;
+    padding-left: 90%;
 }
 
+
+/*
 .sticky {
     position: fixed;
     width: 100%;
@@ -32,7 +34,7 @@ body {
     top: 0;
     z-index: 100;
     border-top: 0;
-}
+}*/
 
 h1,
 h3,
@@ -59,7 +61,9 @@ h4 {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    min-height: 400px;
+    width: 1893px;
+    /*height: 900px;*/
+    margin-left: 10px;
 }
 
 .divtamaniomap {
@@ -67,11 +71,16 @@ h4 {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    //min-height: 600px;
-    //min-width: 700px;
 }
 
 .colordescripcionmapa {
+    background-color: #f4f4f4;
+    overflow: scroll;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    max-height: 830px;
     background-color: #FFF300;
     border: 1px solid #000000;
 }

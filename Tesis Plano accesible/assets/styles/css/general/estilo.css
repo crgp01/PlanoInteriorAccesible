@@ -3,6 +3,8 @@
     height: 30px;
 }
 
+
+/*
 .sticky {
     position: fixed;
     width: 100%;
@@ -11,11 +13,12 @@
     z-index: 100;
     border-top: 0;
 }
+*/
 
 .fondo-menu {
     max-height: 50px;
     background-color: #DDDDDD;
-    /*padding-left: 95%;*/
+    padding-left: 90%;
 }
 
 p.titulobloque {
@@ -41,6 +44,8 @@ p.titulobloque {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    width: 1893px;
+    margin-left: 10px;
 }
 
 .divtamaniomap {
@@ -57,8 +62,7 @@ p.titulobloque {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    /*  min-width: 700px;*/
-    max-height: 900px;
+    max-height: 830px;
 }
 
 .menuavanzado {
@@ -79,6 +83,7 @@ p.descripcionoficina {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    max-height: 850px;
 }
 
 p.titulodescripcion {
@@ -86,6 +91,11 @@ p.titulodescripcion {
 }
 
 a.elementomenu {
+    font-size: 1.2em;
+    margin: 3%;
+}
+
+button.elementomenu {
     font-size: 1.2em;
     margin: 3%;
 }

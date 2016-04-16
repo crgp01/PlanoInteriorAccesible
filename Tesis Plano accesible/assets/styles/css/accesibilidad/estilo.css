@@ -3,18 +3,20 @@
     height: 30px;
 }
 
-.sticky {
+
+/*.sticky {
     position: fixed;
     width: 100%;
     left: 0;
     top: 0;
     z-index: 100;
     border-top: 0;
-}
+}*/
 
 .fondo-menu {
+    max-height: 50px;
     background-color: #DDDDDD;
-    padding-left: 95%;
+    padding-left: 90%;
 }
 
 p.titulobloque {
@@ -40,6 +42,9 @@ p.titulobloque {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    width: 1893px;
+    /*height: 900px;*/
+    margin-left: 10px;
 }
 
 .divtamaniomap {
@@ -56,8 +61,7 @@ p.titulobloque {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    /*  min-width: 700px;*/
-    max-height: 900px;
+    max-height: 830px;
 }
 
 .menuavanzado {
@@ -74,12 +78,11 @@ p.descripcionoficina {
 
 .tamaniomapa {
     min-width: 100%;
-    min-height: 900px;
-    max-height: 900px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    max-height: 850px;
 }
 
 p.titulodescripcion {
@@ -87,6 +90,11 @@ p.titulodescripcion {
 }
 
 a.elementomenu {
+    font-size: 1.2em;
+    margin: 3%;
+}
+
+button.elementomenu {
     font-size: 1.2em;
     margin: 3%;
 }
@@ -100,7 +108,7 @@ a.elementomenu {
 }
 
 .menuaccesibilidad {
-    padding-left: 5%;
+    margin-left: 1%;
     margin-bottom: 1%;
     border-color: #BBBBBB;
     background-color: #FFFFFF;
@@ -142,15 +150,6 @@ a.opcionavanzada {
     border-color: #BBBBBB;
 }
 
-.advancedOptions {
-    -webkit-filter: saturate(1);
-    -webkit-filter: grayscale(0);
-    -webkit-filter: brightness(100%);
-    -webkit-filter: hue-rotate(0deg);
-    -webkit-filter: sepia(0);
-    -webkit-filter: invert(0);
-}
-
 .back-to-top {
     background: none;
     margin: 0;
@@ -180,6 +179,19 @@ a.opcionavanzada {
     margin-top: 1%;
 }
 
+.advancedOptions {
+    -webkit-filter: saturate(1);
+    -webkit-filter: grayscale(0);
+    -webkit-filter: brightness(100%);
+    -webkit-filter: hue-rotate(0deg);
+    -webkit-filter: sepia(0);
+    -webkit-filter: invert(0);
+}
+
+.nav {
+    background-color: #FFFFFF;
+}
+
 a:focus {
     outline: none !important;
     border: 1px solid blue;
@@ -202,8 +214,4 @@ div:focus {
     outline: none !important;
     border: 1px solid blue;
     box-shadow: 0 0 10px blue;
-}
-
-.nav {
-    background-color: #FFFFFF;
 }
