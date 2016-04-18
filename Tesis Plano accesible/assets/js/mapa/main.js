@@ -1793,8 +1793,6 @@ function renderizarMapa(mapa, idOficina) {
         function (data) {
 
             $('#contenedorPlanoOficinas').html(data);
-
-
             var zoomTiger = svgPanZoom('#plano', {
                 zoomEnabled: true,
                 controlIconsEnabled: true,
@@ -1863,7 +1861,7 @@ function mostrarRuta(tabindex, idRuta) {
                         myCircle.setAttributeNS(null, "id", "mycircle");
                         myCircle.setAttributeNS(null, "cx", item["coordenadax"]);
                         myCircle.setAttributeNS(null, "cy", item["coordenaday"]);
-                        myCircle.setAttributeNS(null, "r", 3);
+                        myCircle.setAttributeNS(null, "r", 4);
                         myCircle.setAttributeNS(null, "fill", "yellow");
                         myCircle.setAttributeNS(null, "stroke", "none");
 
@@ -1873,7 +1871,7 @@ function mostrarRuta(tabindex, idRuta) {
                         myCircle.setAttributeNS(null, "id", "mycircle");
                         myCircle.setAttributeNS(null, "cx", item["coordenadax"]); //item["coordenadax"]);
                         myCircle.setAttributeNS(null, "cy", item["coordenaday"]); //item["coordenadax"]);
-                        myCircle.setAttributeNS(null, "r", 3);
+                        myCircle.setAttributeNS(null, "r", 4);
                         myCircle.setAttributeNS(null, "fill", "red");
                         myCircle.setAttributeNS(null, "stroke", "none");
 
@@ -1881,7 +1879,7 @@ function mostrarRuta(tabindex, idRuta) {
                     }
                     console.log(item);
                     aux++;
-                }, 800 * i);
+                }, 50 * i);
             });
         }).fail(function (res) {
         console.log("Error: en ajax plano");
