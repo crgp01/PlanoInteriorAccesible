@@ -27,7 +27,7 @@ body {
     max-height: 50px;
     background-color: #DDDDDD;
     color: #000000;
-    padding-left: 92%;
+    padding-left: 90%;
     width: 1900px;
 }
 
@@ -112,7 +112,7 @@ a.elementomenu {
 }
 
 #salto {
-    margin-left: 92%;
+    margin-left: 85%;
 }
 
 button.elementomenu {

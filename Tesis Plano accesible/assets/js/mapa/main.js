@@ -1,6 +1,4 @@
 $(document).ready(function () {
-
-
     //lamada de funcion cookies
     cookiesinicio();
 
@@ -1580,9 +1578,9 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '4':
                 if (e.which == 38) {
-                    $("button[id='1']").focus();
+                    $("button[id='']").focus();
                 } else {
-                    $("button[tabindex='1']").focus();
+                    $("button[tabindex='']").focus();
                 }
                 break;
             }
@@ -1605,9 +1603,9 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '5':
                 if (e.which == 38) {
-                    $("input[tabindex='1']").focus();
+                    $("input[tabindex='']").focus();
                 } else {
-                    $("button[tabindex='1']").focus();
+                    $("button[tabindex='']").focus();
                 }
                 break;
             }
@@ -1630,7 +1628,7 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '6':
                 if (e.which == 38) {
-                    $("button[id='1']").focus();
+                    $("button[id='']").focus();
                 } else {
                     $("a[tabindex='']").focus();
                 }
@@ -1669,9 +1667,9 @@ $(document).ready(function () {
             switch (focused.attr("id")) {
             case '2':
                 if (e.which == 37) {
-                    $("a[id='1']").focus();
+                    $("button[id='1']").focus();
                 } else {
-                    $("input[id='']").focus();
+                    $("button[id='']").focus();
                 }
                 break;
             }
@@ -3346,6 +3344,57 @@ $(document).ready(function () {
             }
         }
 
+        //Link contenido principal
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'salto':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'salto':
+                if (e.which == 38) {
+                    $("a[id='']").focus();
+                } else {
+                    $("h1[tabindex='0']").focus();
+                }
+                break;
+            }
+        }
+
+        //titulo principal
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '0':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '0':
+                if (e.which == 38) {
+                    $("a[id='salto']").focus();
+                } else {
+                    $("button[tabindex='1']").focus();
+                }
+                break;
+            }
+        }
+
 
     });
 
@@ -3407,6 +3456,15 @@ $(document).ready(function () {
     });
 
 });
+
+//Funcion salir de tab
+$(document).keyup(function (e) {
+    if (e.keyCode == 27) { // escape key maps to keycode `27`
+        $("h1[tabindex='0']").focus();
+    }
+});
+
+
 
 //funcion de keypress
 function tab() {
@@ -3788,39 +3846,6 @@ function mostrarRuta(tabindex, idRuta) {
             //renderiar mapa
             var datauser = data;
             renderizarMapa(datauser['mapa'], tabindex);
-
-            /*var svg = document.getElementById("plano");
-
-            function drawposition(coordenadax, coordenaday, svg, colortono) {
-                var shape = this.id;
-                var svg = $('#plano').svg('get');
-                x = parseInt(coordenadax);
-                y = parseInt(coordenaday);
-                svg.circle(x, y, 5, {
-                    fill: colortono,
-                    stroke: colortono,
-                    strokeWidth: 3,
-                    id: 'circle'
-                });
-
-            }
-
-            //dibujar coordenadas recibidas
-            var aux = 1;
-            var total = Object.keys(datauser['user']).length;
-            var svg = document.getElementById("plano");
-
-            $.each(datauser['user'], function (i, item) {
-
-                setTimeout(function () {
-                    if (aux === total) {
-                        drawposition(item["coordenadax"], item["coordenaday"], svg, "yellow");
-                    } else {
-                        drawposition(item["coordenadax"], item["coordenaday"], svg, "red");
-                    }
-                    aux++;
-                }, 1000 * i);
-            });*/
 
             var aux = 1;
             var total = Object.keys(datauser['user']).length;
