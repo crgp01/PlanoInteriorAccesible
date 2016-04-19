@@ -17,6 +17,9 @@ $(document).ready(function () {
         }
     };
 
+
+
+
     stickyNav();
 
     var offset = 25;
@@ -62,8 +65,13 @@ $(document).ready(function () {
     //Keypress event with enter key
     $("body").keypress(function (e) {
         if (e.which == 13) {
-            var focused = $(':focus').parent();
-            focused.trigger("click");
+            var focused = $(':focus');
+            var focusedParent = focused.parent();
+            if (focused.attr('tabindex') >= 29 && focused.attr('tabindex') <= 115) {
+                focusedParent.trigger("click");
+            } else {
+                focused.trigger("click");
+            }
         }
 
 
@@ -192,7 +200,7 @@ $(document).ready(function () {
                 if (e.which == 37) {
                     $("button[tabindex='15']").focus();
                 } else {
-                    $("path[tabindex='39']").focus();
+                    $("path[tabindex='33']").focus();
                 }
                 break;
             }
@@ -1241,7 +1249,13 @@ $(document).ready(function () {
                 if (e.which == 38) {
                     $("button[tabindex='1']").focus();
                 } else {
-                    $("button[tabindex='19']").focus();
+                    if ($("#ofidocentes").attr("aria-expanded") == "false") {
+                        $("button[tabindex='19']").focus();
+
+                    } else {
+                        $("input[id='a-c']").focus();
+                    }
+
                 }
                 break;
             }
@@ -1266,7 +1280,7 @@ $(document).ready(function () {
                 if (e.which == 38) {
                     $("button[tabindex='15']").focus();
                 } else {
-                    $("path[tabindex='29']").focus();
+                    $("a[id='BañoMujeresruta']").focus();
                 }
                 break;
             }
@@ -1347,7 +1361,7 @@ $(document).ready(function () {
             }
         }
 
-        //boton accesibilidad 1
+        //boton accesibilidad tabindex 0
         if (e.which == 37 || e.which == 39) {
             switch (focused.attr("tabindex")) {
             case '1':
@@ -1364,7 +1378,7 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '1':
                 if (e.which == 38) {
-                    $("button[tabindex='']").focus();
+                    $("button[id='1']").focus();
                 } else {
                     $("button[tabindex='15']").focus();
                 }
@@ -1372,7 +1386,1965 @@ $(document).ready(function () {
             }
         }
 
+        //boton accesibilidad menu id 1
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case '1':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("button[id='2']").focus();
+                }
+                break;
+            }
+        }
 
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case '1':
+                if (e.which == 38) {
+                    $("input[id='']").focus();
+                } else {
+                    $("input[id='3']").focus();
+                }
+                break;
+            }
+        }
+
+        //boton estilo normal id 3
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case '3':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("input[id='4']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case '3':
+                if (e.which == 38) {
+                    $("button[id='1']").focus();
+                } else {
+                    $("button[tabindex='1']").focus();
+                }
+                break;
+            }
+        }
+
+        //boton estilo blanco id 4
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case '4':
+                if (e.which == 37) {
+                    $("input[id='3']").focus();
+                } else {
+                    $("input[id='5']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case '4':
+                if (e.which == 38) {
+                    $("button[id='1']").focus();
+                } else {
+                    $("button[tabindex='1']").focus();
+                }
+                break;
+            }
+        }
+
+        //boton estilo amarillo negro id 5
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case '5':
+                if (e.which == 37) {
+                    $("input[id='4']").focus();
+                } else {
+                    $("input[id='6']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case '5':
+                if (e.which == 38) {
+                    $("button[id='1']").focus();
+                } else {
+                    $("button[tabindex='1']").focus();
+                }
+                break;
+            }
+        }
+
+
+        //boton estilo negro amaarillo id 6
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case '6':
+                if (e.which == 37) {
+                    $("input[id='5']").focus();
+                } else {
+                    $("input[id='7']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case '6':
+                if (e.which == 38) {
+                    $("button[id='1']").focus();
+                } else {
+                    $("button[tabindex='1']").focus();
+                }
+                break;
+            }
+        }
+
+        //boton estilo ngro id 7
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case '7':
+                if (e.which == 37) {
+                    $("input[id='6']").focus();
+                } else {
+                    $("input[id='8']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case '7':
+                if (e.which == 38) {
+                    $("button[id='1']").focus();
+                } else {
+                    $("button[tabindex='1']").focus();
+                }
+                break;
+            }
+        }
+
+        //boton estilo gris id 7
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case '8':
+                if (e.which == 37) {
+                    $("input[id='7']").focus();
+                } else {
+                    $("input[tabindex='4']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case '8':
+                if (e.which == 38) {
+                    $("button[id='1']").focus();
+                } else {
+                    $("button[tabindex='1']").focus();
+                }
+                break;
+            }
+        }
+
+
+        //boton tamanio letra tabindex 4
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '4':
+                if (e.which == 37) {
+                    $("input[id='8']").focus();
+                } else {
+                    $("input[tabindex='5']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '4':
+                if (e.which == 38) {
+                    $("button[id='1']").focus();
+                } else {
+                    $("button[tabindex='1']").focus();
+                }
+                break;
+            }
+        }
+
+        //boton interespaciado tabindex 5
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '5':
+                if (e.which == 37) {
+                    $("input[tabindex='4']").focus();
+                } else {
+                    $("select[tabindex='6']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '5':
+                if (e.which == 38) {
+                    $("input[tabindex='1']").focus();
+                } else {
+                    $("button[tabindex='1']").focus();
+                }
+                break;
+            }
+        }
+
+        //combo tipo letra tabindex 6
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '6':
+                if (e.which == 37) {
+                    $("input[tabindex='5']").focus();
+                } else {
+                    $("a[tabindex='7']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '6':
+                if (e.which == 38) {
+                    $("button[id='1']").focus();
+                } else {
+                    $("a[tabindex='']").focus();
+                }
+                break;
+            }
+        }
+
+        //boton reload letra tabindex 7
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '7':
+                if (e.which == 37) {
+                    $("select[tabindex='6']").focus();
+                } else {
+                    $("button[id='2']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '7':
+                if (e.which == 38) {
+                    $("button[id='1']").focus();
+                } else {
+                    $("button[tabindex='1']").focus();
+                }
+                break;
+            }
+        }
+
+
+        //boton accesibilidad menu id 2
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case '2':
+                if (e.which == 37) {
+                    $("a[id='1']").focus();
+                } else {
+                    $("input[id='']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case '2':
+                if (e.which == 38) {
+                    $("input[id='']").focus();
+                } else {
+                    $("input[id='9']").focus();
+                }
+                break;
+            }
+        }
+
+        //boton patron negro menu id 9
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case '9':
+                if (e.which == 37) {
+                    $("a[id='']").focus();
+                } else {
+                    $("input[id='10']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case '9':
+                if (e.which == 38) {
+                    $("button[id='2']").focus();
+                } else {
+                    $("button[tabindex='1']").focus();
+                }
+                break;
+            }
+        }
+
+
+        //boton patron color menu id 9
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case '10':
+                if (e.which == 37) {
+                    $("input[id='9']").focus();
+                } else {
+                    $("input[id='11']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case '10':
+                if (e.which == 38) {
+                    $("button[id='2']").focus();
+                } else {
+                    $("button[tabindex='1']").focus();
+                }
+                break;
+            }
+        }
+
+
+        //boton patron normal menu id 10
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case '11':
+                if (e.which == 37) {
+                    $("input[id='10']").focus();
+                } else {
+                    $("input[id='Saturation']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case '11':
+                if (e.which == 38) {
+                    $("button[id='2']").focus();
+                } else {
+                    $("button[tabindex='1']").focus();
+                }
+                break;
+            }
+        }
+
+        //input id Saturation
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Saturation':
+                if (e.which == 37) {
+                    $("input[id='11']").focus();
+                } else {
+                    $("input[id='Brightness']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Saturation':
+                if (e.which == 38) {
+                    $("button[id='2']").focus();
+                } else {
+                    $("input[id='Sepia']").focus();
+                }
+                break;
+            }
+        }
+        //input id Brightness
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Brightness':
+                if (e.which == 37) {
+                    $("input[id='Saturation']").focus();
+                } else {
+                    $("input[id='Hue']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Brightness':
+                if (e.which == 38) {
+                    $("button[id='2']").focus();
+                } else {
+                    $("input[id='Invert']").focus();
+                }
+                break;
+            }
+        }
+
+        //input id Hue
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Hue':
+                if (e.which == 37) {
+                    $("input[id='Brightness']").focus();
+                } else {
+                    $("input[id='Grayscale']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Hue':
+                if (e.which == 38) {
+                    $("button[id='2']").focus();
+                } else {
+                    $("input[id='Opacity']").focus();
+                }
+                break;
+            }
+        }
+
+        //input id Grayscale
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Grayscale':
+                if (e.which == 37) {
+                    $("input[id='Hue']").focus();
+                } else {
+                    $("a[tabindex='10']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Grayscale':
+                if (e.which == 38) {
+                    $("button[id='2']").focus();
+                } else {
+                    $("input[id='Contrast']").focus();
+                }
+                break;
+            }
+        }
+
+        //input id Sepia
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Sepia':
+                if (e.which == 37) {
+                    $("input[id='Grayscale']").focus();
+                } else {
+                    $("input[id='Invert']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Sepia':
+                if (e.which == 38) {
+                    $("input[id='Saturation']").focus();
+                } else {
+                    $("button[tabindex='1']").focus();
+                }
+                break;
+            }
+        }
+
+        //input id Invert
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Invert':
+                if (e.which == 37) {
+                    $("input[id='Sepia']").focus();
+                } else {
+                    $("input[id='Opacity']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Invert':
+                if (e.which == 38) {
+                    $("input[id='Brightness']").focus();
+                } else {
+                    $("button[tabindex='1']").focus();
+                }
+                break;
+            }
+        }
+
+        //input id Opacity
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Opacity':
+                if (e.which == 37) {
+                    $("input[id='Invert']").focus();
+                } else {
+                    $("input[id='Contrast']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Opacity':
+                if (e.which == 38) {
+                    $("input[id='Hue']").focus();
+                } else {
+                    $("button[tabindex='1']").focus();
+                }
+                break;
+            }
+        }
+
+        //input id Contrast
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Contrast':
+                if (e.which == 37) {
+                    $("input[id='Opacity']").focus();
+                } else {
+                    $("a[tabindex='10']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Contrast':
+                if (e.which == 38) {
+                    $("input[id='Grayscale']").focus();
+                } else {
+                    $("button[tabindex='1']").focus();
+                }
+                break;
+            }
+        }
+
+        //boton reload tab 10
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '10':
+                if (e.which == 37) {
+                    $("input[id='Grayscale']").focus();
+                } else {
+                    $("a[tabindex='']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '10':
+                if (e.which == 38) {
+                    $("button[id='2']").focus();
+                } else {
+                    $("button[tabindex='1']").focus();
+                }
+                break;
+            }
+        }
+
+        //Menu izquierdo 
+        //boton a-c
+        //boton reload tab 10
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'a-c':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("input[id='d-l']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'a-c':
+                if (e.which == 38) {
+                    $("button[tabindex='15']").focus();
+                } else {
+                    $("a[id='Archundia']").focus();
+                }
+                break;
+            }
+        }
+
+        //Archundia
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Archundia':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Archundia':
+                if (e.which == 38) {
+                    $("input[id='a-c']").focus();
+                } else {
+                    $("a[id='AreaProfesores']").focus();
+                }
+                break;
+            }
+        }
+        //AreaProfesores
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'AreaProfesores':
+                if (e.which == 37) {
+                    $("input[id='Archundia']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'AreaProfesores':
+                if (e.which == 38) {
+                    $("a[id='Archundia']").focus();
+                } else {
+                    $("a[id='Almacén']").focus();
+                }
+                break;
+            }
+        }
+
+        //Almacén
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Almacén':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Almacén':
+                if (e.which == 38) {
+                    $("a[id='AreaProfesores']").focus();
+                } else {
+                    $("a[id='Hombres']").focus();
+                }
+                break;
+            }
+        }
+
+        //Hombres
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Hombres':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Hombres':
+                if (e.which == 38) {
+                    $("a[id='Almacén']").focus();
+                } else {
+                    $("a[id='Mujeres']").focus();
+                }
+                break;
+            }
+        }
+
+        //Mujeres
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Mujeres':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Mujeres':
+                if (e.which == 38) {
+                    $("a[id='Hombres']").focus();
+                } else {
+                    $("a[id='Bodega']").focus();
+                }
+                break;
+            }
+        }
+        //Bodega
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Bodega':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Bodega':
+                if (e.which == 38) {
+                    $("a[id='Mujeres']").focus();
+                } else {
+                    $("a[id='Barriga']").focus();
+                }
+                break;
+            }
+        }
+
+        //Barriga
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Barriga':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Barriga':
+                if (e.which == 38) {
+                    $("a[id='Bodega']").focus();
+                } else {
+                    $("a[id='Benalcazar']").focus();
+                }
+                break;
+            }
+        }
+
+        //Benalcazar
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Benalcazar':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Benalcazar':
+                if (e.which == 38) {
+                    $("a[id='Barriga']").focus();
+                } else {
+                    $("a[id='Calle']").focus();
+                }
+                break;
+            }
+        }
+
+
+        //Calle
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Calle':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Calle':
+                if (e.which == 38) {
+                    $("a[id='Benalcazar']").focus();
+                } else {
+                    $("a[id='Carrera']").focus();
+                }
+                break;
+            }
+        }
+
+        //Carrera
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Carrera':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Carrera':
+                if (e.which == 38) {
+                    $("a[id='Calle']").focus();
+                } else {
+                    $("a[id='Carrión']").focus();
+                }
+                break;
+            }
+        }
+
+
+        //Carrión
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Carrión':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Carrión':
+                if (e.which == 38) {
+                    $("a[id='Carrera']").focus();
+                } else {
+                    $("a[id='Cevallos']").focus();
+                }
+                break;
+            }
+        }
+
+        //Cevallos
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Cevallos':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Cevallos':
+                if (e.which == 38) {
+                    $("a[id='Carrión']").focus();
+                } else {
+                    $("a[id='Chancusig']").focus();
+                }
+                break;
+            }
+        }
+
+        //Chancusig
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Chancusig':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Chancusig':
+                if (e.which == 38) {
+                    $("a[id='Cevallos']").focus();
+                } else {
+                    $("a[id='Cordova']").focus();
+                }
+                break;
+            }
+        }
+
+        //Cordova
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Cordova':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Cordova':
+                if (e.which == 38) {
+                    $("a[id='Chancusig']").focus();
+                } else {
+                    $("a[id='Cocina']").focus();
+                }
+                break;
+            }
+        }
+
+        //Cocina
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Cocina':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Cocina':
+                if (e.which == 38) {
+                    $("a[id='Cordova']").focus();
+                } else {
+                    $("a[id='Conserjería1']").focus();
+                }
+                break;
+            }
+        }
+
+        //Conserjería1
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Conserjería1':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Conserjería1':
+                if (e.which == 38) {
+                    $("a[id='Cocina']").focus();
+                } else {
+                    $("a[id='Conserjería2']").focus();
+                }
+                break;
+            }
+        }
+
+        //Conserjería2
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Conserjería2':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Conserjería2':
+                if (e.which == 38) {
+                    $("a[id='Conserjería1']").focus();
+                } else {
+                    $("button[tabindex='19']").focus();
+                }
+                break;
+            }
+        }
+
+        //d-l
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'd-l':
+                if (e.which == 37) {
+                    $("input[id='a-c']").focus();
+                } else {
+                    $("input[id='m-p']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'd-l':
+                if (e.which == 38) {
+                    $("button[tabindex='15']").focus();
+                } else {
+                    $("a[id='Decanato']").focus();
+                }
+                break;
+            }
+        }
+
+        //m-p
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'm-p':
+                if (e.which == 37) {
+                    $("input[id='d-l']").focus();
+                } else {
+                    $("input[id='q-z']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'm-p':
+                if (e.which == 38) {
+                    $("button[tabindex='15']").focus();
+                } else {
+                    $("a[id='Mafla']").focus();
+                }
+                break;
+            }
+        }
+
+        //q-z
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'q-z':
+                if (e.which == 37) {
+                    $("input[id='m-p']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'q-z':
+                if (e.which == 38) {
+                    $("button[tabindex='15']").focus();
+                } else {
+                    $("a[id='Reuniones']").focus();
+                }
+                break;
+            }
+        }
+        //Decanato
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Decanato':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Decanato':
+                if (e.which == 38) {
+                    $("input[id='d-l']").focus();
+                } else {
+                    $("a[id='Hallo']").focus();
+                }
+                break;
+            }
+        }
+
+        //Hallo
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Hallo':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Hallo':
+                if (e.which == 38) {
+                    $("a[id='Decanato']").focus();
+                } else {
+                    $("a[id='Hernández']").focus();
+                }
+                break;
+            }
+        }
+        //Hernández
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Hernández':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Hernández':
+                if (e.which == 38) {
+                    $("a[id='Hallo']").focus();
+                } else {
+                    $("a[id='Imagen']").focus();
+                }
+                break;
+            }
+        }
+        //Imagen
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Imagen':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Imagen':
+                if (e.which == 38) {
+                    $("a[id='Hernández']").focus();
+                } else {
+                    $("a[id='Intriago']").focus();
+                }
+                break;
+            }
+        }
+        //Intriago
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Intriago':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Intriago':
+                if (e.which == 38) {
+                    $("a[id='Imagen']").focus();
+                } else {
+                    $("a[id='Larco']").focus();
+                }
+                break;
+            }
+        }
+        //Larco
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Larco':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Larco':
+                if (e.which == 38) {
+                    $("a[id='Intriago']").focus();
+                } else {
+                    $("button[tabindex='19']").focus();
+                }
+                break;
+            }
+        }
+        //Mafla
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Mafla':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Mafla':
+                if (e.which == 38) {
+                    $("input[id='m-p']").focus();
+                } else {
+                    $("a[id='Mena']").focus();
+                }
+                break;
+            }
+        }
+        //Mena
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Mena':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Mena':
+                if (e.which == 38) {
+                    $("a[id='Mafla']").focus();
+                } else {
+                    $("a[id='Montenegro']").focus();
+                }
+                break;
+            }
+        }
+
+        //Montenegro
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Montenegro':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Montenegro':
+                if (e.which == 38) {
+                    $("a[id='Mena']").focus();
+                } else {
+                    $("a[id='Navarrete']").focus();
+                }
+                break;
+            }
+        }
+
+
+        //Navarrete
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Navarrete':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Navarrete':
+                if (e.which == 38) {
+                    $("a[id='Montenegro']").focus();
+                } else {
+                    $("a[id='Palán']").focus();
+                }
+                break;
+            }
+        }
+
+
+        //Palán
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Palán':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Palán':
+                if (e.which == 38) {
+                    $("a[id='Navarrete']").focus();
+                } else {
+                    $("a[id='Paz']").focus();
+                }
+                break;
+            }
+        }
+
+
+        //Paz
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Paz':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Paz':
+                if (e.which == 38) {
+                    $("a[id='Palán']").focus();
+                } else {
+                    $("a[id='Pazmiño']").focus();
+                }
+                break;
+            }
+        }
+
+
+        //Pazmiño
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Pazmiño':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Pazmiño':
+                if (e.which == 38) {
+                    $("a[id='Paz']").focus();
+                } else {
+                    $("a[id='Perez']").focus();
+                }
+                break;
+            }
+        }
+
+
+        //Perez
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Perez':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Perez':
+                if (e.which == 38) {
+                    $("a[id='Pazmiño']").focus();
+                } else {
+                    $("a[id='Profesor']").focus();
+                }
+                break;
+            }
+        }
+
+
+        //Profesor
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Profesor':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Profesor':
+                if (e.which == 38) {
+                    $("a[id='Perez']").focus();
+                } else {
+                    $("a[id='Investigación']").focus();
+                }
+                break;
+            }
+        }
+
+
+        //Investigación
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Investigación':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Investigación':
+                if (e.which == 38) {
+                    $("a[id='Profesor']").focus();
+                } else {
+                    $("a[id='Investigación2']").focus();
+                }
+                break;
+            }
+        }
+
+
+        //Investigación2
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Investigación2':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Investigación2':
+                if (e.which == 38) {
+                    $("a[id='Investigación']").focus();
+                } else {
+                    $("button[tabindex='19']").focus();
+                }
+                break;
+            }
+        }
+
+        //Reuniones
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Reuniones':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Reuniones':
+                if (e.which == 38) {
+                    $("input[id='q-z']").focus();
+                } else {
+                    $("a[id='Salvador']").focus();
+                }
+                break;
+            }
+        }
+
+        //Salvador
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Salvador':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Salvador':
+                if (e.which == 38) {
+                    $("a[id='Reuniones']").focus();
+                } else {
+                    $("a[id='Sánchez']").focus();
+                }
+                break;
+            }
+        }
+        //Sánchez
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Sánchez':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Sánchez':
+                if (e.which == 38) {
+                    $("a[id='Salvador']").focus();
+                } else {
+                    $("a[id='Santorum']").focus();
+                }
+                break;
+            }
+        }
+
+
+        //Santorum
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Santorum':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Santorum':
+                if (e.which == 38) {
+                    $("a[id='Sánchez']").focus();
+                } else {
+                    $("a[id='SecretaríaDecanato']").focus();
+                }
+                break;
+            }
+        }
+
+
+        //SecretaríaDecanato
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'SecretaríaDecanato':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'SecretaríaDecanato':
+                if (e.which == 38) {
+                    $("a[id='Santorum']").focus();
+                } else {
+                    $("a[id='SecretaríaDoctorado']").focus();
+                }
+                break;
+            }
+        }
+
+        //SecretaríaDoctorado
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'SecretaríaDoctorado':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'SecretaríaDoctorado':
+                if (e.which == 38) {
+                    $("a[id='SecretaríaDecanato']").focus();
+                } else {
+                    $("a[id='SecretaríaGeneral']").focus();
+                }
+                break;
+            }
+        }
+
+        //SecretaríaGeneral
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'SecretaríaGeneral':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'SecretaríaGeneral':
+                if (e.which == 38) {
+                    $("a[id='SecretaríaDoctorado']").focus();
+                } else {
+                    $("a[id='Subdecanato']").focus();
+                }
+                break;
+            }
+        }
+
+        //Subdecanato
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Subdecanato':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Subdecanato':
+                if (e.which == 38) {
+                    $("a[id='SecretaríaGeneral']").focus();
+                } else {
+                    $("a[id='Torres']").focus();
+                }
+                break;
+            }
+        }
+
+
+        //Torres
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Torres':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Torres':
+                if (e.which == 38) {
+                    $("a[id='Subdecanato']").focus();
+                } else {
+                    $("a[id='Zambrano']").focus();
+                }
+                break;
+            }
+        }
+
+
+        //Zambrano
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Zambrano':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Zambrano':
+                if (e.which == 38) {
+                    $("a[id='Torres']").focus();
+                } else {
+                    $("button[tabindex='19']").focus();
+                }
+                break;
+            }
+        }
+        //baño mujeres ruta
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'BañoMujeresruta':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'BañoMujeresruta':
+                if (e.which == 38) {
+                    $("button[tabindex='19']").focus();
+                } else {
+                    $("a[id='Decanatoruta']").focus();
+                }
+                break;
+            }
+        }
+
+        //Decanatoruta
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Decanatoruta':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Decanatoruta':
+                if (e.which == 38) {
+                    $("a[id='BañoMujeresruta']").focus();
+                } else {
+                    $("a[id='Investigacionruta']").focus();
+                }
+                break;
+            }
+        }
+
+        //Investigacionruta
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Investigacionruta':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Investigacionruta':
+                if (e.which == 38) {
+                    $("a[id='Decanatoruta']").focus();
+                } else {
+                    $("a[id='Profesorruta']").focus();
+                }
+                break;
+            }
+        }
+
+        //Profesorruta
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'Profesorruta':
+                if (e.which == 37) {
+                    $("input[id='']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'Profesorruta':
+                if (e.which == 38) {
+                    $("a[id='Investigacionruta']").focus();
+                } else {
+                    $("path[tabindex='33']").focus();
+                }
+                break;
+            }
+        }
 
 
     });
@@ -1780,6 +3752,7 @@ function cargarInformacionOficina(idOficina, mapa) {
         console.log("Error: en ajax");
     }).success(function () {
         renderizarMapa("", idOficina);
+        $("div[tabindex='150']").focus();
     });
 }
 
@@ -1851,37 +3824,25 @@ function mostrarRuta(tabindex, idRuta) {
 
             var aux = 1;
             var total = Object.keys(datauser['user']).length;
-            var svgNS = "http://www.w3.org/2000/svg";
 
             $.each(datauser['user'], function (i, item) {
 
                 setTimeout(function () {
                     if (aux === total) {
-                        var myCircle = document.createElementNS(svgNS, "circle"); //to create a circle, for rectangle use rectangle
-                        myCircle.setAttributeNS(null, "id", "mycircle");
-                        myCircle.setAttributeNS(null, "cx", item["coordenadax"]);
-                        myCircle.setAttributeNS(null, "cy", item["coordenaday"]);
-                        myCircle.setAttributeNS(null, "r", 4);
-                        myCircle.setAttributeNS(null, "fill", "yellow");
-                        myCircle.setAttributeNS(null, "stroke", "none");
-
-                        document.getElementById("plano").appendChild(myCircle);
+                        d3.select(".currentLayer").append("circle").attr("cx", item["coordenadax"]).attr("cy", item["coordenaday"]).attr("r", 4).style("fill", "yellow");
                     } else {
-                        var myCircle = document.createElementNS(svgNS, "circle"); //to create a circle, for rectangle use rectangle
-                        myCircle.setAttributeNS(null, "id", "mycircle");
-                        myCircle.setAttributeNS(null, "cx", item["coordenadax"]); //item["coordenadax"]);
-                        myCircle.setAttributeNS(null, "cy", item["coordenaday"]); //item["coordenadax"]);
-                        myCircle.setAttributeNS(null, "r", 4);
-                        myCircle.setAttributeNS(null, "fill", "red");
-                        myCircle.setAttributeNS(null, "stroke", "none");
-
-                        document.getElementById("plano").appendChild(myCircle);
+                        d3.select(".currentLayer").append("circle").attr("cx", item["coordenadax"]).attr("cy", item["coordenaday"]).attr("r", 4).style("fill", "red");
                     }
-                    console.log(item);
                     aux++;
-                }, 50 * i);
+                }, 550 * i);
             });
         }).fail(function (res) {
         console.log("Error: en ajax plano");
     });
+}
+
+function playaudio(audio1) {
+    var audio = document.getElementById(audio1);
+    audio.play();
+
 }

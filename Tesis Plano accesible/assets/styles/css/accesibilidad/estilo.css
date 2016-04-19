@@ -1,3 +1,8 @@
+body {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
 .alfabeto {
     width: 48px;
     height: 30px;
@@ -13,10 +18,17 @@
     border-top: 0;
 }*/
 
+
+/*#stickybar {
+    width: 1893px;
+}*/
+
 .fondo-menu {
     max-height: 50px;
     background-color: #DDDDDD;
-    padding-left: 90%;
+    color: #000000;
+    padding-left: 92%;
+    width: 1900px;
 }
 
 p.titulobloque {
@@ -35,6 +47,11 @@ p.titulobloque {
 
 .div-inicio {
     padding-bottom: 40px;
+}
+
+.estiloInformacion {
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 .div-main-content-body {
@@ -94,6 +111,10 @@ a.elementomenu {
     margin: 3%;
 }
 
+#salto {
+    margin-left: 92%;
+}
+
 button.elementomenu {
     font-size: 1.2em;
     margin: 3%;
@@ -107,15 +128,17 @@ button.elementomenu {
     max-width: 250px;
 }
 
-.menuaccesibilidad {
+#menuaccesibilidad {
     margin-left: 1%;
     margin-bottom: 1%;
     border-color: #BBBBBB;
     background-color: #FFFFFF;
+    width: 1815px;
 }
 
 .elementoavanzado {
     border-color: #BBBBBB;
+    color: #000000;
 }
 
 #letra {
@@ -148,6 +171,7 @@ a.opcionavanzada {
 
 .tituloinicial {
     border-color: #BBBBBB;
+    color: #000000;
 }
 
 .back-to-top {
@@ -190,6 +214,7 @@ a.opcionavanzada {
 
 .nav {
     background-color: #FFFFFF;
+    color: #000000;
 }
 
 a:focus {

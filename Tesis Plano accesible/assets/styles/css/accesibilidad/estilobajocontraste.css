@@ -19,7 +19,11 @@ p {
 .fondo-menu {
     max-height: 50px;
     background-color: #555555;
-    padding-left: 90%;
+    padding-left: 92%;
+}
+
+#salto {
+    margin-left: 92%;
 }
 
 
@@ -54,6 +58,20 @@ p {
 
 .div-inicio {
     padding-bottom: 40px;
+}
+
+#menuaccesibilidad {
+    margin-left: 1%;
+    margin-bottom: 1%;
+    border-color: #BBBBBB;
+    background-color: #555555;
+    width: 1815px;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active {
+    background-color: #555555;
 }
 
 .div-main-content-body {

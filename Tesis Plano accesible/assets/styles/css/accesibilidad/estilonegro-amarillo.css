@@ -22,7 +22,11 @@ body {
 .fondo-menu {
     max-height: 50px;
     background-color: #FFF300;
-    padding-left: 90%;
+    padding-left: 92%;
+}
+
+#salto {
+    margin-left: 92%;
 }
 
 
@@ -71,6 +75,20 @@ h4 {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+}
+
+#menuaccesibilidad {
+    margin-left: 1%;
+    margin-bottom: 1%;
+    border-color: #000000;
+    background-color: #FFF300;
+    width: 1815px;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active {
+    background-color: #FFF300;
 }
 
 .colordescripcionmapa {

@@ -20,7 +20,11 @@ h4 {
 .fondo-menu {
     max-height: 50px;
     background-color: #FFFFFF;
-    padding-left: 90%;
+    padding-left: 92%;
+}
+
+#salto {
+    margin-left: 92%;
 }
 
 
@@ -46,6 +50,14 @@ h4 {
 
 .div-inicio {
     padding-bottom: 40px;
+}
+
+#menuaccesibilidad {
+    margin-left: 1%;
+    margin-bottom: 1%;
+    border-color: #000000;
+    background-color: #FFFFFF;
+    width: 1815px;
 }
 
 .div-main-content-body {

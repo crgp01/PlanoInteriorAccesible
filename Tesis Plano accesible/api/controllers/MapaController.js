@@ -17,7 +17,7 @@ module.exports = {
         var tono = (req.cookies.tono) ? req.cookies.tono : 0;
         var sepia = (req.cookies.sepia) ? req.cookies.sepia : 0;
         var grises = (req.cookies.grises) ? req.cookies.grises : 0;
-        var mapaplano = (req.cookies.mapaplano) ? req.cookies.mapaplano : 'mapaplano';
+        var mapaplano = (req.cookies.mapaplano) ? req.cookies.mapaplano : res.cookie('mapaplano', 'mapaplano');
 
 
         return res.redirect('/Mapa/plano');
@@ -28,7 +28,7 @@ module.exports = {
         var informacionPrincipalMapaController = "";
         var cargaHorariaMapaController = "";
         var informacionProfesorMapaController = "";
-        var mapacookieMapaController = (req.cookies.mapaplano) ? req.cookies.mapaplano : 'mapaplano';
+        var mapacookieMapaController = req.cookies.mapaplano;
 
         res.view({
             idOficina: 0,
@@ -294,7 +294,9 @@ module.exports = {
     //Controlador para retornar plano correspondiente
     tipoPlano: function (req, res) {
 
-        var mapa = "Mapa/" + req.cookies.mapaplano + ".ejs";
+
+        var mapaplano = req.cookies.mapaplano;
+        var mapa = "Mapa/" + mapaplano + ".ejs";
         var idOficina = req.param("idOficina");
 
         console.log(mapa);
