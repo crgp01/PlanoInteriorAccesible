@@ -1,0 +1,1017 @@
+{
+  "data": {
+    "informacion": [],
+    "inicio": [],
+    "coordenadas": [
+      {
+        "idcoordenadas": 1,
+        "coordenadax": 455,
+        "coordenaday": 80,
+        "owner": 1,
+        "id": 1
+      },
+      {
+        "idcoordenadas": 2,
+        "coordenadax": 455,
+        "coordenaday": 100,
+        "owner": 1,
+        "id": 2
+      },
+      {
+        "idcoordenadas": 3,
+        "coordenadax": 455,
+        "coordenaday": 120,
+        "owner": 1,
+        "id": 3
+      },
+      {
+        "idcoordenadas": 4,
+        "coordenadax": 455,
+        "coordenaday": 140,
+        "owner": 1,
+        "id": 4
+      },
+      {
+        "idcoordenadas": 5,
+        "coordenadax": 455,
+        "coordenaday": 160,
+        "owner": 1,
+        "id": 5
+      },
+      {
+        "idcoordenadas": 6,
+        "coordenadax": 455,
+        "coordenaday": 180,
+        "owner": 1,
+        "id": 6
+      },
+      {
+        "idcoordenadas": 7,
+        "coordenadax": 455,
+        "coordenaday": 200,
+        "owner": 1,
+        "id": 7
+      },
+      {
+        "idcoordenadas": 8,
+        "coordenadax": 455,
+        "coordenaday": 220,
+        "owner": 1,
+        "id": 8
+      },
+      {
+        "idcoordenadas": 9,
+        "coordenadax": 435,
+        "coordenaday": 230,
+        "owner": 1,
+        "id": 9
+      },
+      {
+        "idcoordenadas": 10,
+        "coordenadax": 410,
+        "coordenaday": 230,
+        "owner": 1,
+        "id": 10
+      },
+      {
+        "idcoordenadas": 11,
+        "coordenadax": 385,
+        "coordenaday": 230,
+        "owner": 1,
+        "id": 11
+      },
+      {
+        "idcoordenadas": 12,
+        "coordenadax": 360,
+        "coordenaday": 230,
+        "owner": 1,
+        "id": 12
+      },
+      {
+        "idcoordenadas": 13,
+        "coordenadax": 335,
+        "coordenaday": 230,
+        "owner": 1,
+        "id": 13
+      },
+      {
+        "idcoordenadas": 14,
+        "coordenadax": 310,
+        "coordenaday": 230,
+        "owner": 1,
+        "id": 14
+      },
+      {
+        "idcoordenadas": 15,
+        "coordenadax": 285,
+        "coordenaday": 230,
+        "owner": 1,
+        "id": 15
+      },
+      {
+        "idcoordenadas": 16,
+        "coordenadax": 260,
+        "coordenaday": 230,
+        "owner": 1,
+        "id": 16
+      },
+      {
+        "idcoordenadas": 17,
+        "coordenadax": 235,
+        "coordenaday": 230,
+        "owner": 1,
+        "id": 17
+      },
+      {
+        "idcoordenadas": 18,
+        "coordenadax": 210,
+        "coordenaday": 230,
+        "owner": 1,
+        "id": 18
+      },
+      {
+        "idcoordenadas": 19,
+        "coordenadax": 185,
+        "coordenaday": 240,
+        "owner": 1,
+        "id": 19
+      },
+      {
+        "idcoordenadas": 20,
+        "coordenadax": 175,
+        "coordenaday": 260,
+        "owner": 1,
+        "id": 20
+      },
+      {
+        "idcoordenadas": 21,
+        "coordenadax": 175,
+        "coordenaday": 280,
+        "owner": 1,
+        "id": 21
+      },
+      {
+        "idcoordenadas": 22,
+        "coordenadax": 455,
+        "coordenaday": 80,
+        "owner": 2,
+        "id": 22
+      },
+      {
+        "idcoordenadas": 23,
+        "coordenadax": 455,
+        "coordenaday": 100,
+        "owner": 2,
+        "id": 23
+      },
+      {
+        "idcoordenadas": 24,
+        "coordenadax": 455,
+        "coordenaday": 120,
+        "owner": 2,
+        "id": 24
+      },
+      {
+        "idcoordenadas": 25,
+        "coordenadax": 455,
+        "coordenaday": 140,
+        "owner": 2,
+        "id": 25
+      },
+      {
+        "idcoordenadas": 26,
+        "coordenadax": 455,
+        "coordenaday": 160,
+        "owner": 2,
+        "id": 26
+      },
+      {
+        "idcoordenadas": 27,
+        "coordenadax": 455,
+        "coordenaday": 180,
+        "owner": 2,
+        "id": 27
+      },
+      {
+        "idcoordenadas": 28,
+        "coordenadax": 455,
+        "coordenaday": 200,
+        "owner": 2,
+        "id": 28
+      },
+      {
+        "idcoordenadas": 29,
+        "coordenadax": 455,
+        "coordenaday": 220,
+        "owner": 2,
+        "id": 29
+      },
+      {
+        "idcoordenadas": 30,
+        "coordenadax": 455,
+        "coordenaday": 240,
+        "owner": 2,
+        "id": 30
+      },
+      {
+        "idcoordenadas": 31,
+        "coordenadax": 455,
+        "coordenaday": 260,
+        "owner": 2,
+        "id": 31
+      },
+      {
+        "idcoordenadas": 32,
+        "coordenadax": 475,
+        "coordenaday": 280,
+        "owner": 2,
+        "id": 32
+      },
+      {
+        "idcoordenadas": 33,
+        "coordenadax": 480,
+        "coordenaday": 300,
+        "owner": 2,
+        "id": 33
+      },
+      {
+        "idcoordenadas": 34,
+        "coordenadax": 480,
+        "coordenaday": 325,
+        "owner": 2,
+        "id": 34
+      },
+      {
+        "idcoordenadas": 35,
+        "coordenadax": 480,
+        "coordenaday": 350,
+        "owner": 2,
+        "id": 35
+      },
+      {
+        "idcoordenadas": 36,
+        "coordenadax": 480,
+        "coordenaday": 375,
+        "owner": 2,
+        "id": 36
+      },
+      {
+        "idcoordenadas": 37,
+        "coordenadax": 480,
+        "coordenaday": 400,
+        "owner": 2,
+        "id": 37
+      },
+      {
+        "idcoordenadas": 38,
+        "coordenadax": 480,
+        "coordenaday": 425,
+        "owner": 2,
+        "id": 38
+      },
+      {
+        "idcoordenadas": 39,
+        "coordenadax": 480,
+        "coordenaday": 450,
+        "owner": 2,
+        "id": 39
+      },
+      {
+        "idcoordenadas": 40,
+        "coordenadax": 480,
+        "coordenaday": 475,
+        "owner": 2,
+        "id": 40
+      },
+      {
+        "idcoordenadas": 41,
+        "coordenadax": 480,
+        "coordenaday": 500,
+        "owner": 2,
+        "id": 41
+      },
+      {
+        "idcoordenadas": 42,
+        "coordenadax": 480,
+        "coordenaday": 525,
+        "owner": 2,
+        "id": 42
+      },
+      {
+        "idcoordenadas": 43,
+        "coordenadax": 480,
+        "coordenaday": 550,
+        "owner": 2,
+        "id": 43
+      },
+      {
+        "idcoordenadas": 44,
+        "coordenadax": 480,
+        "coordenaday": 575,
+        "owner": 2,
+        "id": 44
+      },
+      {
+        "idcoordenadas": 45,
+        "coordenadax": 480,
+        "coordenaday": 600,
+        "owner": 2,
+        "id": 45
+      },
+      {
+        "idcoordenadas": 46,
+        "coordenadax": 480,
+        "coordenaday": 625,
+        "owner": 2,
+        "id": 46
+      },
+      {
+        "idcoordenadas": 47,
+        "coordenadax": 480,
+        "coordenaday": 650,
+        "owner": 2,
+        "id": 47
+      },
+      {
+        "idcoordenadas": 48,
+        "coordenadax": 480,
+        "coordenaday": 675,
+        "owner": 2,
+        "id": 48
+      },
+      {
+        "idcoordenadas": 49,
+        "coordenadax": 480,
+        "coordenaday": 700,
+        "owner": 2,
+        "id": 49
+      },
+      {
+        "idcoordenadas": 50,
+        "coordenadax": 480,
+        "coordenaday": 725,
+        "owner": 2,
+        "id": 50
+      },
+      {
+        "idcoordenadas": 51,
+        "coordenadax": 480,
+        "coordenaday": 750,
+        "owner": 2,
+        "id": 51
+      },
+      {
+        "idcoordenadas": 52,
+        "coordenadax": 460,
+        "coordenaday": 750,
+        "owner": 2,
+        "id": 52
+      },
+      {
+        "idcoordenadas": 53,
+        "coordenadax": 440,
+        "coordenaday": 750,
+        "owner": 2,
+        "id": 53
+      },
+      {
+        "idcoordenadas": 54,
+        "coordenadax": 420,
+        "coordenaday": 775,
+        "owner": 2,
+        "id": 54
+      },
+      {
+        "idcoordenadas": 55,
+        "coordenadax": 420,
+        "coordenaday": 800,
+        "owner": 2,
+        "id": 55
+      },
+      {
+        "idcoordenadas": 56,
+        "coordenadax": 455,
+        "coordenaday": 80,
+        "owner": 3,
+        "id": 56
+      },
+      {
+        "idcoordenadas": 57,
+        "coordenadax": 455,
+        "coordenaday": 100,
+        "owner": 3,
+        "id": 57
+      },
+      {
+        "idcoordenadas": 58,
+        "coordenadax": 455,
+        "coordenaday": 120,
+        "owner": 3,
+        "id": 58
+      },
+      {
+        "idcoordenadas": 59,
+        "coordenadax": 455,
+        "coordenaday": 140,
+        "owner": 3,
+        "id": 59
+      },
+      {
+        "idcoordenadas": 60,
+        "coordenadax": 455,
+        "coordenaday": 160,
+        "owner": 3,
+        "id": 60
+      },
+      {
+        "idcoordenadas": 61,
+        "coordenadax": 455,
+        "coordenaday": 180,
+        "owner": 3,
+        "id": 61
+      },
+      {
+        "idcoordenadas": 62,
+        "coordenadax": 455,
+        "coordenaday": 200,
+        "owner": 3,
+        "id": 62
+      },
+      {
+        "idcoordenadas": 63,
+        "coordenadax": 455,
+        "coordenaday": 220,
+        "owner": 3,
+        "id": 63
+      },
+      {
+        "idcoordenadas": 64,
+        "coordenadax": 455,
+        "coordenaday": 240,
+        "owner": 3,
+        "id": 64
+      },
+      {
+        "idcoordenadas": 65,
+        "coordenadax": 455,
+        "coordenaday": 260,
+        "owner": 3,
+        "id": 65
+      },
+      {
+        "idcoordenadas": 66,
+        "coordenadax": 475,
+        "coordenaday": 280,
+        "owner": 3,
+        "id": 66
+      },
+      {
+        "idcoordenadas": 67,
+        "coordenadax": 480,
+        "coordenaday": 300,
+        "owner": 3,
+        "id": 67
+      },
+      {
+        "idcoordenadas": 68,
+        "coordenadax": 480,
+        "coordenaday": 325,
+        "owner": 3,
+        "id": 68
+      },
+      {
+        "idcoordenadas": 69,
+        "coordenadax": 480,
+        "coordenaday": 350,
+        "owner": 3,
+        "id": 69
+      },
+      {
+        "idcoordenadas": 70,
+        "coordenadax": 480,
+        "coordenaday": 375,
+        "owner": 3,
+        "id": 70
+      },
+      {
+        "idcoordenadas": 71,
+        "coordenadax": 480,
+        "coordenaday": 400,
+        "owner": 3,
+        "id": 71
+      },
+      {
+        "idcoordenadas": 72,
+        "coordenadax": 480,
+        "coordenaday": 425,
+        "owner": 3,
+        "id": 72
+      },
+      {
+        "idcoordenadas": 73,
+        "coordenadax": 480,
+        "coordenaday": 450,
+        "owner": 3,
+        "id": 73
+      },
+      {
+        "idcoordenadas": 74,
+        "coordenadax": 480,
+        "coordenaday": 475,
+        "owner": 3,
+        "id": 74
+      },
+      {
+        "idcoordenadas": 75,
+        "coordenadax": 480,
+        "coordenaday": 500,
+        "owner": 3,
+        "id": 75
+      },
+      {
+        "idcoordenadas": 76,
+        "coordenadax": 480,
+        "coordenaday": 525,
+        "owner": 3,
+        "id": 76
+      },
+      {
+        "idcoordenadas": 77,
+        "coordenadax": 480,
+        "coordenaday": 550,
+        "owner": 3,
+        "id": 77
+      },
+      {
+        "idcoordenadas": 78,
+        "coordenadax": 480,
+        "coordenaday": 575,
+        "owner": 3,
+        "id": 78
+      },
+      {
+        "idcoordenadas": 79,
+        "coordenadax": 490,
+        "coordenaday": 600,
+        "owner": 3,
+        "id": 79
+      },
+      {
+        "idcoordenadas": 80,
+        "coordenadax": 510,
+        "coordenaday": 620,
+        "owner": 3,
+        "id": 80
+      },
+      {
+        "idcoordenadas": 81,
+        "coordenadax": 455,
+        "coordenaday": 80,
+        "owner": 4,
+        "id": 81
+      },
+      {
+        "idcoordenadas": 82,
+        "coordenadax": 455,
+        "coordenaday": 100,
+        "owner": 4,
+        "id": 82
+      },
+      {
+        "idcoordenadas": 83,
+        "coordenadax": 455,
+        "coordenaday": 120,
+        "owner": 4,
+        "id": 83
+      },
+      {
+        "idcoordenadas": 84,
+        "coordenadax": 455,
+        "coordenaday": 140,
+        "owner": 4,
+        "id": 84
+      },
+      {
+        "idcoordenadas": 85,
+        "coordenadax": 455,
+        "coordenaday": 160,
+        "owner": 4,
+        "id": 85
+      },
+      {
+        "idcoordenadas": 86,
+        "coordenadax": 455,
+        "coordenaday": 180,
+        "owner": 4,
+        "id": 86
+      },
+      {
+        "idcoordenadas": 87,
+        "coordenadax": 455,
+        "coordenaday": 200,
+        "owner": 4,
+        "id": 87
+      },
+      {
+        "idcoordenadas": 88,
+        "coordenadax": 455,
+        "coordenaday": 220,
+        "owner": 4,
+        "id": 88
+      },
+      {
+        "idcoordenadas": 89,
+        "coordenadax": 455,
+        "coordenaday": 240,
+        "owner": 4,
+        "id": 89
+      },
+      {
+        "idcoordenadas": 90,
+        "coordenadax": 455,
+        "coordenaday": 260,
+        "owner": 4,
+        "id": 90
+      },
+      {
+        "idcoordenadas": 91,
+        "coordenadax": 475,
+        "coordenaday": 280,
+        "owner": 4,
+        "id": 91
+      },
+      {
+        "idcoordenadas": 92,
+        "coordenadax": 480,
+        "coordenaday": 300,
+        "owner": 4,
+        "id": 92
+      },
+      {
+        "idcoordenadas": 93,
+        "coordenadax": 480,
+        "coordenaday": 325,
+        "owner": 4,
+        "id": 93
+      },
+      {
+        "idcoordenadas": 94,
+        "coordenadax": 480,
+        "coordenaday": 350,
+        "owner": 4,
+        "id": 94
+      },
+      {
+        "idcoordenadas": 95,
+        "coordenadax": 480,
+        "coordenaday": 375,
+        "owner": 4,
+        "id": 95
+      },
+      {
+        "idcoordenadas": 96,
+        "coordenadax": 480,
+        "coordenaday": 400,
+        "owner": 4,
+        "id": 96
+      },
+      {
+        "idcoordenadas": 97,
+        "coordenadax": 480,
+        "coordenaday": 425,
+        "owner": 4,
+        "id": 97
+      },
+      {
+        "idcoordenadas": 98,
+        "coordenadax": 480,
+        "coordenaday": 450,
+        "owner": 4,
+        "id": 98
+      },
+      {
+        "idcoordenadas": 99,
+        "coordenadax": 480,
+        "coordenaday": 475,
+        "owner": 4,
+        "id": 99
+      },
+      {
+        "idcoordenadas": 100,
+        "coordenadax": 480,
+        "coordenaday": 500,
+        "owner": 4,
+        "id": 100
+      },
+      {
+        "idcoordenadas": 101,
+        "coordenadax": 480,
+        "coordenaday": 525,
+        "owner": 4,
+        "id": 101
+      },
+      {
+        "idcoordenadas": 102,
+        "coordenadax": 480,
+        "coordenaday": 550,
+        "owner": 4,
+        "id": 102
+      },
+      {
+        "idcoordenadas": 103,
+        "coordenadax": 480,
+        "coordenaday": 575,
+        "owner": 4,
+        "id": 103
+      },
+      {
+        "idcoordenadas": 104,
+        "coordenadax": 480,
+        "coordenaday": 600,
+        "owner": 4,
+        "id": 104
+      },
+      {
+        "idcoordenadas": 105,
+        "coordenadax": 480,
+        "coordenaday": 625,
+        "owner": 4,
+        "id": 105
+      },
+      {
+        "idcoordenadas": 106,
+        "coordenadax": 480,
+        "coordenaday": 650,
+        "owner": 4,
+        "id": 106
+      },
+      {
+        "idcoordenadas": 107,
+        "coordenadax": 480,
+        "coordenaday": 675,
+        "owner": 4,
+        "id": 107
+      },
+      {
+        "idcoordenadas": 108,
+        "coordenadax": 480,
+        "coordenaday": 700,
+        "owner": 4,
+        "id": 108
+      },
+      {
+        "idcoordenadas": 109,
+        "coordenadax": 480,
+        "coordenaday": 725,
+        "owner": 4,
+        "id": 109
+      },
+      {
+        "idcoordenadas": 110,
+        "coordenadax": 505,
+        "coordenaday": 735,
+        "owner": 4,
+        "id": 110
+      },
+      {
+        "idcoordenadas": 111,
+        "coordenadax": 530,
+        "coordenaday": 735,
+        "owner": 4,
+        "id": 111
+      },
+      {
+        "idcoordenadas": 112,
+        "coordenadax": 555,
+        "coordenaday": 750,
+        "owner": 4,
+        "id": 112
+      },
+      {
+        "idcoordenadas": 113,
+        "coordenadax": 580,
+        "coordenaday": 770,
+        "owner": 4,
+        "id": 113
+      },
+      {
+        "idcoordenadas": 114,
+        "coordenadax": 605,
+        "coordenaday": 790,
+        "owner": 4,
+        "id": 114
+      },
+      {
+        "idcoordenadas": 115,
+        "coordenadax": 630,
+        "coordenaday": 810,
+        "owner": 4,
+        "id": 115
+      },
+      {
+        "idcoordenadas": 116,
+        "coordenadax": 655,
+        "coordenaday": 830,
+        "owner": 4,
+        "id": 116
+      },
+      {
+        "idcoordenadas": 117,
+        "coordenadax": 680,
+        "coordenaday": 830,
+        "owner": 4,
+        "id": 117
+      },
+      {
+        "idcoordenadas": 118,
+        "coordenadax": 705,
+        "coordenaday": 830,
+        "owner": 4,
+        "id": 118
+      },
+      {
+        "idcoordenadas": 119,
+        "coordenadax": 730,
+        "coordenaday": 830,
+        "owner": 4,
+        "id": 119
+      },
+      {
+        "idcoordenadas": 120,
+        "coordenadax": 755,
+        "coordenaday": 830,
+        "owner": 4,
+        "id": 120
+      },
+      {
+        "idcoordenadas": 121,
+        "coordenadax": 780,
+        "coordenaday": 830,
+        "owner": 4,
+        "id": 121
+      },
+      {
+        "idcoordenadas": 122,
+        "coordenadax": 805,
+        "coordenaday": 830,
+        "owner": 4,
+        "id": 122
+      },
+      {
+        "idcoordenadas": 123,
+        "coordenadax": 830,
+        "coordenaday": 830,
+        "owner": 4,
+        "id": 123
+      },
+      {
+        "idcoordenadas": 124,
+        "coordenadax": 855,
+        "coordenaday": 830,
+        "owner": 4,
+        "id": 124
+      },
+      {
+        "idcoordenadas": 125,
+        "coordenadax": 880,
+        "coordenaday": 830,
+        "owner": 4,
+        "id": 125
+      },
+      {
+        "idcoordenadas": 126,
+        "coordenadax": 895,
+        "coordenaday": 805,
+        "owner": 4,
+        "id": 126
+      },
+      {
+        "idcoordenadas": 127,
+        "coordenadax": 895,
+        "coordenaday": 780,
+        "owner": 4,
+        "id": 127
+      },
+      {
+        "idcoordenadas": 128,
+        "coordenadax": 895,
+        "coordenaday": 755,
+        "owner": 4,
+        "id": 128
+      },
+      {
+        "idcoordenadas": 129,
+        "coordenadax": 895,
+        "coordenaday": 730,
+        "owner": 4,
+        "id": 129
+      },
+      {
+        "idcoordenadas": 130,
+        "coordenadax": 880,
+        "coordenaday": 705,
+        "owner": 4,
+        "id": 130
+      }
+    ],
+    "rutas": [
+      {
+        "idruta": 1,
+        "nombreruta": "Decanato",
+        "id": 1
+      },
+      {
+        "idruta": 2,
+        "nombreruta": "BañoMujeres",
+        "id": 2
+      },
+      {
+        "idruta": 3,
+        "nombreruta": "Proyecto de Investigacion",
+        "id": 3
+      },
+      {
+        "idruta": 4,
+        "nombreruta": "Profesor",
+        "id": 4
+      }
+    ]
+  },
+  "schema": {
+    "informacion": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "inicio": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "coordenadas": {
+      "idcoordenadas": {
+        "type": "integer"
+      },
+      "coordenadax": {
+        "type": "integer"
+      },
+      "coordenaday": {
+        "type": "integer"
+      },
+      "owner": {
+        "type": "integer",
+        "model": "rutas",
+        "foreignKey": true,
+        "alias": "owner"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      }
+    },
+    "rutas": {
+      "idruta": {
+        "type": "integer"
+      },
+      "nombreruta": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      }
+    }
+  },
+  "counters": {
+    "coordenadas": {
+      "id": 130
+    },
+    "informacion": {},
+    "inicio": {},
+    "rutas": {
+      "id": 4
+    }
+  }
+}
