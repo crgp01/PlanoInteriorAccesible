@@ -1,44 +1,62 @@
 $(document).ready(function () {
     //lamada de funcion cookies
     cookiesinicio();
+    //Boton navegacion por defecto
+    $("button[tabindex='19']").prop('disabled', true);
+
+    //Creacion de accesskey
+    document.getElementById("ofidocentes").accessKey = "m";
+    document.getElementById("volvermapa").accessKey = "p";
+    document.getElementById("botondeaccesibilidad").accessKey = "c";
+    document.getElementById("botondeayuda").accessKey = "a";
+
+    $("#botondeayuda").click(function () {
+
+
+        $("#menuaccesibilidad").removeClass("in").addClass('collapse');
+
+    });
+
+    $("#botondeaccesibilidad").click(function () {
+        $("#menuayuda").removeClass("in").addClass('collapse');
+    });
+
+
 
     //Declaracion Stycky Bar
-    var stickyNavTop = $('#styckybar').offset().top;
+    /*    var stickyNavTop = $('#styckybar').offset().top;
 
-    var stickyNav = function () {
-        var scrollTop = $(window).scrollTop();
+        var stickyNav = function () {
+            var scrollTop = $(window).scrollTop();
 
-        if (scrollTop > stickyNavTop) {
-            $('#styckybar').addClass('sticky');
-        } else {
-            $('#styckybar').removeClass('sticky');
-        }
-    };
+            if (scrollTop > stickyNavTop) {
+                $('#styckybar').addClass('sticky');
+            } else {
+                $('#styckybar').removeClass('sticky');
+            }
+        };
 
-
-
-
-    stickyNav();
-
-    var offset = 25;
-
-    var duration = 300;
-
-    $(window).scroll(function () {
         stickyNav();
 
+        var offset = 25;
+
+        var duration = 300;
+
+        $(window).scroll(function () {
+            stickyNav();
 
 
-        if (jQuery(this).scrollTop() > offset) {
-            jQuery('.back-to-top').fadeIn(duration);
-        } else {
-            jQuery('.back-to-top').fadeOut(duration);
-        }
-    });
+
+            if (jQuery(this).scrollTop() > offset) {
+                jQuery('.back-to-top').fadeIn(duration);
+            } else {
+                jQuery('.back-to-top').fadeOut(duration);
+            }
+        });*/
 
     //declaracion back on top
 
-    jQuery('.back-to-top').click(function (event) {
+    /*  jQuery('.back-to-top').click(function (event) {
 
         event.preventDefault();
 
@@ -48,8 +66,7 @@ $(document).ready(function () {
 
         return false;
 
-    });
-
+    });*/
 
     //barra de zoom svg
     var zoomTiger = svgPanZoom('#plano', {
@@ -414,7 +431,7 @@ $(document).ready(function () {
                 if (e.which == 37) {
                     $("rect[tabindex='49']").focus();
                 } else {
-                    $("button[tabindex = '150']").focus();
+                    $("div[tabindex = '150']").focus();
                 }
                 break;
             }
@@ -1034,7 +1051,7 @@ $(document).ready(function () {
                 if (e.which == 37) {
                     $("path[tabindex='99']").focus();
                 } else {
-                    $("button[tabindex='150']").focus();
+                    $("div[tabindex='150']").focus();
                 }
                 break;
             }
@@ -1044,7 +1061,7 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '101':
                 if (e.which == 38) {
-                    $("path[tabindex='51']").focus();
+                    $("rect[tabindex='51']").focus();
                 } else {
                     $("rect[tabindex='103']").focus();
                 }
@@ -1059,7 +1076,7 @@ $(document).ready(function () {
                 if (e.which == 37) {
                     $("rect[tabindex='97']").focus();
                 } else {
-                    $("button[tabindex='150']").focus();
+                    $("div[tabindex='150']").focus();
                 }
                 break;
             }
@@ -1084,7 +1101,7 @@ $(document).ready(function () {
                 if (e.which == 37) {
                     $("rect[tabindex='95']").focus();
                 } else {
-                    $("button[tabindex='150']").focus();
+                    $("div[tabindex='150']").focus();
                 }
                 break;
             }
@@ -1109,7 +1126,7 @@ $(document).ready(function () {
                 if (e.which == 37) {
                     $("rect[tabindex='93']").focus();
                 } else {
-                    $("button[tabindex='150']").focus();
+                    $("div[tabindex='150']").focus();
                 }
                 break;
             }
@@ -1134,7 +1151,7 @@ $(document).ready(function () {
                 if (e.which == 37) {
                     $("rect[tabindex='111']").focus();
                 } else {
-                    $("button[tabindex='150']").focus();
+                    $("div[tabindex='150']").focus();
                 }
                 break;
             }
@@ -1303,7 +1320,7 @@ $(document).ready(function () {
                 if (e.which == 38) {
                     $("button[tabindex='1']").focus();
                 } else {
-                    $("button[tabindex='154']").focus();
+                    $("button[tabindex='161']").focus();
                 }
                 break;
             }
@@ -1364,7 +1381,7 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '1':
                 if (e.which == 37) {
-                    $("rect[tabindex='']").focus();
+                    $("button[id='botondeayuda']").focus();
                 } else {
                     $("rect[tabindex='']").focus();
                 }
@@ -3395,6 +3412,240 @@ $(document).ready(function () {
             }
         }
 
+        //boton ir a mapa
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '161':
+                if (e.which == 37) {
+                    $("rect[tabindex='51']").focus();
+                } else {
+                    $("path[tabindex='']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '161':
+                if (e.which == 38) {
+                    $("div[tabindex='150']").focus();
+                } else {
+                    $("button[tabindex='162']").focus();
+                }
+                break;
+            }
+        }
+
+        //boton ir a menu principal
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '162':
+                if (e.which == 37) {
+                    $("rect[tabindex='51']").focus();
+                } else {
+                    $("path[tabindex='']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '162':
+                if (e.which == 38) {
+                    $("button[tabindex='161']").focus();
+                } else {
+                    $("button[tabindex='163']").focus();
+                }
+                break;
+            }
+        }
+
+        //boton ir a mapa
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '163':
+                if (e.which == 37) {
+                    $("rect[tabindex='51']").focus();
+                } else {
+                    $("path[tabindex='']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '163':
+                if (e.which == 38) {
+                    $("button[tabindex='161']").focus();
+                } else {
+                    $("button[tabindex='']").focus();
+                }
+                break;
+            }
+        }
+
+        //boton de ayuda
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'botondeayuda':
+                if (e.which == 37) {
+                    $("rect[tabindex='']").focus();
+                } else {
+                    $("button[tabindex='1']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'botondeayuda':
+                if (e.which == 38) {
+                    $("button[id='botondescripcion']").focus();
+                } else {
+                    $("button[tabindex='15']").focus();
+                }
+                break;
+            }
+        }
+
+        //boton indicaciones
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'botonindicaciones':
+                if (e.which == 37) {
+                    $("button[id='botondescripcion']").focus();
+                } else {
+                    $("button[id='botonnavegacion']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'botonindicaciones':
+                if (e.which == 38) {
+                    $("button[id='']").focus();
+                } else {
+                    $("div[tabindex='170']").focus();
+                }
+                break;
+            }
+        }
+
+        //boton descripcion
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'botondescripcion':
+                if (e.which == 37) {
+                    $("button[id='']").focus();
+                } else {
+                    $("button[id='botonindicaciones']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'botondescripcion':
+                if (e.which == 38) {
+                    $("button[id='']").focus();
+                } else {
+                    $("div[tabindex='170']").focus();
+                }
+                break;
+            }
+        }
+
+
+        //boton simulacion
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'botonsimulacion':
+                if (e.which == 37) {
+                    $("button[id='botonnavegacion']").focus();
+                } else {
+                    $("button[tabindex='']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'botonsimulacion':
+                if (e.which == 38) {
+                    $("button[id='']").focus();
+                } else {
+                    $("div[tabindex='170']").focus();
+                }
+                break;
+            }
+        }
+
+        //boton navegacion
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'botonnavegacion':
+                if (e.which == 37) {
+                    $("button[id='botonindicaciones']").focus();
+                } else {
+                    $("button[id ='botonsimulacion']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'botonnavegacion':
+                if (e.which == 38) {
+                    $("button[id='']").focus();
+                } else {
+                    $("div[tabindex='170']").focus();
+                }
+                break;
+            }
+        }
+
+        //boton navegacion
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '170':
+                if (e.which == 37) {
+                    $("button[id='']").focus();
+                } else {
+                    $("button[id ='']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '170':
+                if (e.which == 38) {
+                    $("button[id='botondescripcion']").focus();
+                } else {
+                    $("button[id='botondeayuda']").focus();
+                }
+                break;
+            }
+        }
+
+
+
 
     });
 
@@ -3453,6 +3704,23 @@ $(document).ready(function () {
     $("#Contrast").change(function () {
         var nuevocontrast = $("#Contrast").val();
         contrast(nuevocontrast);
+    });
+
+    $('#modo input').on('change', function () {
+        switch (($('input[name=radiomenu]:checked', '#modo').val())) {
+        case 'simulacion':
+            $("button[tabindex='15']").prop('disabled', true);
+            $("button[tabindex='19']").prop('disabled', false);
+
+            break;
+        case 'navegacion':
+            $("button[tabindex='19']").prop('disabled', true);
+            $("button[tabindex='15']").prop('disabled', false);
+
+
+        }
+
+
     });
 
 });
@@ -3811,6 +4079,7 @@ function cargarInformacionOficina(idOficina, mapa) {
     }).success(function () {
         renderizarMapa("", idOficina);
         $("div[tabindex='150']").focus();
+        $("button[tabindex='161']").attr("lastelement", "" + idOficina);
     });
 }
 
@@ -3859,7 +4128,7 @@ function mostrarRuta(tabindex, idRuta) {
                         d3.select(".currentLayer").append("circle").attr("cx", item["coordenadax"]).attr("cy", item["coordenaday"]).attr("r", 4).style("fill", "red");
                     }
                     aux++;
-                }, 550 * i);
+                }, 1500 * i);
             });
         }).fail(function (res) {
         console.log("Error: en ajax plano");
@@ -3870,4 +4139,46 @@ function playaudio(audio1) {
     var audio = document.getElementById(audio1);
     audio.play();
 
+}
+
+function ultimoelemento() {
+    var ultimoelemento = $("button[tabindex='161']").attr("lastelement");
+
+    if (ultimoelemento > 0) {
+        var elemento = $("[tabindex='" + ultimoelemento + "']");
+        elemento.focus();
+    } else {
+        var informacion = $("[tabindex='29']");
+        informacion.focus()
+    }
+}
+
+function menuprincipal() {
+    $("button[tabindex='15']").focus();
+}
+
+function exit() {
+    $("h1[tabindex='0']").focus();
+}
+
+function menuayuda() {
+    $("div[tabindex='170']").focus();
+}
+
+/*function ocultardiv() {
+    $("div[id='menuaccesibilidad']").collapse("toggle");
+}
+
+function desocultardiv() {
+
+    $("div[id='menuayuda']").collapse("toggle");
+}*/
+
+
+function ocultartodo() {
+
+    /* $('a[data-toggle="collapse"]').each(function () {
+     var objectID = $(this).attr('href');
+     $(objectID).collapse('hide');
+ });*/
 }

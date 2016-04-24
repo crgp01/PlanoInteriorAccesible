@@ -1,27 +1,38 @@
-<div class="container" tabindex="150">
+<div class="container">
 
     <!--<button data-toggle="collapse" class="btn btn-default elementomenu subtitulos" href="#informacion1" tabindex="150">
     Informacion Principal
 </button>-->
 
+    <div tabindex="150">
+        <p class="estiloInformacion">Información Principal: </p>
+        <div id="informacion1">
 
-    <p class="estiloInformacion">Información Principal: </p>
-    <div id="informacion1">
+            <p class="descripcionoficina" id="InformacionPrincipal">
+            </p>
+        </div>
+        <p class="estiloInformacion">Carga Horaria: </p>
+        <div id="informacion2">
 
-        <p class="descripcionoficina" id="InformacionPrincipal">
-        </p>
+            <p class="descripcionoficina" id="CargaHoraria" tabindex="152">
+            </p>
+        </div>
+        <p class="estiloInformacion">Informacion del Profesor</p>
+        <div id="informacion3">
+
+            <p class="descripcionoficina" id="InformacionProfesor" tabindex="160">
+            </p>
+        </div>
     </div>
-    <p class="estiloInformacion">Carga Horaria: </p>
-    <div id="informacion2">
 
-        <p class="descripcionoficina" id="CargaHoraria" tabindex="152">
-        </p>
+    <div>
+        <button id="volvermapa" class="btn btn-default elementomenu subtitulos opcionavanzada" onclick="ultimoelemento()" alt="Accessibility" aria-expanded="true" tabindex="161" href="#rutas" lastelement="0">Volver al mapa</button>
     </div>
-    <p class="estiloInformacion">Informacion del Profesor</p>
-    <div id="informacion3">
-
-        <p class="descripcionoficina" id="InformacionProfesor" tabindex="160">
-        </p>
+    <div>
+        <button class="btn btn-default elementomenu subtitulos opcionavanzada" onclick="menuprincipal()" alt="Accessibility" aria-expanded="true" tabindex="162" href="#rutas">Volver al menu principal</button>
+    </div>
+    <div>
+        <button class="btn btn-default elementomenu subtitulos opcionavanzada" onclick="exit()" alt="Accessibility" aria-expanded="true" tabindex="163" href="#rutas">Salir</button>
     </div>
 
     <!--<div>

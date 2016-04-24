@@ -9,8 +9,14 @@
 
 h1,
 h3,
-h4 {
+h4,
+li,
+label {
     color: #000000;
+}
+
+#menuayuda {
+    background-color: #FFFFFF;
 }
 
 .nav {
@@ -18,13 +24,21 @@ h4 {
 }
 
 .fondo-menu {
-    max-height: 50px;
     background-color: #FFFFFF;
-      padding-left: 90%;
+    max-height: 50px;
+    margin-bottom: 1%;
+    padding-left: 85%;
+}
+
+button.botonmenu {
+    font-size: 1.2em;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-color: #000000;
 }
 
 #salto {
-   margin-left: 85%;
+    margin-left: 85%;
 }
 
 

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 
 <head>
-    <title>Indoor Floor Plan</title>
+    <title>Plano Interior Accesible</title>
 
     <!-- Viewport mobile tag for sensible mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -31,6 +31,8 @@
     -->
 
     <!--STYLES-->
+    <link rel="stylesheet" href="/styles/css/general/bootstrap-switch.css">
+    <link rel="stylesheet" href="/styles/css/general/bootstrap-switch.min.css">
     <link rel="stylesheet" href="/styles/css/general/bootstrap.css">
     <link rel="stylesheet" href="/styles/css/general/bootstrap.min.css">
     <link rel="stylesheet" href="/styles/css/general/estilo.css">
@@ -52,6 +54,8 @@
     <script src="/js/dependencies/Jquery/jquery.min.js"></script>
     <script src="/js/dependencies/Jquery/jquery.svg.js"></script>
     <script src="/js/dependencies/Jquery/jquery.svganim.js"></script>
+    <script src="/js/dependencies/Bootstrap/bootstrap-switch.js"></script>
+    <script src="/js/dependencies/Bootstrap/bootstrap-switch.min.js"></script>
     <script src="/js/dependencies/Bootstrap/bootstrap.js"></script>
     <script src="/js/dependencies/Bootstrap/bootstrap.min.js"></script>
     <script src="/js/mapa/main.js"></script>
@@ -60,31 +64,30 @@
 
 <body class="">
 
-
     <a id="salto" href="#maincontent">Contenido Principal</a>
     <!-- bottom-up button-->
     <input type="image" src="../../images/flecha.png" alt="back to top" class="back-to-top" style="display: inline;" title="back to top" tabindex="200">
 
-    <div id="styckybar" class="nav">
-        <div id="menuaccesibilidad" class="panel-collapse collapse">
+    <div id="">
+        <div id="menuaccesibilidad" class="panel-collapse collapse" data-collapse-group="divaccesibilidad">
             <ul class="nav nav-tabs">
                 <li class="active">
-                    <button data-toggle="tab" class="btn btn-default elementomenu subtitulos" href="#home" alt="Accessibility" id="1" tabindex="1">Accessibility</button>
+                    <button data-toggle="tab" class="btn btn-default elementomenu subtitulos" href="#home" alt="Accessibility" id="1" tabindex="1">Accesibilidad</button>
                 </li>
                 <li>
-                    <button data-toggle="tab" class="btn btn-default elementomenu subtitulos" href="#menu1" alt="Advanced Options" id="2" tabindex="2">Advanced Options</button>
+                    <button data-toggle="tab" class="btn btn-default elementomenu subtitulos" href="#menu1" alt="Advanced Options" id="2" tabindex="2">Opciones Avanzadas</button>
                 </li>
             </ul>
 
             <div class="tab-content">
                 <div id="home" class="tab-pane fade in active">
-                    <div id="menuaccesibilidad2" class="panel-collapse">
+                    <div id="menuaccesibilidad2">
                         <!--    <ul class="list-group">-->
                         <div class="menuavanzado">
                             <!-- <li class="list-group-item elementoavanzado">-->
                             <div class="row">
                                 <div class="estilos col-md-3">
-                                    <p>Styles</p>
+                                    <p>Estilos</p>
                                     <input id="3" type="image" src="../../images/normal2.png" alt="normal style" width="48" height="48" onclick="pulsar('estilo.css')" tabindex="3" title="normal style">
                                     <input id="4" type="image" src="../../images/blanco.png" alt="white style" width="48" height="48" onclick="pulsar('estiloblanco.css')" tabindex="3" title="white style">
                                     <input id="5" type="image" src="../../images/amarillo-negro.png" alt="yellow style" width="48" height="48" onclick="pulsar('estiloamarillo-negro.css')" tabindex="3" title="yellow style">
@@ -96,7 +99,7 @@
                                     <div class="row">
 
                                         <div class="tamanio-letra col-md-4">
-                                            <p>Font Size</p>
+                                            <p>Tamaño de letra</p>
                                             <img id="letranormal" src="../../images/letranormal.png" alt="small font size" height="38" width="38">
                                             <input id="letra" class="inline" type='text' name='username' size='1' title="font" disabled />
                                             <img id="letragrande" src="../../images/letragrande.png" alt="small font size" height="38" width="38">
@@ -104,14 +107,14 @@
                                         </div>
 
                                         <div class="interlineado col-md-3">
-                                            <p>Line Spacing</p>
+                                            <p>Interespaciado</p>
                                             <img id="espaciadonormal" src="../../images/linea1.png" alt="small font size" height="38" width="38">
                                             <input id="espaciado" class="inline" type='text' name='username' size='1' disabled title="spacing" />
                                             <img id="espaciadogrande" src="../../images/linea3.png" alt="small font size" height="38" width="38">
                                             <input id="espaciado2" class="inline" type="range" name="points" min="1" max="2.5" size='5' step="0.1" tabindex="5" alt="line spacing" title="spacing">
                                         </div>
-                                        <div class="tipo-letra col-md-3">
-                                            <p>Text Style</p>
+                                        <div class="tipo-letra col-md-2">
+                                            <p>Tipo de Letra</p>
 
                                             <select id="tipoletra" width="10" tabindex="6" title="font type" alt="font type">
                                                 <option id="Calibri" value="Calibri">Calibri</option>
@@ -122,10 +125,25 @@
 
                                             </select>
                                         </div>
+                                        <div class="col-md-2">
+                                            <p>Modo de operación</p>
+
+                                            <form id="modo">
+
+                                                <input id="radionavegacion" type="radio" name="radiomenu" value="navegacion" checked>
+                                                <label>Navegación</label>
+                                                <br>
+
+
+
+                                                <input id="radiosimulacion" type="radio" name="radiomenu" value="simulacion">
+                                                <label>Simulación</label>
+                                            </form>
+                                        </div>
 
                                         <p class="panel-title">
                                             <a class="btn btn-default opcionavanzada" href="#reload" onclick="reiniciar()" tabindex="7" alt="Reload">
-               Reload Settings
+               Restablecer Configuraación
             </a>
                                         </p>
                                     </div>
@@ -143,12 +161,12 @@
 
                 </div>
                 <div id="menu1" class="tab-pane fade">
-                    <div id="collapse2" class="panel-collapse">
+                    <div id="collapse2" class="">
                         <!--   <ul class="list-group ">-->
                         <div class="menuavanzado">
                             <!--<li class="list-group-item elementoavanzado">-->
                             <div class="row">
-                                <p>Pattern</p>
+                                <p>Patrones</p>
                                 <div class="col-md-3">
                                     <input id="9" type="image" src="../../images/patron.png" alt="without pattern" title="without pattern" width="48" height="48" onclick="patron('mapaplanopatronnegro')" tabindex="8" title="without pattern">
                                     <input id="10" type="image" src="../../images/colorypatron.png" alt="Color and pattern" title="Color and pattern" width="48" height="48" onclick="patron('mapaplanopatroncolor')" tabindex="8" title="color and pattern">
@@ -158,19 +176,19 @@
                                 <div class="col-md-6">
                                     <div class="row">
                                         <div class="col-md-3">
-                                            <p>Saturation</p>
+                                            <p>Saturación</p>
                                             <input id="Saturation" class="" type="range" name="points" min="1" max="10" size='5' step="1" tabindex="9" title="Saturation">
                                         </div>
                                         <div class="col-md-3">
-                                            <p>Brightness</p>
+                                            <p>Brillo</p>
                                             <input id="Brightness" class="" type="range" name="points" min="1" max="1.2" size='5' step="0.1" tabindex="9" title="Brightness">
                                         </div>
                                         <div class="col-md-3">
-                                            <p>Hue</p>
+                                            <p>Tono</p>
                                             <input id="Hue" class="" type="range" name="points" min="0" max="360" size='5' step="0.1" tabindex="9" title="Hue">
                                         </div>
                                         <div class="col-md-3">
-                                            <p>Grayscale</p>
+                                            <p>Grises</p>
                                             <input id="Grayscale" class="" type="range" name="points" min="0" max="1" size='5' step="0.1" tabindex="9" title="Grayscale">
                                         </div>
 
@@ -181,15 +199,15 @@
                                             <input id="Sepia" class="" type="range" name="points" min="0" max="1" size='5' step="0.1" tabindex="9" title="Sepia">
                                         </div>
                                         <div class="col-md-3">
-                                            <p>Invert</p>
+                                            <p>Ivertir</p>
                                             <input id="Invert" class="" type="range" name="points" min="0" max="1" size='5' step="0.001" tabindex="9" title="Invert">
                                         </div>
                                         <div class="col-md-3">
-                                            <p>Opacity</p>
+                                            <p>Opacidad</p>
                                             <input id="Opacity" class="" type="range" name="points" min="0.2" max="1" size='5' step="0.001" tabindex="9" title="Opacity">
                                         </div>
                                         <div class="col-md-3">
-                                            <p>Contrast</p>
+                                            <p>Contraste</p>
                                             <input id="Contrast" class="" type="range" name="points" min="1" max="4" size='5' step="0.001" tabindex="9" title="Contrast">
                                         </div>
                                     </div>
@@ -199,7 +217,7 @@
 
                                 <p class="panel-title">
                                     <a class="btn btn-default opcionavanzada" href="#reload" onclick="restart()" tabindex="10" alt="restart">
-               Reload Settings
+               Restablecer Configuración
             </a>
                                 </p>
                             </div>
@@ -214,18 +232,112 @@
 
             </div>
         </div>
+
+
+        <div id="menuayuda" class="panel-collapse collapse" data-collapse-group="divayuda">
+
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <button data-toggle="tab" class="btn btn-default elementomenu subtitulos" href="#descripcion" alt="Accessibility" id="botondescripcion" tabindex="11">Descripcion</button>
+                </li>
+                <li>
+                    <button data-toggle="tab" class="btn btn-default elementomenu subtitulos" href="#indicaciones" alt="Advanced Options" id="botonindicaciones" tabindex="12">Indicaciones</button>
+                </li>
+                <li>
+                    <button data-toggle="tab" class="btn btn-default elementomenu subtitulos" href="#navegacion" alt="Advanced Options" id="botonnavegacion" tabindex="13">Modo Navegación</button>
+                </li>
+                <li>
+                    <button data-toggle="tab" class="btn btn-default elementomenu subtitulos" href="#simulacion" alt="Advanced Options" id="botonsimulacion" tabindex="14">Modo Simulación</button>
+                </li>
+            </ul>
+            <div id="descripcionayuda" class="tab-content">
+                <div id="descripcion" class="tab-pane fade in active">
+                    <div id="divdescripcion" class="" tabindex="170">
+                        <h4>Descripción</h4>
+                        <p>El siguiente protitipo es una representacion de un plano interior accesible del segundo piso de la facultad de ingeniería de Sistemas. Contiene información de las oficinas de los profesores del segundo piso con su respectiva distribución espacial. La pagina consiste en un menu superior y 3 bloques se informacion principales.</p>
+
+                        <ul>
+                            <li>El menu superior contiene 2 botones, ayuda y accesibilidad.
+                                <ul>
+                                    <p>Menu ayuda</p>
+                                    <li>Descripción: Contiene una descripción del prototipo y una descripción de su uso.</li>
+                                    <li>Indicaciones: Se especifica las ociones de usablidad y navegacion que se han integrado al protitipo.</li>
+                                    <p>Menu accesibilidad</p>
+                                    <li>Accesibilidad: Posee alternativas para cambio de color de la página, aumento en el tamaño de letra, aumento en el espaciado de letra y cambio en el tipo de fuente. En este menu se puede activar el modo navegación o simulación. </li>
+                                    <li>Opciones avanzadas: Posee opciones para cambios en el estilo del mapa y opciones avanzadas de cambio de color como saturación, tono, brillo, escala de grises, etc. </li>
+                                </ul>
+                            </li>
+                            <br>
+                            <li>Bloque izquierda: Contiene un menu de navegación en orden albabético en el modo navegación. En el modo simulación posee 4 rutas principales que indican las instrucciones para llegar a 4 pficinas, decanato, profesor, proyecto de investigación y bañsos.</li>
+                            <li>Bloque central: Contiene el plano a escala del segundo piso de la facultad de sistemas. Posee la distribución espacial de las oficinas que se encuentan divididas en 4 bloques principales. El bloque superior izquierdo corresponde a las oficinas del rectorado. El bloque superior derecho consiste en el area de profesores, anteriormente la biblioteca. El bloque inferior izquierdo corresponde al primer bloque de oficinas y el bloque inferior derecho corresponde al segundo bloque de oficinas.</li>
+                            <li>Bloque derecho: Corresponde a las descripciones de cada elemento que es seleccionado en el mapa. Entre la descripcion se tiene la carga horaria del profesor o la descripcion de la oficina. Además posee tres botones de retorno, como son menu principal, retornar al plano y salir.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="indicaciones" class="tab-pane fade">
+                    <div id="divindicaciones" class="" tabindex="170">
+                        <h4>Indicaciones</h4>
+                        <ul>Para navegar por el plano, puede utilizar la tecla tab para moverse en orden secuencial, o las flechas arriba, abajo, izquierda y derecha para navegar en cualquier dirección.
+                            <li>
+                                <ul>Puede utilizar los siguientes atajos de teclado para ir a los siguientes elementos:
+                                    <li>
+                                        Menu principal: Alt + m
+                                    </li>
+                                    <li>
+                                        Plano: Alt + p
+                                    </li>
+                                    <li>
+                                        Menu ayuda: Alt + a
+                                    </li>
+                                    <li>
+                                        Menu accesibilidad: Alt + c
+                                    </li>
+                                    <li>
+                                        Inicio: Esc
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>La navegacion se la realiza ubicando el elemento deseado ya sea con los cursores, tecla tab o ratón. Una vez seleccionado el elemento en el plano interior, el foco se colocará automáticamente en la descripción del elemento. Si se desea retornar al plano, se debe escoger el boton inferior volver al mapa con la tecla tab o con la flecha inferior. Si se desea retornar al menu izquierdo de busqueda, se debe seleccionar el boton Volver al menu principal. Si desea salir y retornar al inicio, se debe escoger el boton salir. </li>
+                            <li>En caso se utilizar Chrome Vox: El screen reader reconoce los tipos de elementos y posteriormente a su selección indica su nombre de descripción.</li>
+
+                    </div>
+                </div>
+
+                <div id="navegacion" class="tab-pane fade">
+                    <div id="divnavegacion" class="" tabindex="170">
+                        <h4>Modo Navegacion</h4>
+                        <ul>
+                            <li> Este modo estará activado por defecto. Dentro se esta opción se puede conocer la información de los elementos del plano. Además se puede realizar una busqueda de profesores y oficinas que se localizan en el segundo piso.</li>
+                            <li>Los elementos se encuentran ordenados alfabéticamente en un rango de 4 grupos. </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div id="simulacion" class="tab-pane fade">
+                    <div id="divsimulacion" class="" tabindex="170">
+                        <h4>Modo Simulacion</h4>
+                        <li>Dentro de este modo se puede escoger una ruta para que sea graficada en el plano, indicando el camino que se debe seguir para llegar al elemento seleccionado. A medida que la ruta se grafica, se ofrece una descripcion verbal de los elementos proximos en la ruta graficada.</li>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
         <h1 class="text-center" tabindex="0">Plano Interior Accesible</h1>
         <!--<p class="text-center">Segundo piso de la Facultad de Ingeniería de Sistemas</p>-->
         <div class="fondo-menu">
 
-            <p>
-                <button data-toggle="collapse" class="btn btn-default elementomenu subtitulos opcionavanzada" href="#menuaccesibilidad" onclick="" alt="Accessibility" aria-expanded="true" tabindex="1" href="#rutas">Accessibility</button>
-            </p>
+
+            <button id="botondeayuda" data-toggle="collapse" class="btn btn-default botonmenu " href="#menuayuda" onclick="menuayuda(); ocultardiv();" alt="Ayuda" aria-expanded="true" tabindex="1" href="#ayuda">Ayuda</button>
+
+            <button id="botondeaccesibilidad" data-toggle="collapse" class="btn btn-default botonmenu" href="#menuaccesibilidad" onclick="desocultardiv()" alt="Accesibilidad" aria-expanded="true" tabindex="1" href="#rutas">Accesibilidad</button>
+
+
 
         </div>
     </div>
-
-
 
 
     <!--<h1 class="text-center">Plano Interior Accesible</h1>-->

@@ -1,6 +1,7 @@
 body {
     background-color: #FFFFFF;
     color: #000000;
+    /*cursor: pointer;*/
 }
 
 .alfabeto {
@@ -24,11 +25,19 @@ body {
 }*/
 
 .fondo-menu {
-    max-height: 50px;
     background-color: #DDDDDD;
     color: #000000;
-    padding-left: 90%;
-    width: 1900px;
+    max-height: 50px;
+    margin-bottom: 1%;
+    padding-left: 2%;
+    /* display: inline;*/
+}
+
+button.botonmenu {
+    font-size: 1.2em;
+    background-color: #DDDDDD;
+    color: #000000;
+    border-color: #AAAAAA;
 }
 
 p.titulobloque {
@@ -59,7 +68,6 @@ p.titulobloque {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    width: 1893px;
     /*height: 900px;*/
     margin-left: 10px;
 }
@@ -133,7 +141,20 @@ button.elementomenu {
     margin-bottom: 1%;
     border-color: #BBBBBB;
     background-color: #FFFFFF;
-    width: 1815px;
+}
+
+#menuayuda {
+    margin-left: 1%;
+    margin-bottom: 1%;
+    border-color: #BBBBBB;
+    background-color: #FFFFFF;
+}
+
+#contenedor-principal {
+    margin-left: 1%;
+    margin-bottom: 1%;
+    border-color: #BBBBBB;
+    background-color: #FFFFFF;
 }
 
 .elementoavanzado {

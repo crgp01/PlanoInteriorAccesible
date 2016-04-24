@@ -4,7 +4,9 @@ body {
 
 h1,
 h3,
-h4 {
+h4,
+li,
+label {
     color: #FFF300;
 }
 
@@ -17,9 +19,18 @@ p {
 }
 
 .fondo-menu {
-    max-height: 50px;
     background-color: #000000;
-    padding-left: 90%;
+    max-height: 50px;
+    margin-bottom: 1%;
+    padding-left: 85%;
+}
+
+.botonmenu {
+    margin: 5px;
+}
+
+#menuayuda {
+    background-color: #000000;
 }
 
 #salto {
@@ -177,6 +188,21 @@ a.opcionavanzada {
     border-color: #FFF300;
 }
 
+button.botonmenu {
+    font-size: 1.2em;
+    background-color: #000000;
+    color: #FFF300;
+    border-color: #FFF300;
+}
+
 .tituloinicial {
     border-color: #FFF300;
+}
+
+input,
+select,
+a,
+h1,
+p {
+    cursor: pointer;
 }
