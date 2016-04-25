@@ -1635,7 +1635,7 @@ $(document).ready(function () {
                 if (e.which == 37) {
                     $("input[tabindex='5']").focus();
                 } else {
-                    $("a[tabindex='7']").focus();
+                    $("input[id='radionavegacion']").focus();
                 }
                 break;
             }
@@ -1658,7 +1658,7 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '7':
                 if (e.which == 37) {
-                    $("select[tabindex='6']").focus();
+                    $("input[id='radionavegacion']").focus();
                 } else {
                     $("button[id='2']").focus();
                 }
@@ -3644,6 +3644,32 @@ $(document).ready(function () {
             }
         }
 
+        //boton radio navegacion
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'radionavegacion':
+                if (e.which == 37) {
+                    $("select[tabindex='6']").focus();
+                } else {
+                    $("a[tabindex ='7']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'radiosimulacion':
+                if (e.which == 38) {
+                    $("button[id='']").focus();
+                } else {
+                    $("button[tabindex='1']").focus();
+                }
+                break;
+            }
+        }
+
 
 
 
@@ -4021,7 +4047,9 @@ function reiniciar() {
     tipoletra('Arial');
     $("#tamanioletra").val(1);
     $("#espaciado2").val(1);
-
+    $("#radionavegacion").prop("checked", true);
+    $("button[tabindex='19']").prop('disabled', true);
+    $("button[tabindex='15']").prop('disabled', false);
 }
 //Inicio de cookies
 function cookiesinicio() {
