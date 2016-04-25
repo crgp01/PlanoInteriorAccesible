@@ -22,13 +22,6 @@ p {
     background-color: #555555;
 }
 
-.fondo-menu {
-    background-color: #555555;
-    max-height: 50px;
-    margin-bottom: 1%;
-    padding-left: 85%;
-}
-
 button.botonmenu {
     font-size: 1.2em;
     background-color: #555555;
@@ -53,6 +46,9 @@ button.botonmenu {
 .fondo-menu {
     background-color: #555555;
     border: 1px solid #BBBBBB;
+    max-height: 50px;
+    margin-bottom: 1%;
+    padding-left: 2%;
 }
 
 .titulobloque {
@@ -79,7 +75,6 @@ button.botonmenu {
     margin-bottom: 1%;
     border-color: #BBBBBB;
     background-color: #555555;
-    width: 1815px;
 }
 
 .nav-tabs>li.active>a,
@@ -93,7 +88,6 @@ button.botonmenu {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    width: 1893px;
     /*height: 900px;*/
     margin-left: 10px;
 }

@@ -4,6 +4,22 @@ $(document).ready(function () {
     //Boton navegacion por defecto
     $("button[tabindex='19']").prop('disabled', true);
 
+    $("#botondescripcion").click(function () {
+        $("div[tabindex='170']").focus();
+    });
+
+    $("#botonindicaciones").click(function () {
+        $("div[tabindex='171']").focus();
+    });
+
+    $("#botonnavegacion").click(function () {
+        $("div[tabindex='172']").focus();
+    });
+    $("#botonsimulacion").click(function () {
+        $("div[tabindex='173']").focus();
+    });
+
+
     //Creacion de accesskey
     document.getElementById("ofidocentes").accessKey = "m";
     document.getElementById("volvermapa").accessKey = "p";
@@ -11,7 +27,6 @@ $(document).ready(function () {
     document.getElementById("botondeayuda").accessKey = "a";
 
     $("#botondeayuda").click(function () {
-
 
         $("#menuaccesibilidad").removeClass("in").addClass('collapse');
 
@@ -3533,7 +3548,7 @@ $(document).ready(function () {
                 if (e.which == 38) {
                     $("button[id='']").focus();
                 } else {
-                    $("div[tabindex='170']").focus();
+                    $("div[tabindex='171']").focus();
                 }
                 break;
             }
@@ -3586,7 +3601,7 @@ $(document).ready(function () {
                 if (e.which == 38) {
                     $("button[id='']").focus();
                 } else {
-                    $("div[tabindex='170']").focus();
+                    $("div[tabindex='173']").focus();
                 }
                 break;
             }
@@ -3612,13 +3627,13 @@ $(document).ready(function () {
                 if (e.which == 38) {
                     $("button[id='']").focus();
                 } else {
-                    $("div[tabindex='170']").focus();
+                    $("div[tabindex='172']").focus();
                 }
                 break;
             }
         }
 
-        //boton navegacion
+        //div descripcion
 
         if (e.which == 37 || e.which == 39) {
             switch (focused.attr("tabindex")) {
@@ -3643,7 +3658,84 @@ $(document).ready(function () {
                 break;
             }
         }
+        //div indicaciones
 
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '171':
+                if (e.which == 37) {
+                    $("button[id='']").focus();
+                } else {
+                    $("button[id ='']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '171':
+                if (e.which == 38) {
+                    $("button[id='botonindicaciones']").focus();
+                } else {
+                    $("button[id='botondeayuda']").focus();
+                }
+                break;
+            }
+        }
+
+        //div navegacion
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '172':
+                if (e.which == 37) {
+                    $("button[id='']").focus();
+                } else {
+                    $("button[id ='']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '172':
+                if (e.which == 38) {
+                    $("button[id='botonnavegacion']").focus();
+                } else {
+                    $("button[id='botondeayuda']").focus();
+                }
+                break;
+            }
+        }
+
+
+        //div simulacion
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("tabindex")) {
+            case '173':
+                if (e.which == 37) {
+                    $("button[id='']").focus();
+                } else {
+                    $("button[id ='']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("tabindex")) {
+            case '173':
+                if (e.which == 38) {
+                    $("button[id='botonsimulacion']").focus();
+                } else {
+                    $("button[id='botondeayuda']").focus();
+                }
+                break;
+            }
+        }
         //boton radio navegacion
 
         if (e.which == 37 || e.which == 39) {
@@ -4193,20 +4285,14 @@ function menuayuda() {
     $("div[tabindex='170']").focus();
 }
 
-/*function ocultardiv() {
-    $("div[id='menuaccesibilidad']").collapse("toggle");
+function menuayuda2() {
+    $("div[tabindex='171']").focus();
 }
 
-function desocultardiv() {
+function menuayuda3() {
+    $("div[tabindex='172']").focus();
+}
 
-    $("div[id='menuayuda']").collapse("toggle");
-}*/
-
-
-function ocultartodo() {
-
-    /* $('a[data-toggle="collapse"]').each(function () {
-     var objectID = $(this).attr('href');
-     $(objectID).collapse('hide');
- });*/
+function menuayuda4() {
+    $("div[tabindex='173']").focus();
 }

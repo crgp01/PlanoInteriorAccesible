@@ -2,11 +2,6 @@ body {
     background-color: #FFF300;
 }
 
-.fondo-menu {
-    background-color: #FFF300;
-    border: 1px solid #000000;
-}
-
 .titulobloque {
     font-size: 1em;
 }
@@ -21,9 +16,10 @@ body {
 
 .fondo-menu {
     background-color: #FFF300;
+    border: 1px solid #000000;
     max-height: 50px;
     margin-bottom: 1%;
-    padding-left: 85%;
+    padding-left: 2%;
 }
 
 button.botonmenu {
@@ -79,7 +75,6 @@ label {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    width: 1893px;
     /*height: 900px;*/
     margin-left: 10px;
 }
@@ -96,7 +91,6 @@ label {
     margin-bottom: 1%;
     border-color: #000000;
     background-color: #FFF300;
-    width: 1815px;
 }
 
 .nav-tabs>li.active>a,

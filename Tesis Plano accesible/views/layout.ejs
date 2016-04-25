@@ -238,87 +238,86 @@
 
             <ul class="nav nav-tabs">
                 <li class="active">
-                    <button data-toggle="tab" class="btn btn-default elementomenu subtitulos" href="#descripcion" alt="Accessibility" id="botondescripcion" tabindex="11">Descripcion</button>
+                    <button data-toggle="tab" class="btn btn-default elementomenu subtitulos" href="#descripcion" alt="Accessibility" id="botondescripcion" tabindex="11" onclick="menuayuda()">Descripción</button>
                 </li>
                 <li>
-                    <button data-toggle="tab" class="btn btn-default elementomenu subtitulos" href="#indicaciones" alt="Advanced Options" id="botonindicaciones" tabindex="12">Indicaciones</button>
+                    <button data-toggle="tab" class="btn btn-default elementomenu subtitulos" href="#indicaciones" alt="Advanced Options" id="botonindicaciones" tabindex="12" onclick="menuayuda2()">Indicaciones</button>
                 </li>
                 <li>
-                    <button data-toggle="tab" class="btn btn-default elementomenu subtitulos" href="#navegacion" alt="Advanced Options" id="botonnavegacion" tabindex="13">Modo Navegación</button>
+                    <button data-toggle="tab" class="btn btn-default elementomenu subtitulos" href="#navegacion" alt="Advanced Options" id="botonnavegacion" tabindex="13" onclick="menuayuda3()">Modo Navegación</button>
                 </li>
                 <li>
-                    <button data-toggle="tab" class="btn btn-default elementomenu subtitulos" href="#simulacion" alt="Advanced Options" id="botonsimulacion" tabindex="14">Modo Simulación</button>
+                    <button data-toggle="tab" class="btn btn-default elementomenu subtitulos" href="#simulacion" alt="Advanced Options" id="botonsimulacion" tabindex="14" onclick="menuayuda4()">Modo Simulación</button>
                 </li>
             </ul>
             <div id="descripcionayuda" class="tab-content">
                 <div id="descripcion" class="tab-pane fade in active">
                     <div id="divdescripcion" class="" tabindex="170">
-                        <h4>Descripción</h4>
-                        <p>El siguiente protitipo es una representacion de un plano interior accesible del segundo piso de la facultad de ingeniería de Sistemas. Contiene información de las oficinas de los profesores del segundo piso con su respectiva distribución espacial. La pagina consiste en un menu superior y 3 bloques se informacion principales.</p>
+                        <h4>Descripción.</h4>
+                        <p>El siguiente prototipo es una representación de un plano interior accesible, del segundo piso de la facultad de ingeniería de Sistemas. Contiene información de las oficinas de los profesores del segundo piso, con su respectiva distribución espacial. La página consiste en un menú superior y 3 bloques de información principales.</p>
 
                         <ul>
-                            <li>El menu superior contiene 2 botones, ayuda y accesibilidad.
+                            <li>El menú superior contiene 2 botones, ayuda y accesibilidad.
                                 <ul>
-                                    <p>Menu ayuda</p>
+                                    <p>Menú ayuda:</p>
                                     <li>Descripción: Contiene una descripción del prototipo y una descripción de su uso.</li>
-                                    <li>Indicaciones: Se especifica las ociones de usablidad y navegacion que se han integrado al protitipo.</li>
-                                    <p>Menu accesibilidad</p>
-                                    <li>Accesibilidad: Posee alternativas para cambio de color de la página, aumento en el tamaño de letra, aumento en el espaciado de letra y cambio en el tipo de fuente. En este menu se puede activar el modo navegación o simulación. </li>
+                                    <li>Indicaciones: Se especifica las ociones de usablidad y navegación que se han integrado al prototipo.</li>
+                                    <p>Menú accesibilidad</p>
+                                    <li>Accesibilidad: Posee alternativas para cambio de color de la página, aumento en el tamaño de letra, aumento en el espaciado de letra y cambio en el tipo de fuente. En este menú se puede activar el modo navegación o simulación. </li>
                                     <li>Opciones avanzadas: Posee opciones para cambios en el estilo del mapa y opciones avanzadas de cambio de color como saturación, tono, brillo, escala de grises, etc. </li>
                                 </ul>
                             </li>
                             <br>
-                            <li>Bloque izquierda: Contiene un menu de navegación en orden albabético en el modo navegación. En el modo simulación posee 4 rutas principales que indican las instrucciones para llegar a 4 pficinas, decanato, profesor, proyecto de investigación y bañsos.</li>
-                            <li>Bloque central: Contiene el plano a escala del segundo piso de la facultad de sistemas. Posee la distribución espacial de las oficinas que se encuentan divididas en 4 bloques principales. El bloque superior izquierdo corresponde a las oficinas del rectorado. El bloque superior derecho consiste en el area de profesores, anteriormente la biblioteca. El bloque inferior izquierdo corresponde al primer bloque de oficinas y el bloque inferior derecho corresponde al segundo bloque de oficinas.</li>
-                            <li>Bloque derecho: Corresponde a las descripciones de cada elemento que es seleccionado en el mapa. Entre la descripcion se tiene la carga horaria del profesor o la descripcion de la oficina. Además posee tres botones de retorno, como son menu principal, retornar al plano y salir.</li>
+                            <li>Bloque izquierda: Contiene un menu de navegación en orden albabético en el modo navegación. En el modo simulación posee 4 rutas principales que indican las instrucciones para llegar a 4 oficinas, decanato, profesor, proyecto de investigación y baños.</li>
+                            <li>Bloque central: Contiene el plano a escala del segundo piso de la facultad de sistemas. Posee la distribución espacial de las oficinas que se encuentan divididas en 4 bloques principales. El bloque superior izquierdo corresponde a las oficinas del rectorado. El bloque superior derecho consiste en el área de profesores, anteriormente la biblioteca. El bloque inferior izquierdo corresponde al primer bloque de oficinas, y el bloque inferior derecho corresponde al segundo bloque de oficinas.</li>
+                            <li>Bloque derecho: Corresponde a las descripciones de cada elemento que es seleccionado en el mapa. Entre la descripcion se tiene la carga horaria del profesor o la descripcion de la oficina. Además posee tres botones de retorno, como son menú principal, retornar al plano y salir.</li>
                         </ul>
                     </div>
                 </div>
 
                 <div id="indicaciones" class="tab-pane fade">
-                    <div id="divindicaciones" class="" tabindex="170">
-                        <h4>Indicaciones</h4>
+                    <div id="divindicaciones" class="" tabindex="171">
+                        <h4>Indicaciones.</h4>
                         <ul>Para navegar por el plano, puede utilizar la tecla tab para moverse en orden secuencial, o las flechas arriba, abajo, izquierda y derecha para navegar en cualquier dirección.
                             <li>
                                 <ul>Puede utilizar los siguientes atajos de teclado para ir a los siguientes elementos:
                                     <li>
-                                        Menu principal: Alt + m
+                                        Menú principal: Alt + m.
                                     </li>
                                     <li>
-                                        Plano: Alt + p
+                                        Plano: Alt + p.
                                     </li>
                                     <li>
-                                        Menu ayuda: Alt + a
+                                        Menú ayuda: Alt + a.
                                     </li>
                                     <li>
-                                        Menu accesibilidad: Alt + c
+                                        Menú accesibilidad: Alt + c.
                                     </li>
                                     <li>
-                                        Inicio: Esc
+                                        Inicio: Escape.
                                     </li>
                                 </ul>
                             </li>
-                            <li>La navegacion se la realiza ubicando el elemento deseado ya sea con los cursores, tecla tab o ratón. Una vez seleccionado el elemento en el plano interior, el foco se colocará automáticamente en la descripción del elemento. Si se desea retornar al plano, se debe escoger el boton inferior volver al mapa con la tecla tab o con la flecha inferior. Si se desea retornar al menu izquierdo de busqueda, se debe seleccionar el boton Volver al menu principal. Si desea salir y retornar al inicio, se debe escoger el boton salir. </li>
-                            <li>En caso se utilizar Chrome Vox: El screen reader reconoce los tipos de elementos y posteriormente a su selección indica su nombre de descripción.</li>
+                            <li>La navegación se la realiza ubicando el elemento deseado ya sea con los cursores, tecla tab o ratón. Una vez seleccionado el elemento en el plano interior, el foco se colocará automáticamente en la descripción del elemento. Si se desea retornar al plano, se debe escoger el botón inferior "Volver al mapa", con la tecla tab o con la flecha inferior. Si se desea retornar al menú izquierdo de búsqueda, se debe seleccionar el botón "Volver al menu principal". Si desea salir y retornar al inicio, se debe escoger el boton salir. </li>
 
                     </div>
                 </div>
 
                 <div id="navegacion" class="tab-pane fade">
-                    <div id="divnavegacion" class="" tabindex="170">
-                        <h4>Modo Navegacion</h4>
+                    <div id="divnavegacion" class="" tabindex="172">
+                        <h4>Modo Navegacion.</h4>
                         <ul>
-                            <li> Este modo estará activado por defecto. Dentro se esta opción se puede conocer la información de los elementos del plano. Además se puede realizar una busqueda de profesores y oficinas que se localizan en el segundo piso.</li>
-                            <li>Los elementos se encuentran ordenados alfabéticamente en un rango de 4 grupos. </li>
+                            <li> Este modo estará activado por defecto. Dentro se esta opción se puede conocer la información de los elementos del plano. Además, se puede realizar una busqueda de profesores y oficinas que se localizan en el segundo piso.</li>
+                            <li>Los elementos se encuentran ordenados alfabéticamente, en un rango de 4 grupos. </li>
                         </ul>
 
                     </div>
                 </div>
 
                 <div id="simulacion" class="tab-pane fade">
-                    <div id="divsimulacion" class="" tabindex="170">
-                        <h4>Modo Simulacion</h4>
-                        <li>Dentro de este modo se puede escoger una ruta para que sea graficada en el plano, indicando el camino que se debe seguir para llegar al elemento seleccionado. A medida que la ruta se grafica, se ofrece una descripcion verbal de los elementos proximos en la ruta graficada.</li>
+                    <div id="divsimulacion" class="" tabindex="173">
+                        <h4>Modo Simulación.</h4>
+                        <li>Dentro de este modo se puede escoger una ruta para que sea graficada en el plano, indicando el camino que se debe seguir para llegar al elemento seleccionado. A medida que la ruta se grafica, se ofrece una descripción verbal de los elementos próximos en la ruta graficada.</li>
 
                     </div>
                 </div>
@@ -330,7 +329,7 @@
         <div class="fondo-menu">
 
 
-            <button id="botondeayuda" data-toggle="collapse" class="btn btn-default botonmenu " href="#menuayuda" onclick="menuayuda();" alt="Ayuda" aria-expanded="true" tabindex="1" href="#ayuda">Ayuda</button>
+            <button id="botondeayuda" data-toggle="collapse" class="btn btn-default botonmenu " href="#menuayuda" onclick="menuayuda()" alt="Ayuda" aria-expanded="true" tabindex="1" href="#ayuda">Ayuda</button>
 
             <button id="botondeaccesibilidad" data-toggle="collapse" class="btn btn-default botonmenu" href="#menuaccesibilidad" onclick="" alt="Accesibilidad" aria-expanded="true" tabindex="1" href="#rutas">Accesibilidad</button>
 
