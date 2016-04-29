@@ -88,6 +88,7 @@
             _createZoomIn: function (instance) {
                 var zoomIn = document.createElementNS(SvgUtils.svgNS, 'g');
                 zoomIn.setAttribute('id', 'svg-pan-zoom-zoom-in');
+                zoomIn.setAttribute('accesskey', '+');
                 zoomIn.setAttribute('transform', 'translate(30.5 5) scale(0.015)');
                 zoomIn.setAttribute('class', 'svg-pan-zoom-control');
                 zoomIn.addEventListener('click', function () {
@@ -102,13 +103,15 @@
                 zoomInBackground.setAttribute('y', '0');
                 zoomInBackground.setAttribute('width', '1500'); // larger than expected because the whole group is transformed to scale down
                 zoomInBackground.setAttribute('height', '1400');
-               /* zoomInBackground.setAttribute('tabindex', '25');*/
+                zoomInBackground.setAttribute('accesskey', '+');
+                /* zoomInBackground.setAttribute('tabindex', '25');*/
                 zoomInBackground.setAttribute('class', 'svg-pan-zoom-control-background');
                 zoomIn.appendChild(zoomInBackground);
 
                 var zoomInShape = document.createElementNS(SvgUtils.svgNS, 'path');
                 zoomInShape.setAttribute('d', 'M1280 576v128q0 26 -19 45t-45 19h-320v320q0 26 -19 45t-45 19h-128q-26 0 -45 -19t-19 -45v-320h-320q-26 0 -45 -19t-19 -45v-128q0 -26 19 -45t45 -19h320v-320q0 -26 19 -45t45 -19h128q26 0 45 19t19 45v320h320q26 0 45 19t19 45zM1536 1120v-960 q0 -119 -84.5 -203.5t-203.5 -84.5h-960q-119 0 -203.5 84.5t-84.5 203.5v960q0 119 84.5 203.5t203.5 84.5h960q119 0 203.5 -84.5t84.5 -203.5z');
                 zoomInShape.setAttribute('class', 'svg-pan-zoom-control-element');
+                zoomInShape.setAttribute('accesskey', '+');
                 /*zoomInShape.setAttribute('tabindex', '25');*/
 
                 zoomIn.appendChild(zoomInShape);
@@ -121,6 +124,7 @@
                 // reset
                 var resetPanZoomControl = document.createElementNS(SvgUtils.svgNS, 'g');
                 resetPanZoomControl.setAttribute('id', 'svg-pan-zoom-reset-pan-zoom');
+                resetPanZoomControl.setAttribute('accesskey', '0');
                 resetPanZoomControl.setAttribute('transform', 'translate(5 35) scale(0.4)');
                 resetPanZoomControl.setAttribute('class', 'svg-pan-zoom-control');
                 resetPanZoomControl.addEventListener('click', function () {
@@ -133,15 +137,17 @@
                 var resetPanZoomControlBackground = document.createElementNS(SvgUtils.svgNS, 'rect'); // TODO change these background space fillers to rounded rectangles so they look prettier
                 resetPanZoomControlBackground.setAttribute('x', '2');
                 resetPanZoomControlBackground.setAttribute('y', '2');
+                resetPanZoomControlBackground.setAttribute('accesskey', '0');
                 resetPanZoomControlBackground.setAttribute('width', '182'); // larger than expected because the whole group is transformed to scale down
                 resetPanZoomControlBackground.setAttribute('height', '58');
                 resetPanZoomControlBackground.setAttribute('class', 'svg-pan-zoom-control-background');
-               /* resetPanZoomControlBackground.setAttribute('tabindex', '26');*/
+                /* resetPanZoomControlBackground.setAttribute('tabindex', '26');*/
                 resetPanZoomControl.appendChild(resetPanZoomControlBackground);
 
                 var resetPanZoomControlShape1 = document.createElementNS(SvgUtils.svgNS, 'path');
                 resetPanZoomControlShape1.setAttribute('d', 'M33.051,20.632c-0.742-0.406-1.854-0.609-3.338-0.609h-7.969v9.281h7.769c1.543,0,2.701-0.188,3.473-0.562c1.365-0.656,2.048-1.953,2.048-3.891C35.032,22.757,34.372,21.351,33.051,20.632z');
                 resetPanZoomControlShape1.setAttribute('class', 'svg-pan-zoom-control-element');
+                resetPanZoomControlShape1.setAttribute('accesskey', '0');
                 resetPanZoomControl.appendChild(resetPanZoomControlShape1);
 
                 var resetPanZoomControlShape2 = document.createElementNS(SvgUtils.svgNS, 'path');
@@ -157,9 +163,10 @@
                 // zoom out
                 var zoomOut = document.createElementNS(SvgUtils.svgNS, 'g');
                 zoomOut.setAttribute('id', 'svg-pan-zoom-zoom-out');
+                zoomOut.setAttribute('accesskey', '-');
                 zoomOut.setAttribute('transform', 'translate(30.5 70) scale(0.015)');
                 zoomOut.setAttribute('class', 'svg-pan-zoom-control');
-               /* zoomOut.setAttribute('tabindex', '26');*/
+                /* zoomOut.setAttribute('tabindex', '26');*/
                 zoomOut.addEventListener('click', function () {
                     instance.getPublicInstance().zoomOut()
                 }, false);
@@ -170,15 +177,17 @@
                 var zoomOutBackground = document.createElementNS(SvgUtils.svgNS, 'rect'); // TODO change these background space fillers to rounded rectangles so they look prettier
                 zoomOutBackground.setAttribute('x', '0');
                 zoomOutBackground.setAttribute('y', '0');
+                zoomOutBackground.setAttribute('accesskey', '-');
                 zoomOutBackground.setAttribute('width', '1500'); // larger than expected because the whole group is transformed to scale down
                 zoomOutBackground.setAttribute('height', '1400');
                 zoomOutBackground.setAttribute('class', 'svg-pan-zoom-control-background');
-               /* zoomOutBackground.setAttribute('tabindex', '27');*/
+                /* zoomOutBackground.setAttribute('tabindex', '27');*/
                 zoomOut.appendChild(zoomOutBackground);
 
                 var zoomOutShape = document.createElementNS(SvgUtils.svgNS, 'path');
                 zoomOutShape.setAttribute('d', 'M1280 576v128q0 26 -19 45t-45 19h-896q-26 0 -45 -19t-19 -45v-128q0 -26 19 -45t45 -19h896q26 0 45 19t19 45zM1536 1120v-960q0 -119 -84.5 -203.5t-203.5 -84.5h-960q-119 0 -203.5 84.5t-84.5 203.5v960q0 119 84.5 203.5t203.5 84.5h960q119 0 203.5 -84.5 t84.5 -203.5z');
                 zoomOutShape.setAttribute('class', 'svg-pan-zoom-control-element');
+                zoomOutShape.setAttribute('accesskey', '-');
                 zoomOut.appendChild(zoomOutShape);
 
                 return zoomOut

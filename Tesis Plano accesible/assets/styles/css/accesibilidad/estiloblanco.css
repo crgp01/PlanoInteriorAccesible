@@ -173,3 +173,33 @@ a.opcionavanzada {
 .tituloinicial {
     border-color: #000000;
 }
+
+a:focus {
+    outline: none !important;
+    border: 2px solid blue;
+    box-shadow: 0 0 10px blue;
+}
+
+input:focus {
+    outline: none !important;
+    border: 2px solid blue;
+    box-shadow: 0 0 10px blue;
+}
+
+select:focus {
+    outline: none !important;
+    border: 2px solid blue;
+    box-shadow: 0 0 10px blue;
+}
+
+div:focus {
+    outline: none !important;
+    border: 2px solid blue;
+    box-shadow: 0 0 10px blue;
+}
+
+button:focus {
+    outline: none !important;
+    border: 2px solid blue;
+    box-shadow: 0 0 10px blue;
+}

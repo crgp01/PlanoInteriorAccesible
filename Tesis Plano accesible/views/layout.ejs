@@ -88,12 +88,12 @@
                             <div class="row">
                                 <div class="estilos col-md-3">
                                     <p>Estilos</p>
-                                    <input id="3" type="image" src="../../images/normal2.png" alt="normal style" width="48" height="48" onclick="pulsar('estilo.css')" tabindex="3" title="normal style">
-                                    <input id="4" type="image" src="../../images/blanco.png" alt="white style" width="48" height="48" onclick="pulsar('estiloblanco.css')" tabindex="3" title="white style">
-                                    <input id="5" type="image" src="../../images/amarillo-negro.png" alt="yellow style" width="48" height="48" onclick="pulsar('estiloamarillo-negro.css')" tabindex="3" title="yellow style">
-                                    <input id="6" type="image" src="../../images/negro-amarillo.png" alt="black style" width="48" height="48" onclick="pulsar('estilonegro-amarillo.css')" tabindex="3" title="black style">
-                                    <input id="7" type="image" src="../../images/negro.png" alt="black and white style" width="48" height="48" onclick="pulsar('estilonegro.css')" tabindex="3" title="black and white style">
-                                    <input id="8" type="image" src="../../images/bajocontraste.png" alt="low contrast style" width="48" height="48" onclick="pulsar('estilobajocontraste.css')" tabindex="3" title="low contrast style">
+                                    <input id="3" type="image" src="../../images/normal2.png" alt="estilo por defecto" width="48" height="48" onclick="pulsar('estilo.css')" tabindex="3" title="estilo por defecto">
+                                    <input id="4" type="image" src="../../images/blanco.png" alt="estilo blanco" width="48" height="48" onclick="pulsar('estiloblanco.css')" tabindex="3" title="estilo blanco">
+                                    <input id="5" type="image" src="../../images/amarillo-negro.png" alt="estilo negro con amarillo" width="48" height="48" onclick="pulsar('estiloamarillo-negro.css')" tabindex="3" title="estilo negro con amarillo">
+                                    <input id="6" type="image" src="../../images/negro-amarillo.png" alt="estilo amarillo con negro" width="48" height="48" onclick="pulsar('estilonegro-amarillo.css')" tabindex="3" title="estilo amarillo con negro">
+                                    <input id="7" type="image" src="../../images/negro.png" alt="estilo negro y blanco" width="48" height="48" onclick="pulsar('estilonegro.css')" tabindex="3" title="estilo negro y blanco">
+                                    <input id="8" type="image" src="../../images/bajocontraste.png" alt="estilo bajo contraste" width="48" height="48" onclick="pulsar('estilobajocontraste.css')" tabindex="3" title="estilo bajo contraste">
                                 </div>
                                 <div class="col-md-9">
                                     <div class="row">
@@ -111,12 +111,12 @@
                                             <img id="espaciadonormal" src="../../images/linea1.png" alt="small font size" height="38" width="38">
                                             <input id="espaciado" class="inline" type='text' name='username' size='1' disabled title="spacing" />
                                             <img id="espaciadogrande" src="../../images/linea3.png" alt="small font size" height="38" width="38">
-                                            <input id="espaciado2" class="inline" type="range" name="points" min="1" max="2.5" size='5' step="0.1" tabindex="5" alt="line spacing" title="spacing">
+                                            <input id="espaciado2" class="inline" type="range" name="points" min="1" max="2.5" size='5' step="0.1" tabindex="5" alt="interlineado" title="spacing">
                                         </div>
                                         <div class="tipo-letra col-md-2">
                                             <p>Tipo de Letra</p>
 
-                                            <select id="tipoletra" width="10" tabindex="6" title="font type" alt="font type">
+                                            <select id="tipoletra" width="10" tabindex="6" title="Tipo de letra" alt="Tipo de letra">
                                                 <option id="Calibri" value="Calibri">Calibri</option>
                                                 <option id="Arial" value="Arial">Arial</option>
                                                 <option id="TimesNewRoman" value="Times New Roman">Times New Roman</option>
@@ -142,8 +142,8 @@
                                         </div>
 
                                         <p class="panel-title">
-                                            <a class="btn btn-default opcionavanzada" href="#reload" onclick="reiniciar()" tabindex="7" alt="Reload">
-               Restablecer Configuraación
+                                            <a class="btn btn-default opcionavanzada" href="#reload" onclick="reiniciar()" tabindex="7" alt="Restablecer Configuración">
+               Restablecer Configuración
             </a>
                                         </p>
                                     </div>
@@ -168,28 +168,28 @@
                             <div class="row">
                                 <p>Patrones</p>
                                 <div class="col-md-3">
-                                    <input id="9" type="image" src="../../images/patron.png" alt="without pattern" title="without pattern" width="48" height="48" onclick="patron('mapaplanopatronnegro')" tabindex="8" title="without pattern">
-                                    <input id="10" type="image" src="../../images/colorypatron.png" alt="Color and pattern" title="Color and pattern" width="48" height="48" onclick="patron('mapaplanopatroncolor')" tabindex="8" title="color and pattern">
-                                    <input id="11" type="image" src="../../images/color.png" alt="only pattern" title="Color and pattern" width="48" height="48" onclick="patron('mapaplano')" tabindex="8" title="only pattern">
+                                    <input id="9" type="image" src="../../images/patron.png" alt="Patrón a blanco y negro" title="Patrón a blanco y negro" width="48" height="48" onclick="patron('mapaplanopatronnegro')" tabindex="8" title="without pattern">
+                                    <input id="10" type="image" src="../../images/colorypatron.png" alt="Patrón con color" title="Patrón con color" width="48" height="48" onclick="patron('mapaplanopatroncolor')" tabindex="8" title="color and pattern">
+                                    <input id="11" type="image" src="../../images/color.png" alt="Sin patrón" title="Sin patrón" width="48" height="48" onclick="patron('mapaplano')" tabindex="8" title="only pattern">
 
                                 </div>
                                 <div class="col-md-6">
                                     <div class="row">
                                         <div class="col-md-3">
                                             <p>Saturación</p>
-                                            <input id="Saturation" class="" type="range" name="points" min="1" max="10" size='5' step="1" tabindex="9" title="Saturation">
+                                            <input id="Saturation" class="" type="range" name="points" min="1" max="10" size='5' step="1" tabindex="9" title="Saturación">
                                         </div>
                                         <div class="col-md-3">
                                             <p>Brillo</p>
-                                            <input id="Brightness" class="" type="range" name="points" min="1" max="1.2" size='5' step="0.1" tabindex="9" title="Brightness">
+                                            <input id="Brightness" class="" type="range" name="points" min="1" max="1.2" size='5' step="0.1" tabindex="9" title="Brillo">
                                         </div>
                                         <div class="col-md-3">
                                             <p>Tono</p>
-                                            <input id="Hue" class="" type="range" name="points" min="0" max="360" size='5' step="0.1" tabindex="9" title="Hue">
+                                            <input id="Hue" class="" type="range" name="points" min="0" max="360" size='5' step="0.1" tabindex="9" title="Tono">
                                         </div>
                                         <div class="col-md-3">
                                             <p>Grises</p>
-                                            <input id="Grayscale" class="" type="range" name="points" min="0" max="1" size='5' step="0.1" tabindex="9" title="Grayscale">
+                                            <input id="Grayscale" class="" type="range" name="points" min="0" max="1" size='5' step="0.1" tabindex="9" title="Grises">
                                         </div>
 
                                     </div>
@@ -200,15 +200,15 @@
                                         </div>
                                         <div class="col-md-3">
                                             <p>Ivertir</p>
-                                            <input id="Invert" class="" type="range" name="points" min="0" max="1" size='5' step="0.001" tabindex="9" title="Invert">
+                                            <input id="Invert" class="" type="range" name="points" min="0" max="1" size='5' step="0.001" tabindex="9" title="Ivertir">
                                         </div>
                                         <div class="col-md-3">
                                             <p>Opacidad</p>
-                                            <input id="Opacity" class="" type="range" name="points" min="0.2" max="1" size='5' step="0.001" tabindex="9" title="Opacity">
+                                            <input id="Opacity" class="" type="range" name="points" min="0.2" max="1" size='5' step="0.001" tabindex="9" title="Opacidad">
                                         </div>
                                         <div class="col-md-3">
                                             <p>Contraste</p>
-                                            <input id="Contrast" class="" type="range" name="points" min="1" max="4" size='5' step="0.001" tabindex="9" title="Contrast">
+                                            <input id="Contrast" class="" type="range" name="points" min="1" max="4" size='5' step="0.001" tabindex="9" title="Contraste">
                                         </div>
                                     </div>
 
@@ -216,7 +216,7 @@
                                 </div>
 
                                 <p class="panel-title">
-                                    <a class="btn btn-default opcionavanzada" href="#reload" onclick="restart()" tabindex="10" alt="restart">
+                                    <a class="btn btn-default opcionavanzada" href="#reload" onclick="restart()" tabindex="10" alt="Restablecer Configuración">
                Restablecer Configuración
             </a>
                                 </p>
@@ -238,16 +238,16 @@
 
             <ul class="nav nav-tabs">
                 <li class="active">
-                    <button data-toggle="tab" class="btn btn-default elementomenu subtitulos" href="#descripcion" alt="Accessibility" id="botondescripcion" tabindex="11" onclick="menuayuda()">Descripción</button>
+                    <button data-toggle="tab" class="btn btn-default elementomenu subtitulos" href="#descripcion" alt="Descripción" id="botondescripcion" tabindex="11" onclick="menuayuda()">Descripción</button>
                 </li>
                 <li>
-                    <button data-toggle="tab" class="btn btn-default elementomenu subtitulos" href="#indicaciones" alt="Advanced Options" id="botonindicaciones" tabindex="12" onclick="menuayuda2()">Indicaciones</button>
+                    <button data-toggle="tab" class="btn btn-default elementomenu subtitulos" href="#indicaciones" alt="Indicaciones" id="botonindicaciones" tabindex="12" onclick="menuayuda2()">Indicaciones</button>
                 </li>
                 <li>
-                    <button data-toggle="tab" class="btn btn-default elementomenu subtitulos" href="#navegacion" alt="Advanced Options" id="botonnavegacion" tabindex="13" onclick="menuayuda3()">Modo Navegación</button>
+                    <button data-toggle="tab" class="btn btn-default elementomenu subtitulos" href="#navegacion" alt="Modo Navegación" id="botonnavegacion" tabindex="13" onclick="menuayuda3()">Modo Navegación</button>
                 </li>
                 <li>
-                    <button data-toggle="tab" class="btn btn-default elementomenu subtitulos" href="#simulacion" alt="Advanced Options" id="botonsimulacion" tabindex="14" onclick="menuayuda4()">Modo Simulación</button>
+                    <button data-toggle="tab" class="btn btn-default elementomenu subtitulos" href="#simulacion" alt="Modo Simulación" id="botonsimulacion" tabindex="14" onclick="menuayuda4()">Modo Simulación</button>
                 </li>
             </ul>
             <div id="descripcionayuda" class="tab-content">
@@ -300,6 +300,7 @@
                             </li>
                             <li>La navegación se la realiza ubicando el elemento deseado ya sea con los cursores, tecla tab o ratón. Una vez seleccionado el elemento en el plano interior, el foco se colocará automáticamente en la descripción del elemento. Si se desea retornar al plano, se debe escoger el botón inferior "Volver al mapa", con la tecla tab o con la flecha inferior. Si se desea retornar al menú izquierdo de búsqueda, se debe seleccionar el botón "Volver al menu principal". Si desea salir y retornar al inicio, se debe escoger el boton salir. </li>
 
+
                     </div>
                 </div>
 
@@ -308,7 +309,7 @@
                         <h4>Modo Navegacion.</h4>
                         <ul>
                             <li> Este modo estará activado por defecto. Dentro se esta opción se puede conocer la información de los elementos del plano. Además, se puede realizar una busqueda de profesores y oficinas que se localizan en el segundo piso.</li>
-                            <li>Los elementos se encuentran ordenados alfabéticamente, en un rango de 4 grupos. </li>
+                            <li>Los elementos se encuentran ordenados alfabéticamente, en un rango de 4 grupos.De A hasta C, de D hasta L, de M hasta P y de Q hasta Z. </li>
                         </ul>
 
                     </div>
@@ -317,7 +318,7 @@
                 <div id="simulacion" class="tab-pane fade">
                     <div id="divsimulacion" class="" tabindex="173">
                         <h4>Modo Simulación.</h4>
-                        <li>Dentro de este modo se puede escoger una ruta para que sea graficada en el plano, indicando el camino que se debe seguir para llegar al elemento seleccionado. A medida que la ruta se grafica, se ofrece una descripción verbal de los elementos próximos en la ruta graficada.</li>
+                        <li>Dentro de este modo se puede escoger una ruta para que sea graficada en el plano, indicando el camino que se debe seguir para llegar al elemento seleccionado. A medida que la ruta se grafica, se ofrece una descripción verbal de los elementos próximos en la ruta graficada. Se recomienda escuchar la ruta por primera vez para elaborar una imágen mental y posteriormente, proceder a ubicar el elemento.</li>
 
                     </div>
                 </div>

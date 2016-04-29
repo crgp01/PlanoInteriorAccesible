@@ -2,8 +2,8 @@ $(document).ready(function () {
     //lamada de funcion cookies
     cookiesinicio();
     //Boton navegacion por defecto
-    $("button[tabindex='19']").prop('disabled', true);
 
+    $("button[tabindex='19']").prop('disabled', true);
     $("#botondescripcion").click(function () {
         $("div[tabindex='170']").focus();
     });
@@ -25,6 +25,13 @@ $(document).ready(function () {
     document.getElementById("volvermapa").accessKey = "p";
     document.getElementById("botondeaccesibilidad").accessKey = "c";
     document.getElementById("botondeayuda").accessKey = "a";
+
+    //access key para zoom
+
+
+
+
+
 
     $("#botondeayuda").click(function () {
 
@@ -3827,13 +3834,17 @@ $(document).ready(function () {
     $('#modo input').on('change', function () {
         switch (($('input[name=radiomenu]:checked', '#modo').val())) {
         case 'simulacion':
-            $("button[tabindex='15']").prop('disabled', true);
+            $("#collapse1").removeClass('in').addClass('collapse');
             $("button[tabindex='19']").prop('disabled', false);
+            $("button[tabindex='15']").prop('disabled', true);
+
 
             break;
         case 'navegacion':
+            $("#rutas").removeClass('in').addClass('collapse');
             $("button[tabindex='19']").prop('disabled', true);
             $("button[tabindex='15']").prop('disabled', false);
+
 
 
         }

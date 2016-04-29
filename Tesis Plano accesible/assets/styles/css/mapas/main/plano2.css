@@ -10,100 +10,112 @@
 }
 
 .oficinasB {
-    fill: #8581a4;
+    fill: #9d9ab7;
     stroke: #000000;
     stroke-width: 2;
 }
 
 .oficinasB:hover {
-    fill: #d0a7e8;
+    fill: #e9abfc;
 }
 
 .oficinasB:focus {
-    fill: #d0a7e8;
+    fill: #e9abfc;
+    stroke: blue;
+    stroke-width: 2.5;
 }
 
 
 /*Baños*/
 
 .BanioMujeres {
-    fill: #c57ba1;
+    fill: #d39cb8;
     background-color: beige;
     stroke: #000000;
     stroke-width: 2;
 }
 
 .BanioMujeres:hover {
-    fill: #ed95c1;
+    fill: #ffb2d3;
 }
 
 .BanioMujeres:focus {
-    fill: #ed95c1;
+    fill: #ffb2d3;
+    stroke: blue;
+    stroke-width: 2.5;
 }
 
 .BanioHombres {
-    fill: #03658f;
+    fill: #67a4bf;
     stroke: #000000;
     stroke-width: 2;
 }
 
 .BanioHombres:hover {
-    fill: #0a9ad8;
+    fill: #c9eeff;
 }
 
 .BanioHombres:focus {
-    fill: #0a9ad8;
+    fill: #c9eeff;
+    stroke: blue;
+    stroke-width: 2.5;
 }
 
 
 /*Biblioteca*/
 
 .lectura {
-    fill: #5b926d;
+    fill: #89b798;
     stroke: #000000;
     stroke-width: 2;
 }
 
 .lectura:hover {
-    fill: #67d389;
+    fill: #a8f7bf;
 }
 
 .lectura:focus {
-    fill: #67d389;
+    fill: #a8f7bf;
+    stroke: blue;
+    stroke-width: 2.5;
 }
 
 
 /*Oficinas A*/
 
 .oficinasA {
-    fill: #c7ac7c;
+    fill: #d8c39e;
     stroke: #000000;
     stroke-width: 2;
 }
 
 .oficinasA:hover {
-    fill: #f9cd7f;
+    fill: #fce9c7;
 }
 
 .oficinasA:focus {
-    fill: #f9cd7f;
+    fill: #fce9c7;
+    stroke: blue;
+    stroke-width: 2.5;
 }
 
 
 /*Rectorado*/
 
 .rectorado {
-    fill: #C7877C;
+    fill: #d3a59e;
     stroke: #000000;
     stroke-width: 2;
 }
 
 .rectorado:hover {
-    fill: #fccac2;
+    fill: #fcd2d1;
 }
 
 .rectorado:focus {
-    fill: #fccac2;
+    fill: #fcd2d1;
+    stroke: blue;
+    stroke-width: 2.5;
 }
 
 .svgSeleccionado {
@@ -114,12 +126,12 @@
 }
 
 path:focus {
-    fill: yellow;
+    fill: blue;
 }
 
 
 /*Rectorado*/
 
 rect:focus {
-    fill: yellow;
+    fill: blue;
 }

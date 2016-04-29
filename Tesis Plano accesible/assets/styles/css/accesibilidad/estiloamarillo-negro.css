@@ -200,3 +200,33 @@ h1,
 p {
     cursor: pointer;
 }
+
+a:focus {
+    outline: none !important;
+    border: 2px solid red;
+    box-shadow: 0 0 10px red;
+}
+
+input:focus {
+    outline: none !important;
+    border: 2px solid red;
+    box-shadow: 0 0 10px red;
+}
+
+select:focus {
+    outline: none !important;
+    border: 2px solid red;
+    box-shadow: 0 0 10px red;
+}
+
+div:focus {
+    outline: none !important;
+    border: 2px solid red;
+    box-shadow: 0 0 10px red;
+}
+
+button:focus {
+    outline: none !important;
+    border: 2px solid red;
+    box-shadow: 0 0 10px red;
+}
