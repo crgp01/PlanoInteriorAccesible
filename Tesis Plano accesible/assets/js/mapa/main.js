@@ -1286,17 +1286,14 @@ $(document).ready(function () {
                 if (e.which == 38) {
                     $("button[tabindex='1']").focus();
                 } else {
-                    if ($("#ofidocentes").attr("aria-expanded") == "false") {
-                        $("button[tabindex='19']").focus();
 
-                    } else {
-                        $("input[id='a-c']").focus();
-                    }
-
+                    $("input[id='a-c']").focus();
                 }
                 break;
             }
+
         }
+
 
         //boton simulacion de rutas 19
         if (e.which == 37 || e.which == 39) {
@@ -1315,9 +1312,9 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '19':
                 if (e.which == 38) {
-                    $("button[tabindex='15']").focus();
+                    $("button[tabindex='0']").focus();
                 } else {
-                    $("a[id='BañoMujeresruta']").focus();
+                    $("a[id='']").focus();
                 }
                 break;
             }
@@ -1417,11 +1414,19 @@ $(document).ready(function () {
                 if (e.which == 38) {
                     $("button[id='1']").focus();
                 } else {
-                    $("button[tabindex='15']").focus();
+                    if ($("button[tabindex='15']").is(":disabled")) {
+
+                        $("button[tabindex='19']").focus();
+
+                    } else {
+                        $("button[tabindex='15']").focus();
+                    }
+
                 }
                 break;
             }
         }
+
 
         //boton accesibilidad menu id 1
         if (e.which == 37 || e.which == 39) {
@@ -3515,9 +3520,10 @@ $(document).ready(function () {
             switch (focused.attr("id")) {
             case 'botondeayuda':
                 if (e.which == 37) {
-                    $("rect[tabindex='']").focus();
+                    this.focus();
                 } else {
-                    $("button[tabindex='1']").focus();
+                    $("#botondeaccesibilidad").focus();
+
                 }
                 break;
             }
@@ -3529,7 +3535,14 @@ $(document).ready(function () {
                 if (e.which == 38) {
                     $("button[id='botondescripcion']").focus();
                 } else {
-                    $("button[tabindex='15']").focus();
+
+                    if ($("button[tabindex='15']").is(":disabled")) {
+
+                        $("button[tabindex='19']").focus();
+
+                    } else {
+                        $("button[tabindex='15']").focus();
+                    }
                 }
                 break;
             }

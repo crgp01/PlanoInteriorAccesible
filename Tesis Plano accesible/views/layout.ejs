@@ -100,18 +100,18 @@
 
                                         <div class="tamanio-letra col-md-4">
                                             <p>Tamaño de letra</p>
-                                            <img id="letranormal" src="../../images/letranormal.png" alt="small font size" height="38" width="38">
+                                            <img id="letranormal" src="../../images/letranormal.png" alt="tamaño de letra normal" height="38" width="38">
                                             <input id="letra" class="inline" type='text' name='username' size='1' title="font" disabled />
-                                            <img id="letragrande" src="../../images/letragrande.png" alt="small font size" height="38" width="38">
-                                            <input id="tamanioletra" class="inline" type="range" name="points" min="1" max="2.5" size='5' step="0.1" tabindex="4" alt="font size" title="font size">
+                                            <img id="letragrande" src="../../images/letragrande.png" alt="tamaño de letra grande" height="38" width="38">
+                                            <input id="tamanioletra" class="inline" type="range" name="points" min="1" max="2.5" size='5' step="0.1" tabindex="4" alt="tamaño de letra" title="tamaño de letra">
                                         </div>
 
                                         <div class="interlineado col-md-3">
                                             <p>Interespaciado</p>
-                                            <img id="espaciadonormal" src="../../images/linea1.png" alt="small font size" height="38" width="38">
-                                            <input id="espaciado" class="inline" type='text' name='username' size='1' disabled title="spacing" />
-                                            <img id="espaciadogrande" src="../../images/linea3.png" alt="small font size" height="38" width="38">
-                                            <input id="espaciado2" class="inline" type="range" name="points" min="1" max="2.5" size='5' step="0.1" tabindex="5" alt="interlineado" title="spacing">
+                                            <img id="espaciadonormal" src="../../images/linea1.png" alt="espaciado normal" height="38" width="38">
+                                            <input id="espaciado" class="inline" type='text' name='username' size='1' title="interespaciado" disabled/>
+                                            <img id="espaciadogrande" src="../../images/linea3.png" alt="espaciado grande" height="38" width="38">
+                                            <input id="espaciado2" class="inline" type="range" name="points" min="1" max="2.5" size='5' step="0.1" tabindex="5" alt="interespaciado" title="interespaciado">
                                         </div>
                                         <div class="tipo-letra col-md-2">
                                             <p>Tipo de Letra</p>
@@ -130,14 +130,14 @@
 
                                             <form id="modo">
 
-                                                <input id="radionavegacion" type="radio" name="radiomenu" value="navegacion" checked>
-                                                <label>Navegación</label>
+                                                <input id="radionavegacion" type="radio" name="radiomenu" value="navegacion" checked title="Activar Navegación" tabindex="6">
+                                                <label title="Activar Navegación">Navegación</label>
                                                 <br>
 
 
 
-                                                <input id="radiosimulacion" type="radio" name="radiomenu" value="simulacion">
-                                                <label>Simulación</label>
+                                                <input id="radiosimulacion" type="radio" name="radiomenu" value="simulacion" title="Activar Simulación" tabindex="6">
+                                                <label title="Activar Simulación">Simulación</label>
                                             </form>
                                         </div>
 
@@ -327,16 +327,16 @@
         </div>
         <h1 class="text-center" tabindex="0">Plano Interior Accesible</h1>
         <!--<p class="text-center">Segundo piso de la Facultad de Ingeniería de Sistemas</p>-->
-        <div class="fondo-menu">
+       <div class="fondo-menu">
 
 
-            <button id="botondeayuda" data-toggle="collapse" class="btn btn-default botonmenu " href="#menuayuda" onclick="menuayuda()" alt="Ayuda" aria-expanded="true" tabindex="1" href="#ayuda">Ayuda</button>
+    <button id="botondeayuda" data-toggle="collapse" class="btn btn-default botonmenu " href="#menuayuda" onclick="menuayuda()" alt="Ayuda" aria-expanded="true" tabindex="0" href="#ayuda">Ayuda</button>
 
-            <button id="botondeaccesibilidad" data-toggle="collapse" class="btn btn-default botonmenu" href="#menuaccesibilidad" onclick="" alt="Accesibilidad" aria-expanded="true" tabindex="1" href="#rutas">Accesibilidad</button>
+    <button id="botondeaccesibilidad" data-toggle="collapse" class="btn btn-default botonmenu" href="#menuaccesibilidad" onclick="" alt="Accesibilidad" aria-expanded="true" tabindex="1" href="#rutas">Accesibilidad</button>
 
 
 
-        </div>
+</div>
     </div>
 
 
