@@ -3,7 +3,7 @@ $(document).ready(function () {
     cookiesinicio();
     //Boton navegacion por defecto
 
-    $("button[tabindex='19']").prop('disabled', true);
+    /*  $("button[tabindex='19']").prop('disabled', true);*/
     $("#botondescripcion").click(function () {
         $("div[tabindex='170']").focus();
     });
@@ -21,10 +21,16 @@ $(document).ready(function () {
 
 
     //Creacion de accesskey
-    document.getElementById("ofidocentes").accessKey = "m";
+    document.getElementById("ofidocentes").accessKey = "o";
     document.getElementById("volvermapa").accessKey = "p";
+    document.getElementById("Guardia").accessKey = "i";
     document.getElementById("botondeaccesibilidad").accessKey = "c";
-    document.getElementById("botondeayuda").accessKey = "a";
+    document.getElementById("botondeayuda").accessKey = "h";
+    document.getElementById("a-c").accessKey = "a";
+    document.getElementById("d-l").accessKey = "l";
+    document.getElementById("m-p").accessKey = "m";
+    document.getElementById("q-z").accessKey = "q";
+    document.getElementById("simurutas").accessKey = "s";
 
     //access key para zoom
 
@@ -1286,17 +1292,21 @@ $(document).ready(function () {
                 if (e.which == 38) {
                     $("button[tabindex='1']").focus();
                 } else {
-                    if ($("#ofidocentes").attr("aria-expanded") == "false") {
+                    if ($("button[tabindex='15']").attr('aria-expanded') == "false") {
+
                         $("button[tabindex='19']").focus();
 
                     } else {
                         $("input[id='a-c']").focus();
                     }
+                    break;
 
                 }
-                break;
+
             }
+
         }
+
 
         //boton simulacion de rutas 19
         if (e.which == 37 || e.which == 39) {
@@ -1415,13 +1425,16 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '1':
                 if (e.which == 38) {
-                    $("button[id='1']").focus();
+                    $("div[tabindex='3']").focus();
                 } else {
+
                     $("button[tabindex='15']").focus();
                 }
                 break;
             }
         }
+
+
 
         //boton accesibilidad menu id 1
         if (e.which == 37 || e.which == 39) {
@@ -1657,7 +1670,7 @@ $(document).ready(function () {
                 if (e.which == 37) {
                     $("input[tabindex='5']").focus();
                 } else {
-                    $("input[id='radionavegacion']").focus();
+                    $("a[tabindex='7']").focus();
                 }
                 break;
             }
@@ -1680,7 +1693,7 @@ $(document).ready(function () {
             switch (focused.attr("tabindex")) {
             case '7':
                 if (e.which == 37) {
-                    $("input[id='radionavegacion']").focus();
+                    $("select[tabindex='6']").focus();
                 } else {
                     $("button[id='2']").focus();
                 }
@@ -3515,9 +3528,10 @@ $(document).ready(function () {
             switch (focused.attr("id")) {
             case 'botondeayuda':
                 if (e.which == 37) {
-                    $("rect[tabindex='']").focus();
+                    this.focus();
                 } else {
-                    $("button[tabindex='1']").focus();
+                    $("#botondeaccesibilidad").focus();
+
                 }
                 break;
             }
@@ -3527,12 +3541,28 @@ $(document).ready(function () {
             switch (focused.attr("id")) {
             case 'botondeayuda':
                 if (e.which == 38) {
-                    $("button[id='botondescripcion']").focus();
+
+                    if ($("button[id='botonindicaciones']").attr('aria-expanded') == "true") {
+                        $("div[tabindex='171']").focus();
+                    }
+                    if ($("button[id='botonnavegacion']").attr('aria-expanded') == "true") {
+                        $("div[tabindex='172']").focus();
+                    }
+                    if ($("button[id='botonsimulacion']").attr('aria-expanded') == "true") {
+                        $("div[tabindex='173']").focus();
+                    } else {
+                        $("div[tabindex='170']").focus();
+                    }
+
                 } else {
+
                     $("button[tabindex='15']").focus();
+
                 }
                 break;
             }
+
+
         }
 
         //boton indicaciones
@@ -3769,6 +3799,97 @@ $(document).ready(function () {
             }
         }
 
+        //titulo
+
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'tituloprincipal':
+                if (e.which == 37) {
+                    $("select[tabindex='']").focus();
+                } else {
+                    $("a[tabindex ='']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'tituloprincipal':
+                if (e.which == 38) {
+                    $("a[id='salto']").focus();
+                } else {
+                    $("button[id='menuayuda']").focus();
+                }
+                break;
+            }
+        }
+
+        //div accesibilidad
+
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'menu1':
+                if (e.which == 37) {
+                    $("select[tabindex='']").focus();
+                } else {
+                    $("a[tabindex ='']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'menu1':
+                if (e.which == 38) {
+                    if ($("button[id='1']").attr('aria-expanded') == 'false') {
+
+                        $("button[id='2']").focus();
+
+                    } else {
+                        $("button[id='1']").focus();
+                    }
+
+                } else {
+                    $("button[tabindex='1']").focus();
+                }
+                break;
+            }
+        }
+        //div accesibilidad
+        if (e.which == 37 || e.which == 39) {
+            switch (focused.attr("id")) {
+            case 'menuaccesibilidad2':
+                if (e.which == 37) {
+                    $("select[tabindex='']").focus();
+                } else {
+                    $("a[tabindex ='']").focus();
+                }
+                break;
+            }
+        }
+
+        if (e.which == 38 || e.which == 40) {
+            switch (focused.attr("id")) {
+            case 'menuaccesibilidad2':
+                if (e.which == 38) {
+                    if ($("button[id='1']").attr('aria-expanded') == 'false') {
+
+                        $("button[id='2']").focus();
+
+                    } else {
+                        $("button[id='1']").focus();
+                    }
+
+                } else {
+                    $("button[tabindex='1']").focus();
+                }
+                break;
+            }
+        }
+
 
 
 
@@ -3830,8 +3951,7 @@ $(document).ready(function () {
         var nuevocontrast = $("#Contrast").val();
         contrast(nuevocontrast);
     });
-
-    $('#modo input').on('change', function () {
+    /*$('#modo input').on('change', function () {
         switch (($('input[name=radiomenu]:checked', '#modo').val())) {
         case 'simulacion':
             $("#collapse1").removeClass('in').addClass('collapse');
@@ -3850,7 +3970,7 @@ $(document).ready(function () {
         }
 
 
-    });
+    });*/
 
 });
 

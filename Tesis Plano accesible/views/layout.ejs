@@ -81,7 +81,7 @@
 
             <div class="tab-content">
                 <div id="home" class="tab-pane fade in active">
-                    <div id="menuaccesibilidad2">
+                    <div id="menuaccesibilidad2" tabindex="3">
                         <!--    <ul class="list-group">-->
                         <div class="menuavanzado">
                             <!-- <li class="list-group-item elementoavanzado">-->
@@ -100,18 +100,18 @@
 
                                         <div class="tamanio-letra col-md-4">
                                             <p>Tamaño de letra</p>
-                                            <img id="letranormal" src="../../images/letranormal.png" alt="small font size" height="38" width="38">
+                                            <img id="letranormal" src="../../images/letranormal.png" alt="tamaño de letra normal" height="38" width="38">
                                             <input id="letra" class="inline" type='text' name='username' size='1' title="font" disabled />
-                                            <img id="letragrande" src="../../images/letragrande.png" alt="small font size" height="38" width="38">
-                                            <input id="tamanioletra" class="inline" type="range" name="points" min="1" max="2.5" size='5' step="0.1" tabindex="4" alt="font size" title="font size">
+                                            <img id="letragrande" src="../../images/letragrande.png" alt="tamaño de letra grande" height="38" width="38">
+                                            <input id="tamanioletra" class="inline" type="range" name="points" min="1" max="2.5" size='5' step="0.1" tabindex="4" alt="tamaño de letra" title="tamaño de letra">
                                         </div>
 
                                         <div class="interlineado col-md-3">
                                             <p>Interespaciado</p>
-                                            <img id="espaciadonormal" src="../../images/linea1.png" alt="small font size" height="38" width="38">
-                                            <input id="espaciado" class="inline" type='text' name='username' size='1' disabled title="spacing" />
-                                            <img id="espaciadogrande" src="../../images/linea3.png" alt="small font size" height="38" width="38">
-                                            <input id="espaciado2" class="inline" type="range" name="points" min="1" max="2.5" size='5' step="0.1" tabindex="5" alt="interlineado" title="spacing">
+                                            <img id="espaciadonormal" src="../../images/linea1.png" alt="espaciado normal" height="38" width="38">
+                                            <input id="espaciado" class="inline" type='text' name='username' size='1' title="interespaciado" disabled/>
+                                            <img id="espaciadogrande" src="../../images/linea3.png" alt="espaciado grande" height="38" width="38">
+                                            <input id="espaciado2" class="inline" type="range" name="points" min="1" max="2.5" size='5' step="0.1" tabindex="5" alt="interespaciado" title="interespaciado">
                                         </div>
                                         <div class="tipo-letra col-md-2">
                                             <p>Tipo de Letra</p>
@@ -125,21 +125,21 @@
 
                                             </select>
                                         </div>
-                                        <div id="radios" class="col-md-2">
-                                            <p>Modo de operación</p>
+                                        <!--<div id="radios" class="col-md-2">
+    <p>Modo de operación</p>
 
-                                            <form id="modo">
+    <form id="modo">
 
-                                                <input id="radionavegacion" type="radio" name="radiomenu" value="navegacion" checked>
-                                                <label>Navegación</label>
-                                                <br>
+        <input id="radionavegacion" type="radio" name="radiomenu" value="navegacion" checked title="Activar Navegación" tabindex="6">
+        <label title="Activar Navegación">Navegación</label>
+        <br>
 
 
 
-                                                <input id="radiosimulacion" type="radio" name="radiomenu" value="simulacion">
-                                                <label>Simulación</label>
-                                            </form>
-                                        </div>
+        <input id="radiosimulacion" type="radio" name="radiomenu" value="simulacion" title="Activar Simulación" tabindex="6">
+        <label title="Activar Simulación">Simulación</label>
+    </form>
+</div>-->
 
                                         <p class="panel-title">
                                             <a class="btn btn-default opcionavanzada" href="#reload" onclick="reiniciar()" tabindex="7" alt="Restablecer Configuración">
@@ -160,7 +160,7 @@
                     </div>
 
                 </div>
-                <div id="menu1" class="tab-pane fade">
+                <div id="menu1" class="tab-pane fade" tabindex="3">
                     <div id="collapse2" class="">
                         <!--   <ul class="list-group ">-->
                         <div class="menuavanzado">
@@ -263,12 +263,12 @@
                                     <li>Descripción: Contiene una descripción del prototipo y una descripción de su uso.</li>
                                     <li>Indicaciones: Se especifica las ociones de usablidad y navegación que se han integrado al prototipo.</li>
                                     <p>Menú accesibilidad</p>
-                                    <li>Accesibilidad: Posee alternativas para cambio de color de la página, aumento en el tamaño de letra, aumento en el espaciado de letra y cambio en el tipo de fuente. En este menú se puede activar el modo navegación o simulación. </li>
+                                    <li>Accesibilidad: Posee alternativas para cambio de color de la página, aumento en el tamaño de letra, aumento en el espaciado de letra y cambio en el tipo de fuente. </li>
                                     <li>Opciones avanzadas: Posee opciones para cambios en el estilo del mapa y opciones avanzadas de cambio de color como saturación, tono, brillo, escala de grises, etc. </li>
                                 </ul>
                             </li>
                             <br>
-                            <li>Bloque izquierda: Contiene un menu de navegación en orden albabético en el modo navegación. En el modo simulación posee 4 rutas principales que indican las instrucciones para llegar a 4 oficinas, decanato, profesor, proyecto de investigación y baños.</li>
+                            <li>Bloque izquierda: Contiene un menú de navegación en orden albabético en el modo navegación. En el modo simulación posee 4 rutas principales que indican las instrucciones para llegar a 4 oficinas, decanato, profesor, proyecto de investigación y baños.</li>
                             <li>Bloque central: Contiene el plano a escala del segundo piso de la facultad de sistemas. Posee la distribución espacial de las oficinas que se encuentan divididas en 4 bloques principales. El bloque superior izquierdo corresponde a las oficinas del rectorado. El bloque superior derecho consiste en el área de profesores, anteriormente la biblioteca. El bloque inferior izquierdo corresponde al primer bloque de oficinas, y el bloque inferior derecho corresponde al segundo bloque de oficinas.</li>
                             <li>Bloque derecho: Corresponde a las descripciones de cada elemento que es seleccionado en el mapa. Entre la descripcion se tiene la carga horaria del profesor o la descripcion de la oficina. Además posee tres botones de retorno, como son menú principal, retornar al plano y salir.</li>
                         </ul>
@@ -278,27 +278,44 @@
                 <div id="indicaciones" class="tab-pane fade">
                     <div id="divindicaciones" class="" tabindex="171">
                         <h4>Indicaciones.</h4>
-                        <ul>Para navegar por el plano, puede utilizar la tecla tab para moverse en orden secuencial, o las flechas arriba, abajo, izquierda y derecha para navegar en cualquier dirección.
+                        <ul>Para navegar por el plano, puede utilizar la tecla Tabulador para moverse en orden secuencial, o las flechas arriba, abajo, izquierda y derecha para navegar en cualquier dirección.
                             <li>
                                 <ul>Puede utilizar los siguientes atajos de teclado para ir a los siguientes elementos:
                                     <li>
-                                        Menú principal: Alt + m.
+                                        Menú oficinas de docentes: Alt + o.
                                     </li>
                                     <li>
-                                        Plano: Alt + p.
+                                        Menú simulacion de rutas: Alt + s.
+                                    </li>
+
+                                    <li>
+                                        Ultimo elemento del plano: Alt + p.
                                     </li>
                                     <li>
-                                        Menú ayuda: Alt + a.
+                                        Menú ayuda: Alt + h.
                                     </li>
                                     <li>
                                         Menú accesibilidad: Alt + c.
                                     </li>
                                     <li>
+                                        Rango A - C: Alt + a.
+                                    </li>
+                                    <li>
+                                        Rango D - L: Alt + l.
+                                    </li>
+                                    <li>
+                                        Rango M - P: Alt + m.
+                                    </li>
+                                    <li>
+                                        Rango Q - Z: Alt + q.
+                                    </li>
+
+                                    <li>
                                         Inicio: Escape.
                                     </li>
                                 </ul>
                             </li>
-                            <li>La navegación se la realiza ubicando el elemento deseado ya sea con los cursores, tecla tab o ratón. Una vez seleccionado el elemento en el plano interior, el foco se colocará automáticamente en la descripción del elemento. Si se desea retornar al plano, se debe escoger el botón inferior "Volver al mapa", con la tecla tab o con la flecha inferior. Si se desea retornar al menú izquierdo de búsqueda, se debe seleccionar el botón "Volver al menu principal". Si desea salir y retornar al inicio, se debe escoger el boton salir. </li>
+                            <li>La navegación se la realiza ubicando el elemento deseado ya sea con los cursores, tecla tab o ratón. Una vez seleccionado el elemento en el plano interior, el foco se colocará automáticamente en la descripción del elemento. Si se desea retornar al plano, se debe escoger el botón inferior "Volver al mapa", con la tecla tab o con la flecha inferior. Si se desea retornar al menú izquierdo de búsqueda, se debe seleccionar el botón "Volver al menú principal". Si desea salir y retornar al inicio, se debe escoger el boton salir. </li>
 
 
                     </div>
@@ -308,7 +325,7 @@
                     <div id="divnavegacion" class="" tabindex="172">
                         <h4>Modo Navegacion.</h4>
                         <ul>
-                            <li> Este modo estará activado por defecto. Dentro se esta opción se puede conocer la información de los elementos del plano. Además, se puede realizar una busqueda de profesores y oficinas que se localizan en el segundo piso.</li>
+                            <li> Dentro se esta opción se puede conocer la información de los elementos del plano. Además, se puede realizar una busqueda de profesores y oficinas que se localizan en el segundo piso.</li>
                             <li>Los elementos se encuentran ordenados alfabéticamente, en un rango de 4 grupos.De A hasta C, de D hasta L, de M hasta P y de Q hasta Z. </li>
                         </ul>
 
@@ -325,12 +342,12 @@
             </div>
 
         </div>
-        <h1 class="text-center" tabindex="0">Plano Interior Accesible</h1>
+        <h1 class="text-center" tabindex="0" id="tituloprincipal">Plano Interior Accesible</h1>
         <!--<p class="text-center">Segundo piso de la Facultad de Ingeniería de Sistemas</p>-->
         <div class="fondo-menu">
 
 
-            <button id="botondeayuda" data-toggle="collapse" class="btn btn-default botonmenu " href="#menuayuda" onclick="menuayuda()" alt="Ayuda" aria-expanded="true" tabindex="1" href="#ayuda">Ayuda</button>
+            <button id="botondeayuda" data-toggle="collapse" class="btn btn-default botonmenu " href="#menuayuda" onclick="menuayuda()" alt="Ayuda" aria-expanded="true" tabindex="0" href="#ayuda">Ayuda</button>
 
             <button id="botondeaccesibilidad" data-toggle="collapse" class="btn btn-default botonmenu" href="#menuaccesibilidad" onclick="" alt="Accesibilidad" aria-expanded="true" tabindex="1" href="#rutas">Accesibilidad</button>
 
